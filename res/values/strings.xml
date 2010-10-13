@@ -47,7 +47,7 @@
 
     <!-- Added by LIBRA -->
     <string name="need_headset_for_antenna">Please plug in a wired headset which will be used as an FM antenna.</string>
-    <string name="init_FM">请稍候，打开蓝牙启动FM芯片...</string>
+    <string name="init_FM">Enabling Bluetooth for FM radio support..</string>
     <string name="need_bluetooth">Please enable Bluetooth</string>
 
 </resources>
