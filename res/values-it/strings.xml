@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Radio FM</string>
+    <string name="tx_app_name">Trasmettitore FM</string>
+    <string name="preset_delete">Elimina</string>
+    <string name="stat_notif_frequency">Radio FM "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
+
+    <string name="sel_band_menu">Seleziona banda</string>
+    <string name="settings_menu">Impostazioni</string>
+    <string name="regional_band">Banda</string>
+
+    <string name="aud_output_mode">Modalità uscita audio</string>
+    <string name="sel_audio_output">Seleziona uscita audio</string>
+
+    <string name="record_dur">Durata registrazione</string>
+    <string name="sel_rec_dur">Seleziona durata registrazione</string>
+
+    <string name="auto_select_af">Frequenza alternativa</string>
+    <string name="auto_select_af_enabled">Selezione automatica attiva</string>
+    <string name="auto_select_af_disabled">Selezione automatica non attiva</string>
+
+    <string name="fac_defaults">Ripristina impostazioni iniziali</string>
+    <string name="revert_to_fac">Ripristina impostazioni iniziali</string>
+    <string name="settings_back">Indietro</string>
+
+    <string name="settings_revert_confirm_title">Conferma reset impostazioni</string>
+    <string name="settings_revert_confirm_msg">Questo eliminerà tutte le impostazioni inclusi i Preset</string>
+
+    <string name="settings_back_summary">Ritorna a schermata precedente</string>
+    <string name="settings_revert_defaults_title">Ripristina impostazioni iniziali</string>
+    <string name="settings_revert_defaults_summary">Ripristina tutte le impostazioni</string>
+
+    <string name="alert_dialog_ok">Conferma</string>
+    <string name="alert_dialog_cancel">Annulla</string>
+
+    <string name="preset_search">Cerca"<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
+
+    <string name="fm_command_failed_title">Operazione fallita</string>
+    <string name="fm_cmd_failed_msg">Operazione non riuscita. Le possibili cause sono: le cuffie non sono collegate, il Bluetooth non è abilitato, si sta effettuando una chiamata, La radio FM è stata chiusa. Riprovare dopo aver premuto il pulsante ON/OFF, quindi riavviare la radio FM.</string>
+
+    <string name="frequency_string">Frequenza</string>
+    <string name="stat_no_fm">Radio FM spenta</string>
+
+    <string name="need_headset_for_antenna">Errore! Collegare il cavo delle cuffie come antenna FM</string>
+    <string name="init_FM">Attendere prego, si sta abilitando il Bluetooth per attivare la radio FM...</string>
+    <string name="need_bluetooth">Errore! Si prega di attivare il Bluetooth per avviare la Radio FM</string>
+</resources>
