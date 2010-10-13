@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+  <string-array name="ster_mon_entries">
+    <item>ステレオ</item>
+    <item>モノラル</item>
+  </string-array>
+
+  <string-array name="record_durations_entries">
+    <item>5分</item>
+    <item>15分</item>
+    <item>30分</item>
+    <item>無制限</item>
+  </string-array>
+
+  <string-array name="presetlist_edit_category">
+    <item>リネーム</item>
+    <item>自動選択</item>
+    <item>削除</item>
+  </string-array>
+
+</resources>
