@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+  <string-array name="ster_mon_entries">
+    <item>立体声</item>
+    <item>单声道</item>
+  </string-array>
+
+  <string-array name="record_durations_entries">
+    <item>5分钟</item>
+    <item>15分钟</item>
+    <item>30分钟</item>
+    <item>直到停止</item>
+  </string-array>
+
+</resources>

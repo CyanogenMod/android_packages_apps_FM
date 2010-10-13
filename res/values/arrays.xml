@@ -3,8 +3,8 @@
 <resources>
 
   <string-array name="ster_mon_entries">
-    <item>立体声</item>
-    <item>单声道</item>
+    <item>Stereo</item>
+    <item>Mono</item>
   </string-array>
 
   <string-array name="ster_mon_values">
@@ -13,10 +13,10 @@
   </string-array>
 
   <string-array name="record_durations_entries">
-    <item>5分钟</item>
-    <item>15分钟</item>
-    <item>30分钟</item>
-    <item>直到停止</item>
+    <item>5 minutes</item>
+    <item>15 minutes</item>
+    <item>30 minutes</item>
+    <item>Unlimited</item>
   </string-array>
 
 
@@ -25,21 +25,6 @@
     <item>15</item>
     <item>30</item>
     <item>-1</item>
-  </string-array>
-
-  <string-array name="sleep_duration_values">
-    <item>15分钟</item>
-    <item>30分钟</item>
-    <item>45分钟</item>
-    <item>1分钟</item>
-  </string-array>
-
-    <!-- This array should be in seconds and should match the values above -->
-  <string-array name="sleep_duration_values_seconds">
-    <item>900</item>
-    <item>1800</item>
-    <item>2700</item>
-    <item>3600</item>
   </string-array>
 
   <string-array name="search_category_rbds_entries">
