@@ -5,30 +5,30 @@
     <string name="preset_delete">Delete</string>
     <string name="stat_notif_frequency">FM Radio: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
 
-    <string name="sel_band_menu">Select Regional Band</string>
+    <string name="sel_band_menu">Select regional band</string>
     <string name="settings_menu">Settings</string>
-    <string name="regional_band">Regional Band</string>
+    <string name="regional_band">Regional band</string>
 
-    <string name="aud_output_mode">Audio Output Mode</string>
-    <string name="sel_audio_output">Select Audio Output</string>
+    <string name="aud_output_mode">Audio output mode</string>
+    <string name="sel_audio_output">Select audio output</string>
 
-    <string name="record_dur">Record Duration</string>
-    <string name="sel_rec_dur">Select Record Duration</string>
+    <string name="record_dur">Record duration</string>
+    <string name="sel_rec_dur">Select record duration</string>
 
-    <string name="auto_select_af">Alternate Frequency</string>
-    <string name="auto_select_af_enabled">Auto Select Enabled</string>
-    <string name="auto_select_af_disabled">Auto Select Disabled</string>
+    <string name="auto_select_af">Alternate frequency</string>
+    <string name="auto_select_af_enabled">Auto select enabled</string>
+    <string name="auto_select_af_disabled">Auto select disabled</string>
 
     <string name="fac_defaults">Reset settings</string>
     <string name="revert_to_fac">Reset settings</string>
     <string name="settings_back">Back</string>
 
-    <string name="settings_revert_confirm_title">Confirm Reset Settings</string>
-    <string name="settings_revert_confirm_msg">This will delete all settings including Presets</string>
+    <string name="settings_revert_confirm_title">Confirm Resets</string>
+    <string name="settings_revert_confirm_msg">This will delete all settings including presets!</string>
 
     <string name="settings_back_summary">Return to previous view</string>
-    <string name="settings_revert_defaults_title">Revert to Factory Defaults</string>
-    <string name="settings_revert_defaults_summary">Reset all settings</string>
+    <string name="settings_revert_defaults_title">Reset settings</string>
+    <string name="settings_revert_defaults_summary">Reset all settings to defaults</string>
 
     <string name="alert_dialog_ok">OK</string>
     <string name="alert_dialog_cancel">Cancel</string>
