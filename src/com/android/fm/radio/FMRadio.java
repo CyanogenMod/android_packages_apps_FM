@@ -424,10 +424,9 @@ public class FMRadio extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        return false;
 
-//        super.onCreateOptionsMenu(menu);
-//        MenuItem item;
+        super.onCreateOptionsMenu(menu);
+        MenuItem item;
 //        boolean radioOn = isFmOn();
 //        boolean recording = isRecording();
 //        boolean sleepActive = isSleepTimerActive();
@@ -456,9 +455,9 @@ public class FMRadio extends Activity {
 //                item.setVisible(recording && radioOn);
 //            }
 //        }
-//        /* Settings can be active */
-//        item = menu.add(0, MENU_SETTINGS, 0, R.string.menu_settings).setIcon(
-//                android.R.drawable.ic_menu_preferences);
+        /* Settings can be active */
+        item = menu.add(0, MENU_SETTINGS, 0, R.string.settings_menu).setIcon(
+                android.R.drawable.ic_menu_preferences);
 //
 //        item = menu.add(0, MENU_SLEEP, 0, R.string.menu_sleep).setTitle(R.string.menu_sleep);
 //        if (item != null) {
@@ -480,7 +479,7 @@ public class FMRadio extends Activity {
 //            }
 //        }
 //
-//        return true;
+        return true;
     }
 
     @Override
