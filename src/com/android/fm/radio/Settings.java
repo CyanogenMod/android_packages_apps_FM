@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
@@ -33,6 +34,8 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
 
     public static final String RESTORE_FACTORY_DEFAULT = "revert_to_fac";
 
+    private static final String ABOUT_KEY = "about";
+
     public static final int RESTORE_FACTORY_DEFAULT_INT = 1;
 
     public static final String RESTORE_FACTORY_DEFAULT_ACTION = "com.android.fm.radio.settings.revert_to_defaults";
@@ -48,6 +51,8 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
     private CheckBoxPreference mAfPref;
 
     private Preference mRestoreDefaultPreference;
+
+    private Preference mAboutPreference;
 
     private FmSharedPreferences mPrefs = null;
 
@@ -148,16 +153,25 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
             }
         }
 
-        // Add a new category
-        PreferenceCategory prefCat = new PreferenceCategory(this);
-        root.addPreference(prefCat);
-
         mRestoreDefaultPreference = new Preference(this);
         mRestoreDefaultPreference.setTitle(R.string.settings_revert_defaults_title);
         mRestoreDefaultPreference.setKey(RESTORE_FACTORY_DEFAULT);
         mRestoreDefaultPreference.setSummary(R.string.settings_revert_defaults_summary);
         mRestoreDefaultPreference.setOnPreferenceClickListener(this);
         root.addPreference(mRestoreDefaultPreference);
+
+        // Add a new category
+        PreferenceCategory prefCat = new PreferenceCategory(this);
+        prefCat.setTitle(R.string.about_title);
+        root.addPreference(prefCat);
+
+        mAboutPreference = new Preference(this);
+        mAboutPreference.setTitle(R.string.about_title);
+        mAboutPreference.setKey(ABOUT_KEY);
+        mAboutPreference.setSummary(R.string.about_summary);
+        mAboutPreference.setOnPreferenceClickListener(this);
+        root.addPreference(mAboutPreference);
+
         return root;
     }
 
@@ -240,7 +254,12 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
         boolean handled = false;
         if (preference == mRestoreDefaultPreference) {
             showDialog(RESTORE_FACTORY_DEFAULT_INT);
+        } else if (preference == mAboutPreference) {
+            Intent viewIntent = new Intent("android.intent.action.VIEW", Uri.parse("http://www.miui.com"));
+            startActivity(viewIntent);
+            handled = true;
         }
+
         return handled;
     }
 

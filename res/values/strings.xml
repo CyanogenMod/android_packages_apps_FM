@@ -50,4 +50,7 @@
     <string name="init_FM">Enabling Bluetooth for FM radio support..</string>
     <string name="need_bluetooth">Please enable Bluetooth</string>
 
+    <string name="about_title">About</string>
+    <string name="about_summary">FM Radio application by MIUI - http://www.miui.com</string>
+
 </resources>
