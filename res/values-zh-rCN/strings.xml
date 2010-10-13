@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">FM收音机</string>
+    <string name="tx_app_name">FM发射</string>
+    <string name="preset_delete">删除</string>
+    <string name="stat_notif_frequency">FM调频"<xliff:g id="frequency">%1$s</xliff:g>"兆赫</string>
+
+    <string name="sel_band_menu">Select Regional Band</string>
+    <string name="settings_menu">设置</string>
+    <string name="regional_band">Regional Band</string>
+
+    <string name="aud_output_mode">Audio Output Mode</string>
+    <string name="sel_audio_output">Select Audio Output</string>
+
+    <string name="record_dur">Record Duration</string>
+    <string name="sel_rec_dur">Select Record Duration</string>
+
+    <string name="auto_select_af">Alternate Frequency</string>
+    <string name="auto_select_af_enabled">Auto Select Enabled</string>
+    <string name="auto_select_af_disabled">Auto Select Disabled</string>
+
+    <string name="fac_defaults">恢复默认设置</string>
+    <string name="revert_to_fac">恢复默认设置</string>
+    <string name="settings_back">Back</string>
+
+    <string name="settings_revert_confirm_title">Confirm Reset Settings</string>
+    <string name="settings_revert_confirm_msg">This will delete all settings including Presets</string>
+
+    <string name="settings_back_summary">Return to previous view</string>
+    <string name="settings_revert_defaults_title">Revert to Factory Defaults</string>
+    <string name="settings_revert_defaults_summary">Reset all settings</string>
+
+    <string name="alert_dialog_ok">确认</string>
+    <string name="alert_dialog_cancel">取消</string>
+
+    <string name="preset_search">搜索"<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
+
+    <string name="fm_command_failed_title">FM操作失败</string>
+    <string name="fm_cmd_failed_msg">操作失败。可能原因有:没有插上有线耳机作为天线，或者没有打开蓝牙芯片，或者正处于通话中，或FM已关闭。请处理以上情况后再尝试弹起ON/OFF按钮，再按下ON/OFF按钮重启FM。
+    </string>
+
+    <skip/>
+    <!-- Do not translate. Duration format. -->
+    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
+
+    <string name="frequency_string"></string>
+    <string name="stat_no_fm">FM收音机未开启</string>
+
+    <!-- Added by LIBRA -->
+    <string name="need_headset_for_antenna">错误！请插上有线耳机作为FM天线</string>
+    <string name="init_FM">请稍候，打开蓝牙启动FM芯片...</string>
+    <string name="need_bluetooth">错误！请打开蓝牙以启动FM芯片</string>
+
+</resources>
