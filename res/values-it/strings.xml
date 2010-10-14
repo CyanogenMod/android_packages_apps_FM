@@ -44,4 +44,7 @@
     <string name="need_headset_for_antenna">Errore! Collegare il cavo delle cuffie come antenna FM</string>
     <string name="init_FM">Attendere prego, si sta abilitando il Bluetooth per attivare la radio FM...</string>
     <string name="need_bluetooth">Errore! Si prega di attivare il Bluetooth per avviare la Radio FM</string>
+
+    <string name="about_title">Info</string>
+    <string name="about_summary">Applicazione Radio FM creata da MIUI- http://www.miui.com</string>
 </resources>
