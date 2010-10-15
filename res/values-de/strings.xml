@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">FM Radio</string>
+    <string name="tx_app_name">FM Transmitter</string>
+    <string name="preset_delete">Löschen</string>
+    <string name="stat_notif_frequency">FM Radio: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
+
+    <string name="sel_band_menu">Regionalband wählen</string>
+    <string name="settings_menu">Einstellungen</string>
+    <string name="regional_band">Regionalband</string>
+
+    <string name="aud_output_mode">Audioausgang</string>
+    <string name="sel_audio_output">Audioausgang wählen</string>
+
+    <string name="record_dur">Aufnahmedauer</string>
+    <string name="sel_rec_dur">Aufnahmedauer wählen</string>
+
+    <string name="auto_select_af">Ausweichfrequenz</string>
+    <string name="auto_select_af_enabled">Automatische Auswahl aktiviert</string>
+    <string name="auto_select_af_disabled">Automatische Auswahl deaktiviert</string>
+
+    <string name="fac_defaults">Zurücksetzen</string>
+    <string name="revert_to_fac">Auf Werkseinstellungen zurücksetzen</string>
+    <string name="settings_back">Zurück</string>
+
+    <string name="settings_revert_confirm_title">Zurücksetzen bestätigen</string>
+    <string name="settings_revert_confirm_msg">Dies wird alle Einstellungen und Senderspeicher löschen!</string>
+
+    <string name="settings_back_summary">Zurück zur vorherigen Ansicht</string>
+    <string name="settings_revert_defaults_title">Standardeinstellungen wiederherstellen</string>
+    <string name="settings_revert_defaults_summary">Alle Einstellungen mit Standardwerten überschreiben</string>
+
+    <string name="alert_dialog_ok">OK</string>
+    <string name="alert_dialog_cancel">Abbrechen</string>
+
+    <string name="preset_search">Suche "<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
+
+    <string name="fm_command_failed_title">Operation fehlgeschlagen</string>
+    <string name="fm_cmd_failed_msg">Die Operation ist fehlgeschlagen. Mögliche Gründe sind: 
+    Es ist kein Headset als Antenne angeschlossen,
+    Bluethooth ist nicht aktiviert,
+    es ist ein Telefongespräch aktiv
+    oder die Radioanwendung wurde geschlossen. 
+    Bitte überprüfen Sie diese Punkte und starten Sie die Radioandwendung erneut.</string>
+
+    <skip/>
+    <!-- Do not translate. Duration format. -->
+    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
+
+    <string name="frequency_string"></string>
+    <string name="stat_no_fm">FM Radio ist nicht aktiviert</string>
+
+    <!-- Added by LIBRA -->
+    <string name="need_headset_for_antenna">Bitte schließen Sie ein kabelgebundenes Headset als Antenne an.</string>
+    <string name="init_FM">Bluethooth zur Radioverwendung aktivieren...</string>
+    <string name="need_bluetooth">Bitte aktivieren Sie Bluetooth</string>
+
+    <string name="about_title">Über</string>
+    <string name="about_summary">FM Radioanwendung von MIUI - http://www.miui.com</string>
+
+</resources>
