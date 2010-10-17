@@ -31,6 +31,10 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
     public static final String RECORD_DURATION_KEY = "record_duration";
 
     public static final String AUTO_AF = "af_checkbox_preference";
+    
+    public static final String PROMPT_DISABLE_BT = "fm_disable_bt_prompt";
+    
+    public static final String ALWAYS_DISABLE_BT_EXIT = "fm_always_disable_bt_on_off";
 
     public static final String RESTORE_FACTORY_DEFAULT = "revert_to_fac";
 
@@ -49,6 +53,9 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
     private ListPreference mRecordDurPreference;
 
     private CheckBoxPreference mAfPref;
+    
+    private CheckBoxPreference mPromptDisableBt;
+    private CheckBoxPreference mAlwaysDisableBtExit;
 
     private Preference mRestoreDefaultPreference;
 
@@ -152,6 +159,18 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
                 root.addPreference(mRecordDurPreference);
             }
         }
+        
+        mPromptDisableBt = new CheckBoxPreference(this);
+        mPromptDisableBt.setKey(PROMPT_DISABLE_BT);
+        mPromptDisableBt.setTitle(R.string.pref_disable_bt_prompt_title);
+        mPromptDisableBt.setSummary(R.string.pref_disable_bt_prompt_summary);
+        root.addPreference(mPromptDisableBt);
+        
+        mAlwaysDisableBtExit = new CheckBoxPreference(this);
+        mAlwaysDisableBtExit.setKey(ALWAYS_DISABLE_BT_EXIT);
+        mAlwaysDisableBtExit.setTitle(R.string.pref_always_disable_bt_title);
+        mAlwaysDisableBtExit.setSummary(R.string.pref_always_disable_bt_summary);
+        root.addPreference(mAlwaysDisableBtExit);
 
         mRestoreDefaultPreference = new Preference(this);
         mRestoreDefaultPreference.setTitle(R.string.settings_revert_defaults_title);
@@ -242,6 +261,17 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
                         FmSharedPreferences.setAudioOutputMode(false);
                     }
                     FMRadio.fmAudioOutputMode();
+                }
+                else if (key.equals(PROMPT_DISABLE_BT)) {
+                    boolean bPromptDisableBt = mPromptDisableBt.isChecked();
+                    Log.d(LOGTAG, "onSharedPreferenceChanged: Prompt Disable BT: " + bPromptDisableBt);
+                    FmSharedPreferences.setPromptDisableBt(bPromptDisableBt);
+                }
+                else if (key.equals(ALWAYS_DISABLE_BT_EXIT)) {
+                    boolean bAlwaysDisableBt = mAlwaysDisableBtExit.isChecked();
+                    mPromptDisableBt.setEnabled(!bAlwaysDisableBt);
+                    Log.d(LOGTAG, "onSharedPreferenceChanged: Always Disable BT On Exit: " + bAlwaysDisableBt);
+                    FmSharedPreferences.setAlwaysDisableBt(bAlwaysDisableBt);
                 }
             }
         }

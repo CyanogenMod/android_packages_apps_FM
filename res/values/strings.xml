@@ -52,5 +52,14 @@
 
     <string name="about_title">About</string>
     <string name="about_summary">FM Radio application by MIUI - http://www.miui.com</string>
+    
+    <string name="pref_disable_bt_prompt_title">Prompt to disable BT on radio off</string>
+    <string name="pref_disable_bt_prompt_summary">Prompt user to disable bluetooth when radio is switched off</string>
+    <string name="prompt_disable_bt">Do you want to disable bluetooth?</string>
+    <string name="prompt_yes">Yes</string>
+    <string name="prompt_no">No</string>
+    
+    <string name="pref_always_disable_bt_title">Always disable BT on radio off</string>
+    <string name="pref_always_disable_bt_summary">Disable bluetooth when radio is switched off</string>
 
 </resources>

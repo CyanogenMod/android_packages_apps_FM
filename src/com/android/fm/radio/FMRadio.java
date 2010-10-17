@@ -908,6 +908,24 @@ public class FMRadio extends Activity {
                     /* shut down force use */
                     AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
                 }
+                
+                if (BluetoothAdapter.getDefaultAdapter().isEnabled()) {
+                    if (mPrefs.getAlwaysDisableBt())
+                        BluetoothAdapter.getDefaultAdapter().disable();
+                    else if (mPrefs.getPromptDisableBt()) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                        builder.setMessage(R.string.prompt_disable_bt)
+                            .setPositiveButton(R.string.prompt_yes, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    BluetoothAdapter.getDefaultAdapter().disable();
+                                }})
+                            .setNegativeButton(R.string.prompt_no, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    // Do nothing
+                                }})
+                            .show();
+                }
+        }
             } catch (RemoteException e) {
                 Log.e(LOGTAG, "RemoteException in disableRadio", e);
             }

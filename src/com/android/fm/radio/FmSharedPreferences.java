@@ -160,6 +160,10 @@ public class FmSharedPreferences {
     private static boolean mAudioOutputMode = true;
 
     private static boolean mAFAutoSwitch = true;
+    
+    private static boolean mPromptDisableBt = false;
+    
+    private static boolean mAlwaysDisableBt = false;
 
     private static int mRecordDuration = 0;
 
@@ -960,4 +964,22 @@ public class FmSharedPreferences {
     public static boolean getAutoAFSwitch() {
         return mAFAutoSwitch;
     }
+    
+    public static void setPromptDisableBt(boolean promptDisableBt) {
+        mPromptDisableBt = promptDisableBt;
+    }
+
+    public static boolean getPromptDisableBt() {
+        return mPromptDisableBt;
+    }
+    
+    public static void setAlwaysDisableBt(boolean alwaysDisableBt) {
+        mAlwaysDisableBt = alwaysDisableBt;
+    }
+
+    public static boolean getAlwaysDisableBt() {
+        return mAlwaysDisableBt;
+    }
+    
+    
 }
