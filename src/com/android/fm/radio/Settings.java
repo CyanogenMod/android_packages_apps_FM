@@ -32,9 +32,7 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
 
     public static final String AUTO_AF = "af_checkbox_preference";
     
-    public static final String PROMPT_DISABLE_BT = "fm_disable_bt_prompt";
-    
-    public static final String ALWAYS_DISABLE_BT_EXIT = "fm_always_disable_bt_on_off";
+    public static final String BT_EXIT_BEHAVIOUR = "bt_exit_behaviour";
 
     public static final String RESTORE_FACTORY_DEFAULT = "revert_to_fac";
 
@@ -54,8 +52,7 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
 
     private CheckBoxPreference mAfPref;
     
-    private CheckBoxPreference mPromptDisableBt;
-    private CheckBoxPreference mAlwaysDisableBtExit;
+    private ListPreference mBluetoothBehaviour;
 
     private Preference mRestoreDefaultPreference;
 
@@ -160,17 +157,14 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
             }
         }
         
-        mPromptDisableBt = new CheckBoxPreference(this);
-        mPromptDisableBt.setKey(PROMPT_DISABLE_BT);
-        mPromptDisableBt.setTitle(R.string.pref_disable_bt_prompt_title);
-        mPromptDisableBt.setSummary(R.string.pref_disable_bt_prompt_summary);
-        root.addPreference(mPromptDisableBt);
-        
-        mAlwaysDisableBtExit = new CheckBoxPreference(this);
-        mAlwaysDisableBtExit.setKey(ALWAYS_DISABLE_BT_EXIT);
-        mAlwaysDisableBtExit.setTitle(R.string.pref_always_disable_bt_title);
-        mAlwaysDisableBtExit.setSummary(R.string.pref_always_disable_bt_summary);
-        root.addPreference(mAlwaysDisableBtExit);
+        mBluetoothBehaviour = new ListPreference(this);
+        mBluetoothBehaviour.setEntries(R.array.bt_exit_behaviour_entries);
+        mBluetoothBehaviour.setEntryValues(R.array.bt_exit_behaviour_values);
+        mBluetoothBehaviour.setDialogTitle(R.string.pref_bt_behaviour_on_exit_dialog_title);
+        mBluetoothBehaviour.setKey(BT_EXIT_BEHAVIOUR);
+        mBluetoothBehaviour.setTitle(R.string.pref_bt_behaviour_on_exit_title);
+        mBluetoothBehaviour.setSummary(R.string.pref_bt_behaviour_on_exit_summary);
+        root.addPreference(mBluetoothBehaviour);        
 
         mRestoreDefaultPreference = new Preference(this);
         mRestoreDefaultPreference.setTitle(R.string.settings_revert_defaults_title);
@@ -262,16 +256,11 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
                     }
                     FMRadio.fmAudioOutputMode();
                 }
-                else if (key.equals(PROMPT_DISABLE_BT)) {
-                    boolean bPromptDisableBt = mPromptDisableBt.isChecked();
-                    Log.d(LOGTAG, "onSharedPreferenceChanged: Prompt Disable BT: " + bPromptDisableBt);
-                    FmSharedPreferences.setPromptDisableBt(bPromptDisableBt);
-                }
-                else if (key.equals(ALWAYS_DISABLE_BT_EXIT)) {
-                    boolean bAlwaysDisableBt = mAlwaysDisableBtExit.isChecked();
-                    mPromptDisableBt.setEnabled(!bAlwaysDisableBt);
-                    Log.d(LOGTAG, "onSharedPreferenceChanged: Always Disable BT On Exit: " + bAlwaysDisableBt);
-                    FmSharedPreferences.setAlwaysDisableBt(bAlwaysDisableBt);
+                else if (key.equals(BT_EXIT_BEHAVIOUR)) {
+                    String[] btChoices = getResources().getStringArray(R.array.bt_exit_behaviour_entries);
+                    String valueStr = mBluetoothBehaviour.getValue();
+                    Log.d(LOGTAG, "onSharedPreferenceChanged: BT behaviour: " + btChoices[mBluetoothBehaviour.findIndexOfValue(valueStr)]);
+                    FmSharedPreferences.setBluetoothExitBehaviour(Integer.parseInt(valueStr));
                 }
             }
         }

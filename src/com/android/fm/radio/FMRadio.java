@@ -248,6 +248,8 @@ public class FMRadio extends Activity {
     private static int mCommandFailed = 0;
 
     private boolean mBluetoothEnabled = false;
+    
+    private boolean mInitialBtState = false;
 
     private ProgressDialog mBluetoothStartingDialog;
 
@@ -792,6 +794,8 @@ public class FMRadio extends Activity {
 
     private void asyncCheckAndEnableRadio() {
         mBluetoothEnabled = BluetoothAdapter.getDefaultAdapter().isEnabled();
+        mInitialBtState  = mBluetoothEnabled;        
+        
         if (mBluetoothEnabled) {
             enableRadio();
         } else {
@@ -910,11 +914,17 @@ public class FMRadio extends Activity {
                 }
                 
                 if (BluetoothAdapter.getDefaultAdapter().isEnabled()) {
-                    if (mPrefs.getAlwaysDisableBt())
-                        BluetoothAdapter.getDefaultAdapter().disable();
-                    else if (mPrefs.getPromptDisableBt()) {
-                        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                        builder.setMessage(R.string.prompt_disable_bt)
+                    switch (mPrefs.getBluetoothExitBehaviour()) {
+                        // Do nothing for case 0
+                        case 1: // Restore initial BT state
+                            if (!mInitialBtState) {
+                                BluetoothAdapter.getDefaultAdapter().disable();
+                            }                     
+                            break;
+                        
+                        case 2: // Prompt for action
+                            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                            builder.setMessage(R.string.prompt_disable_bt)
                             .setPositiveButton(R.string.prompt_yes, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     BluetoothAdapter.getDefaultAdapter().disable();
@@ -924,8 +934,14 @@ public class FMRadio extends Activity {
                                     // Do nothing
                                 }})
                             .show();
+                            break;
+                        
+                        case 3: // Always disable bluetooth
+                            BluetoothAdapter.getDefaultAdapter().disable();
+                            break;
+                    
+                    }
                 }
-        }
             } catch (RemoteException e) {
                 Log.e(LOGTAG, "RemoteException in disableRadio", e);
             }

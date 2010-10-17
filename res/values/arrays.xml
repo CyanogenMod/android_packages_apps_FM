@@ -2,6 +2,20 @@
 
 <resources>
 
+  <string-array name="bt_exit_behaviour_entries">
+    <item>Do nothing (Remains enabled)</item>
+    <item>Restore initial BT state</item>
+    <item>Prompt for user action</item>
+    <item>Always disable</item>
+  </string-array>
+
+  <string-array name="bt_exit_behaviour_values">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+  </string-array>
+
   <string-array name="ster_mon_entries">
     <item>Stereo</item>
     <item>Mono</item>

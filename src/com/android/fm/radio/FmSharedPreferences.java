@@ -160,12 +160,10 @@ public class FmSharedPreferences {
     private static boolean mAudioOutputMode = true;
 
     private static boolean mAFAutoSwitch = true;
-    
-    private static boolean mPromptDisableBt = false;
-    
-    private static boolean mAlwaysDisableBt = false;
 
     private static int mRecordDuration = 0;
+    
+    private static int mBluetoothExitBehaviour = 0;
 
     FmSharedPreferences(Context context) {
         mContext = context.getApplicationContext();
@@ -456,6 +454,9 @@ public class FmSharedPreferences {
         if (mListIndex >= num_lists) {
             mListIndex = 0;
         }
+
+        setBluetoothExitBehaviour(sp.getInt(Settings.BT_EXIT_BEHAVIOUR, 0));
+        
     }
 
     public void Save() {
@@ -499,6 +500,7 @@ public class FmSharedPreferences {
         ed.putInt(FMCONFIG_COUNTRY, mCountry);
         /* Save speaker state */
         ed.putBoolean(FMSPEAKER, mSpeaker);
+        ed.putInt(Settings.BT_EXIT_BEHAVIOUR, mBluetoothExitBehaviour);
 
         ed.commit();
     }
@@ -963,22 +965,14 @@ public class FmSharedPreferences {
 
     public static boolean getAutoAFSwitch() {
         return mAFAutoSwitch;
+    }    
+     
+    public static void setBluetoothExitBehaviour(int behaviour) {
+        mBluetoothExitBehaviour = behaviour;
     }
     
-    public static void setPromptDisableBt(boolean promptDisableBt) {
-        mPromptDisableBt = promptDisableBt;
-    }
-
-    public static boolean getPromptDisableBt() {
-        return mPromptDisableBt;
-    }
-    
-    public static void setAlwaysDisableBt(boolean alwaysDisableBt) {
-        mAlwaysDisableBt = alwaysDisableBt;
-    }
-
-    public static boolean getAlwaysDisableBt() {
-        return mAlwaysDisableBt;
+    public static int getBluetoothExitBehaviour() {
+        return mBluetoothExitBehaviour;
     }
     
     
