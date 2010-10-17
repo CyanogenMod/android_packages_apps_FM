@@ -52,4 +52,14 @@
 
     <string name="about_title">À propos</string>
     <string name="about_summary">Application Radio FM par MIUI - http://www.miui.com</string>
+
+    <string name="pref_disable_bt_prompt_title">Désactiver BT à la sortie</string>
+    <string name="pref_disable_bt_prompt_summary">Demander la désactivation de Bluetooth lors de la fermeture de la radio</string>
+    <string name="prompt_disable_bt">Voulez-vous désactiver Bluetooth ?</string>
+    <string name="prompt_yes">Oui</string>
+    <string name="prompt_no">Non</string>
+
+    <string name="pref_bt_behaviour_on_exit_title">Comportement de BT à la fermeture</string>
+    <string name="pref_bt_behaviour_on_exit_summary">Toujours désactiver, restaurer l\'état initial, demander, etc.</string>
+    <string name="pref_bt_behaviour_on_exit_dialog_title">Choisir un comportement Bluetooth</string>
 </resources>

@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
+    <string-array name="bt_exit_behaviour_entries">
+        <item>Ne rien faire (Reste actif)</item>
+        <item>Restaurer l\'état initial</item>
+        <item>Demander</item>
+        <item>Toujours désactiver</item>
+    </string-array>
+
     <string-array name="ster_mon_entries">
         <item>Stéréo</item>
         <item>Mono</item>
