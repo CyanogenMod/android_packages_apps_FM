@@ -46,7 +46,7 @@
     <string name="stat_no_fm">FMラジオはオンになっていません</string>
 
     <!-- Added by LIBRA -->
-    <string name="need_headset_for_antenna">有線のヘッドセットを接続してください。FMアンテナとしてりようされます。</string>
+    <string name="need_headset_for_antenna">有線のヘッドセットを接続してください。FMアンテナとして利用されます。</string>
     <string name="init_FM">FMラジオサポートのためにBuetoothを有効にしています...</string>
     <string name="need_bluetooth">Bluetoothを有効にしてください</string>
 
