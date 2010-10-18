@@ -248,7 +248,7 @@ public class FMRadio extends Activity {
     private static int mCommandFailed = 0;
 
     private boolean mBluetoothEnabled = false;
-    
+
     private boolean mInitialBtState = false;
 
     private ProgressDialog mBluetoothStartingDialog;
@@ -794,8 +794,8 @@ public class FMRadio extends Activity {
 
     private void asyncCheckAndEnableRadio() {
         mBluetoothEnabled = BluetoothAdapter.getDefaultAdapter().isEnabled();
-        mInitialBtState  = mBluetoothEnabled;        
-        
+        mInitialBtState  = mBluetoothEnabled;
+
         if (mBluetoothEnabled) {
             enableRadio();
         } else {
@@ -912,38 +912,40 @@ public class FMRadio extends Activity {
                     /* shut down force use */
                     AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
                 }
-                
-                if (BluetoothAdapter.getDefaultAdapter().isEnabled()) {
-                    switch (mPrefs.getBluetoothExitBehaviour()) {
-                        // Do nothing for case 0
-                        case 1: // Restore initial BT state
-                            if (!mInitialBtState) {
-                                BluetoothAdapter.getDefaultAdapter().disable();
-                            }                     
-                            break;
-                        
-                        case 2: // Prompt for action
-                            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                            builder.setMessage(R.string.prompt_disable_bt)
-                            .setPositiveButton(R.string.prompt_yes, new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    BluetoothAdapter.getDefaultAdapter().disable();
-                                }})
-                            .setNegativeButton(R.string.prompt_no, new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    // Do nothing
-                                }})
-                            .show();
-                            break;
-                        
-                        case 3: // Always disable bluetooth
-                            BluetoothAdapter.getDefaultAdapter().disable();
-                            break;
-                    
-                    }
-                }
+                toggleRadioOffBluetoothBehaviour();
             } catch (RemoteException e) {
                 Log.e(LOGTAG, "RemoteException in disableRadio", e);
+            }
+        }
+    }
+
+    private void toggleRadioOffBluetoothBehaviour() {
+        if (BluetoothAdapter.getDefaultAdapter().isEnabled()) {
+            switch (mPrefs.getBluetoothExitBehaviour()) {
+                // Do nothing for case 0
+                case 1: // Restore initial BT state
+                    if (!mInitialBtState) {
+                        BluetoothAdapter.getDefaultAdapter().disable();
+                    }
+                    break;
+
+                case 2: // Prompt for action
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                    builder.setMessage(R.string.prompt_disable_bt)
+                    .setPositiveButton(R.string.prompt_yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            BluetoothAdapter.getDefaultAdapter().disable();
+                        }})
+                    .setNegativeButton(R.string.prompt_no, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // Do nothing
+                        }})
+                    .show();
+                    break;
+
+                case 3: // Always disable bluetooth
+                    BluetoothAdapter.getDefaultAdapter().disable();
+                    break;
             }
         }
     }
@@ -1454,6 +1456,10 @@ public class FMRadio extends Activity {
             AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
             /* Update UI to FM Off State */
             enableRadioOnOffUI(false);
+
+            if (mPrefs.getHeadsetDcBehaviour()) {
+                toggleRadioOffBluetoothBehaviour();
+            }
         }
     };
 

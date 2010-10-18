@@ -52,15 +52,18 @@
 
     <string name="about_title">About</string>
     <string name="about_summary">FM Radio application by MIUI - http://www.miui.com</string>
-    
+
     <string name="pref_disable_bt_prompt_title">Prompt to disable BT on radio off</string>
     <string name="pref_disable_bt_prompt_summary">Prompt user to disable Bluetooth when radio is switched off</string>
     <string name="prompt_disable_bt">Do you want to disable Bluetooth?</string>
     <string name="prompt_yes">Yes</string>
     <string name="prompt_no">No</string>
-    
+
     <string name="pref_bt_behaviour_on_exit_title">Bluetooth behaviour on radio off</string>
     <string name="pref_bt_behaviour_on_exit_summary">Always disable, restore initial state, prompt, etc.</string>
     <string name="pref_bt_behaviour_on_exit_dialog_title">Choose a Bluetooth behaviour</string>
+
+    <string name="pref_headset_behaviour_title">Headset and Bluetooth behaviour</string>
+    <string name="pref_headset_behaviour_summary">Invoke Bluetooth behaviour when headset is removed</string>
 
 </resources>

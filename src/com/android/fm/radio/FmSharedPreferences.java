@@ -161,8 +161,10 @@ public class FmSharedPreferences {
 
     private static boolean mAFAutoSwitch = true;
 
+    private static boolean mHeadsetRemovalBehaviour = true;
+
     private static int mRecordDuration = 0;
-    
+
     private static int mBluetoothExitBehaviour = 0;
 
     FmSharedPreferences(Context context) {
@@ -456,7 +458,7 @@ public class FmSharedPreferences {
         }
 
         setBluetoothExitBehaviour(sp.getInt(Settings.BT_EXIT_BEHAVIOUR, 0));
-        
+        setHeadsetDcBehaviour(sp.getBoolean(Settings.HEADSET_DC_BEHAVIOUR, true));
     }
 
     public void Save() {
@@ -501,7 +503,7 @@ public class FmSharedPreferences {
         /* Save speaker state */
         ed.putBoolean(FMSPEAKER, mSpeaker);
         ed.putInt(Settings.BT_EXIT_BEHAVIOUR, mBluetoothExitBehaviour);
-
+        ed.putBoolean(Settings.HEADSET_DC_BEHAVIOUR, mHeadsetRemovalBehaviour);
         ed.commit();
     }
 
@@ -965,15 +967,22 @@ public class FmSharedPreferences {
 
     public static boolean getAutoAFSwitch() {
         return mAFAutoSwitch;
-    }    
-     
+    }
+
     public static void setBluetoothExitBehaviour(int behaviour) {
         mBluetoothExitBehaviour = behaviour;
     }
-    
+
     public static int getBluetoothExitBehaviour() {
         return mBluetoothExitBehaviour;
     }
-    
-    
+
+    public static void setHeadsetDcBehaviour(boolean behaviour) {
+        mHeadsetRemovalBehaviour = behaviour;
+    }
+
+    public static boolean getHeadsetDcBehaviour() {
+        return mHeadsetRemovalBehaviour;
+    }
+
 }

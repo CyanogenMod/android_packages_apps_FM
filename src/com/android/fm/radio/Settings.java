@@ -31,8 +31,10 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
     public static final String RECORD_DURATION_KEY = "record_duration";
 
     public static final String AUTO_AF = "af_checkbox_preference";
-    
+
     public static final String BT_EXIT_BEHAVIOUR = "bt_exit_behaviour";
+
+    public static final String HEADSET_DC_BEHAVIOUR = "headset_exit_behaviour";
 
     public static final String RESTORE_FACTORY_DEFAULT = "revert_to_fac";
 
@@ -51,8 +53,10 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
     private ListPreference mRecordDurPreference;
 
     private CheckBoxPreference mAfPref;
-    
+
     private ListPreference mBluetoothBehaviour;
+
+    private CheckBoxPreference mRemoveHeadset;
 
     private Preference mRestoreDefaultPreference;
 
@@ -156,7 +160,7 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
                 root.addPreference(mRecordDurPreference);
             }
         }
-        
+
         mBluetoothBehaviour = new ListPreference(this);
         mBluetoothBehaviour.setEntries(R.array.bt_exit_behaviour_entries);
         mBluetoothBehaviour.setEntryValues(R.array.bt_exit_behaviour_values);
@@ -164,7 +168,14 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
         mBluetoothBehaviour.setKey(BT_EXIT_BEHAVIOUR);
         mBluetoothBehaviour.setTitle(R.string.pref_bt_behaviour_on_exit_title);
         mBluetoothBehaviour.setSummary(R.string.pref_bt_behaviour_on_exit_summary);
-        root.addPreference(mBluetoothBehaviour);        
+        root.addPreference(mBluetoothBehaviour);
+
+        mRemoveHeadset = new CheckBoxPreference(this);
+        mRemoveHeadset.setKey(HEADSET_DC_BEHAVIOUR);
+        mRemoveHeadset.setTitle(R.string.pref_headset_behaviour_title);
+        mRemoveHeadset.setSummary(R.string.pref_headset_behaviour_title);
+        mRemoveHeadset.setChecked(FmSharedPreferences.getHeadsetDcBehaviour());
+        root.addPreference(mRemoveHeadset);
 
         mRestoreDefaultPreference = new Preference(this);
         mRestoreDefaultPreference.setTitle(R.string.settings_revert_defaults_title);
@@ -261,6 +272,11 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
                     String valueStr = mBluetoothBehaviour.getValue();
                     Log.d(LOGTAG, "onSharedPreferenceChanged: BT behaviour: " + btChoices[mBluetoothBehaviour.findIndexOfValue(valueStr)]);
                     FmSharedPreferences.setBluetoothExitBehaviour(Integer.parseInt(valueStr));
+                }
+                else if (key.equals(HEADSET_DC_BEHAVIOUR)) {
+                    boolean bRemoveHeadset = mRemoveHeadset.isChecked();
+                    Log.d(LOGTAG, "onSharedPreferenceChanged: Remove Headset Enable: " + bRemoveHeadset);
+                    FmSharedPreferences.setHeadsetDcBehaviour(bRemoveHeadset);
                 }
             }
         }
