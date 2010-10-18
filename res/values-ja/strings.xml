@@ -53,4 +53,14 @@
     <string name="about_title">情報</string>
     <string name="about_summary">MIUIによるFMラジオアプリケーション - http://www.miui.com</string>
 
+    <string name="pref_disable_bt_prompt_title">ラジオオフでBTを無効にするか尋ねる</string>
+    <string name="pref_disable_bt_prompt_summary">ラジオのスイッチをオフにしたときに、Bluetoothを無効にするか尋ねます</string>
+    <string name="prompt_disable_bt">Bluetoothを無効にしますか?</string>
+    <string name="prompt_yes">はい</string>
+    <string name="prompt_no">いいえ</string>
+
+    <string name="pref_bt_behaviour_on_exit_title">ラジオオフ時のBluetooth挙動</string>
+    <string name="pref_bt_behaviour_on_exit_summary">いつも無効にする, 元の状態に戻す, 尋ねる,など</string>
+    <string name="pref_bt_behaviour_on_exit_dialog_title">Bluetoothの挙動を選択</string>
+
 </resources>
