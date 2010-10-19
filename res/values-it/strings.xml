@@ -49,12 +49,15 @@
     <string name="about_summary">Applicazione Radio FM creata da MIUI- http://www.miui.com</string>
 
     <string name="pref_disable_bt_prompt_title">Prompt disatt. BT</string>
-    <string name="pref_disable_bt_prompt_summary">Visualizza prompt di richiesta disattivazione Bluetooth a radio spenta</string>
+    <string name="pref_disable_bt_prompt_summary">Visualizza prompt di richiesta per disattivazione Bluetooth allo spegnimento della radio</string>
     <string name="prompt_disable_bt">Vuoi disattivare il Bluetooth?</string>
     <string name="prompt_yes">Si</string>
     <string name="prompt_no">No</string>
     
-    <string name="pref_bt_behaviour_on_exit_title">Comportamento Bluetooth</string>
+    <string name="pref_bt_behaviour_on_exit_title">Gestione BT</string>
     <string name="pref_bt_behaviour_on_exit_summary">Disattiva sempre, ripristina stato iniziale, prompt, etc.</string>
     <string name="pref_bt_behaviour_on_exit_dialog_title">Scegli comportamento Bluetooth</string>
+
+    <string name="pref_headset_behaviour_title">Gestione cuffie e BT</string>
+    <string name="pref_headset_behaviour_summary">Invoca il comportamento del Bluetooth anche alla rimozione delle cuffie</string>
 </resources>
