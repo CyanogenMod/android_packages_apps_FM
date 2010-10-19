@@ -350,7 +350,11 @@ public class FMRadio extends Activity {
         Log.d(LOGTAG, "FMRadio: onStart");
         try {
             if (mService != null) {
+                Log.d(LOGTAG, "FMRadio: onStart -> mService is not null");
                 mService.registerCallbacks(mServiceCallbacks);
+            }
+            else {
+                Log.d(LOGTAG, "FMRadio: onStart -> mService is null");
             }
         } catch (RemoteException e) {
             e.printStackTrace();
@@ -819,7 +823,6 @@ public class FMRadio extends Activity {
 
                 @Override
                 protected Boolean doInBackground(Void... params) {
-                    // 同步30秒
                     int n = 0;
                     try {
                         while (!mBluetoothEnabled && n < 30) {

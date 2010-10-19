@@ -8,6 +8,7 @@ import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -16,6 +17,7 @@ import android.hardware.fmradio.FmReceiver;
 import android.hardware.fmradio.FmRxEvCallbacksAdaptor;
 import android.hardware.fmradio.FmRxRdsData;
 import android.media.AudioManager;
+import android.media.AudioManager.OnAudioFocusChangeListener;
 import android.media.AudioSystem;
 import android.os.Handler;
 import android.os.IBinder;
@@ -27,7 +29,6 @@ import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.RemoteViews;
-import android.widget.Toast;
 
 import java.lang.ref.WeakReference;
 
@@ -37,52 +38,133 @@ import java.lang.ref.WeakReference;
  */
 public class FMRadioService extends Service {
 
-    public static final int RADIO_AUDIO_DEVIVE_WIRED_HEADSET = 0;
+    public static final String SERVICECMD = "com.android.fm.radio.fmservicecmd";
+    public static final String CMDNAME = "command";
+    public static final String CMDTOGGLEPAUSE = "togglepause";
+    public static final String CMDNEXT = "next";
+    public static final String CMDPREVIOUS = "previous";
 
-    public static final int RADIO_AUDIO_DEVIVE_SPEAKER_PHONE = 1;
+    /**
+     * Static translation for audio output going through a wired headset
+     */
+    public static final int RADIO_AUDIO_DEVICE_WIRED_HEADSET = 0;
 
+    /**
+     * Static translation for audio output going through speaker phone
+     */
+    public static final int RADIO_AUDIO_DEVICE_SPEAKER_PHONE = 1;
+
+    /**
+     * Points to the device node for the FM radio
+     */
     private static final String FMRADIO_DEVICE_FD_STRING = "/dev/radio0";
 
+    /**
+     * ID identifying this service when launched in the foreground
+     */
     private static final int FMRADIOSERVICE_STATUS = 101;
 
+    /**
+     * Code representing a msg in the notification bar
+     */
     private static final int UPDATE_STAT_NOTIFICATION = 1001;
 
-    private static final String LOGTAG = "FMService";// FMRadio.LOGTAG;
+    /**
+     * App name used in log messages
+     */
+    private static final String LOGTAG = "FMService";
 
+    private AudioManager mAudioManager;
+
+    /**
+     * Manipulates the FM radio hardware
+     */
     private FmReceiver mReceiver;
 
+    /**
+     * Receives Headset related Intents
+     */
     private BroadcastReceiver mHeadsetReceiver = null;
 
-    private IFMRadioServiceCallbacks mCallbacks;
-
-    private static FmSharedPreferences mPrefs;
-
-    private boolean mHeadsetPlugged = false;
-
-    private boolean mInternalAntennaAvailable = false;
-
-    private WakeLock mWakeLock;
-
-    private int mServiceStartId = -1;
-
-    private boolean mServiceInUse = false;
-
-    private boolean mMuted = false;
-
-    private boolean mResumeAfterCall = false;
-
-    private boolean mFMOn = false;
-
+    /**
+     * Receives Screen-On/Off related Intents
+     */
     private BroadcastReceiver mScreenOnOffReceiver = null;
 
+    /**
+     * Interface containing callback methods
+     */
+    private IFMRadioServiceCallbacks mCallbacks;
+
+    /**
+     * Handle to FM shared preferences
+     */
+    private static FmSharedPreferences mPrefs;
+
+    /**
+     * Defines whether a headset is currently plugged in
+     */
+    private boolean mHeadsetPlugged = false;
+
+    /**
+     * Defines whether an internal FM antenna is available
+     */
+    private boolean mInternalAntennaAvailable = false;
+
+    /**
+     * Allows access to keep the device awake
+     */
+    private WakeLock mWakeLock;
+
+    /**
+     * The service ID for the current running instance
+     */
+    private int mServiceStartId = -1;
+
+    /**
+     * Defines whether an instance of this service is currently running
+     */
+    private boolean mServiceInUse = false;
+
+    /**
+     * Defines if the audio is currently muted
+     */
+    private boolean mMuted = false;
+
+    /**
+     * Defines if the audio should be resumed after a call is completed
+     */
+    private boolean mResumeAfterCall = false;
+
+    /**
+     * Defines if the FM radio is currently enabled
+     */
+    private boolean mFMOn = false;
+
+    /**
+     * Generic Handler instance
+     */
     final Handler mHandler = new Handler();
 
+    /**
+     * Resource to read Radio Data System (RDS) information embedded in a
+     * radio stream if it exists
+     */
     private FmRxRdsData mFMRxRDSData = null;
 
+    /**
+     * Used to modify UI view hierarchies
+     */
     private RemoteViews statusBarViews = null;
 
+    /**
+     * Used to modify status bar notifications
+     */
     private Notification statusBarNotification = null;
 
+    /**
+     * Handler for Notifications
+     */
     private final Handler mNotificationHandler = new Handler() {
         public void handleMessage(Message msg) {
             switch (msg.what) {
@@ -93,10 +175,6 @@ public class FMRadioService extends Service {
                         statusBarViews.setTextViewText(R.id.frequency, getString(R.string.stat_no_fm));
                     }
                     startForeground(FMRADIOSERVICE_STATUS, statusBarNotification);
-                    // NotificationManager nm = (NotificationManager)
-                    // getSystemService(Context.NOTIFICATION_SERVICE);
-                    // nm.notify(FMRADIOSERVICE_STATUS, status);
-                    // setForeground(true);
                     break;
                 default:
                     super.handleMessage(msg);
@@ -105,9 +183,14 @@ public class FMRadioService extends Service {
         }
     };
 
-    // interval after which we stop the service when idle
+    /**
+     * Defines the interval after which we stop the service when idle
+     */
     private static final int IDLE_DELAY = 60000;
 
+    /**
+     * Default java constructor
+     */
     public FMRadioService() {
     }
 
@@ -115,20 +198,43 @@ public class FMRadioService extends Service {
     public void onCreate() {
         super.onCreate();
 
+        // Grab a handle to the AudioManager
+        mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+
+        // Register our MediaButtonEventReceiver so it receives the lockscreen events
+        mAudioManager.registerMediaButtonEventReceiver(new ComponentName(getPackageName(), 
+                FMMediaButtonIntentReceiver.class.getName()));
+
+        // Instantiate a handle to our shared preferences
+        // TODO: These should be stored in a properties file and read from via a ResourceBundle
         mPrefs = new FmSharedPreferences(this);
+
+        // Since this is the onCreate(), we set Callbacks to null
         mCallbacks = null;
+
+        // Handle to telephone resources
         TelephonyManager tmgr = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+
+        // Listen for phone call state
         tmgr.listen(mPhoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
+
+        // Handle for device power states
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+
+        // Resource to keep the device on a partial wake lock
         mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, this.getClass().getName());
         mWakeLock.setReferenceCounted(false);
-        /* Register for Screen On/off broadcast notifications */
+        
+        // Register for Screen On/off broadcast notifications
         registerScreenOnOffListener();
+
+        // Register for headset plug/unplug intents
         registerHeadsetListener();
 
-        // If the service was idle, but got killed before it stopped itself, the
-        // system will relaunch it. Make sure it gets stopped again in that
-        // case.
+        /* If the service was idle, but got killed before it stopped itself, the
+           system will relaunch it. Make sure it gets stopped again in that
+           case.
+         */
         Message msg = mDelayedStopHandler.obtainMessage();
         mDelayedStopHandler.sendMessageDelayed(msg, IDLE_DELAY);
 
@@ -139,8 +245,7 @@ public class FMRadioService extends Service {
         statusBarNotification.contentView = statusBarViews;
         statusBarNotification.flags |= Notification.FLAG_ONGOING_EVENT;
         statusBarNotification.icon = R.drawable.stat_notify_fm;
-        statusBarNotification.contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, FMRadio.class), 0);
+        statusBarNotification.contentIntent = PendingIntent.getActivity(this, 0, new Intent(this, FMRadio.class), 0);
     }
 
     @Override
@@ -152,6 +257,7 @@ public class FMRadioService extends Service {
 
         // make sure there aren't any other messages coming
         mDelayedStopHandler.removeCallbacksAndMessages(null);
+
         /* Remove the Screen On/off listener */
         if (mScreenOnOffReceiver != null) {
             unregisterReceiver(mScreenOnOffReceiver);
@@ -163,6 +269,9 @@ public class FMRadioService extends Service {
             mHeadsetReceiver = null;
         }
 
+        // Give up Audio focus so other music apps can utilize it
+        mAudioManager.abandonAudioFocus(mAudioFocusListener);
+
         /* Since the service is closing, disable the receiver */
         fmOff();
 
@@ -173,8 +282,40 @@ public class FMRadioService extends Service {
 
         // unregisterReceiver(mIntentReceiver);
         mWakeLock.release();
+
         super.onDestroy();
+
+        // Unregister as a receiver for media button events
+        mAudioManager.unregisterMediaButtonEventReceiver(new ComponentName(getPackageName(),
+                FMMediaButtonIntentReceiver.class.getName()));
     }
+
+    private OnAudioFocusChangeListener mAudioFocusListener = new OnAudioFocusChangeListener() {
+        public void onAudioFocusChange(int focusChange) {
+            switch (focusChange) {
+                case AudioManager.AUDIOFOCUS_LOSS:
+                    Log.v(LOGTAG, "AudioFocus: received AUDIOFOCUS_LOSS");
+                    if(isFmOn()) {
+                        stopFM();
+                    }
+                    break;
+                case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
+                    Log.v(LOGTAG, "AudioFocus: received AUDIOFOCUS_LOSS_TRANSIENT");
+                    if(isFmOn()) {
+                        stopFM();
+                    }
+                    break;
+                case AudioManager.AUDIOFOCUS_GAIN:
+                    Log.v(LOGTAG, "AudioFocus: received AUDIOFOCUS_GAIN");
+                    if(!isFmOn()) {
+                        startFM();
+                    }
+                    break;
+                default:
+                    Log.e(LOGTAG, "Unknown audio focus change code");
+            }
+        }
+    };
 
     /**
      * Registers an intent to listen for ACTION_HEADSET_PLUG notifications. This
@@ -247,15 +388,96 @@ public class FMRadioService extends Service {
     }
 
     @Override
-    public void onStart(Intent intent, int startId) {
-        Log.d(LOGTAG, "onStart");
+    public int onStartCommand(Intent intent, int flags, int startId) {
         mServiceStartId = startId;
+        mDelayedStopHandler.removeCallbacksAndMessages(null);
+
+        Log.d(LOGTAG, "StartId: "+startId);
+
+        if (intent != null) {
+            Log.d(LOGTAG, "onStartCommand: Intent received -> "+intent.toString());
+            // We don't act on Action for Lockscreen controls as the actual command is stored
+            // as an extra value in the Intent
+            String cmd = intent.getStringExtra(FMRadioService.CMDNAME);
+
+            if (FMRadioService.CMDTOGGLEPAUSE.equals(cmd)) {
+                Log.d(LOGTAG, "Play/Pause Intent received");
+
+                // This handles the PLAY action
+                if(isFmOn() && isMuted()) {
+                    Log.d(LOGTAG, "Unpausing FM radio playback");
+                    unMute();
+                    startFM();
+
+                    try {
+                        if (mCallbacks != null) {
+                            mCallbacks.onMute(false);
+                        }
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                }
+                // This handles the PAUSE action
+                else if(isFmOn() && !isMuted()) {
+                    Log.d(LOGTAG, "Pausing FM radio playback");
+                    mute();
+                    stopFM();
+
+                    try {
+                        if (mCallbacks != null) {
+                            mCallbacks.onMute(true);
+                        }
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            else if(FMRadioService.CMDNEXT.equals(cmd)) {
+                // Verify the FM radio is turned on
+                if(isFmOn()) {
+                    Log.d(LOGTAG, "Moving up in frequency");
+                    nextFrequency(true);
+
+                    try {
+                        /*
+                         * Notify the UI/Activity, only if the service is "bound" by
+                         * an activity and if Callbacks are registered
+                         */
+                        if ((mServiceInUse) && (mCallbacks != null)) {
+                            mCallbacks.onTuneStatusChanged();
+                        }
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            else if(FMRadioService.CMDPREVIOUS.equals(cmd)) {
+                // Verify the FM radio is turned on
+                if(isFmOn()) {
+                    Log.d(LOGTAG, "Moving down in frequency");
+                    nextFrequency(false);
+
+                    try {
+                        /*
+                         * Notify the UI/Activity, only if the service is "bound" by
+                         * an activity and if Callbacks are registered
+                         */
+                        if ((mServiceInUse) && (mCallbacks != null)) {
+                            mCallbacks.onTuneStatusChanged();
+                        }
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
 
         // make sure the service will shut down on its own if it was
         // just started but not bound to and nothing is playing
         mDelayedStopHandler.removeCallbacksAndMessages(null);
         Message msg = mDelayedStopHandler.obtainMessage();
         mDelayedStopHandler.sendMessageDelayed(msg, IDLE_DELAY);
+        return START_STICKY;
     }
 
     @Override
@@ -578,6 +800,8 @@ public class FMRadioService extends Service {
     private boolean fmOn() {
         boolean bStatus = false;
         Log.d(LOGTAG, "fmOn");
+        mAudioManager.registerMediaButtonEventReceiver(new ComponentName(getPackageName(), FMMediaButtonIntentReceiver.class.getName()));
+        mAudioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
 
         if (mReceiver == null) {
             mReceiver = new FmReceiver(FMRADIO_DEVICE_FD_STRING, null);
@@ -640,6 +864,7 @@ public class FMRadioService extends Service {
     private boolean fmOff() {
         boolean bStatus = false;
         Log.d(LOGTAG, "fmOff");
+        mAudioManager.abandonAudioFocus(mAudioFocusListener);
         stopFM();
         // This will disable the FM radio device
         if (mReceiver != null) {
@@ -705,8 +930,8 @@ public class FMRadioService extends Service {
         boolean bStatus = false;
         Log.d(LOGTAG, "routeAudio:");
         if (mReceiver != null) {
-            if ((audioDevice == RADIO_AUDIO_DEVIVE_WIRED_HEADSET)
-                    || (audioDevice == RADIO_AUDIO_DEVIVE_SPEAKER_PHONE)) {
+            if ((audioDevice == RADIO_AUDIO_DEVICE_WIRED_HEADSET)
+                    || (audioDevice == RADIO_AUDIO_DEVICE_SPEAKER_PHONE)) {
                 // Add API call when audio routing is supported
             } else {
                 Log.e(LOGTAG, "routeAudio: Unsupported Audio Device: " + audioDevice);
@@ -769,6 +994,43 @@ public class FMRadioService extends Service {
             bCommandSent = true;
             updateNotification();
         }
+        return bCommandSent;
+    }
+
+    /**
+     * Changes frequencies either higher or lower depending on {code boolean}
+     * passed in.
+     *
+     * @param up increments higher if {code true}, lower if {code false}
+     * @return result of command being issued
+     */
+    public boolean nextFrequency(boolean up) {
+        boolean bCommandSent = false;
+        int intNewFreq = 0;
+
+        // Verify we don't have a null handle to FmReceiver
+        if(mReceiver != null) {
+            /* We have to grab the current freq from FmSharedPreferences rather than mReceiver
+             * since any changes to freq get saved to FmSharedPreferences and NOT mReceiver
+             */
+            int intCurrFreq = FmSharedPreferences.getTunedFrequency();
+            Log.d(LOGTAG, "Current Tuned frequency: "+intCurrFreq);
+
+            if(up) {
+                intNewFreq = intCurrFreq + 100;
+            }
+            else {
+                intNewFreq = intCurrFreq - 100;
+            }
+            Log.d(LOGTAG, "New Frequency: "+intNewFreq);
+
+            // Update the new frequency in FmSharedPreferences
+            FmSharedPreferences.setTunedFrequency(intNewFreq);
+
+            // Call tune() to process the changes in FmReceiver
+            bCommandSent = tune(intNewFreq);
+        }
+
         return bCommandSent;
     }
 

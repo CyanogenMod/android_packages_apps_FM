@@ -15,77 +15,41 @@ import java.util.Map;
 
 public class FmSharedPreferences {
     public static final int REGIONAL_BAND_NORTH_AMERICA = 0;
-
     public static final int REGIONAL_BAND_EUROPE = 1;
-
     public static final int REGIONAL_BAND_JAPAN = 2;
-
     public static final int REGIONAL_BAND_JAPAN_WIDE = 3;
-
     public static final int REGIONAL_BAND_AUSTRALIA = 4;
-
     public static final int REGIONAL_BAND_AUSTRIA = 5;
-
     public static final int REGIONAL_BAND_BELGIUM = 6;
-
     public static final int REGIONAL_BAND_BRAZIL = 7;
-
     public static final int REGIONAL_BAND_CHINA = 8;
-
     public static final int REGIONAL_BAND_CZECH = 9;
-
     public static final int REGIONAL_BAND_DENMARK = 10;
-
     public static final int REGIONAL_BAND_FINLAND = 11;
-
     public static final int REGIONAL_BAND_FRANCE = 12;
-
     public static final int REGIONAL_BAND_GERMANY = 13;
-
     public static final int REGIONAL_BAND_GREECE = 14;
-
     public static final int REGIONAL_BAND_HONGKONG = 15;
-
     public static final int REGIONAL_BAND_INDIA = 16;
-
     public static final int REGIONAL_BAND_IRELAND = 17;
-
     public static final int REGIONAL_BAND_ITALY = 18;
-
     public static final int REGIONAL_BAND_KOREA = 19;
-
     public static final int REGIONAL_BAND_MEXICO = 20;
-
     public static final int REGIONAL_BAND_NETHERLANDS = 21;
-
     public static final int REGIONAL_BAND_NEWZEALAND = 22;
-
     public static final int REGIONAL_BAND_NORWAY = 23;
-
     public static final int REGIONAL_BAND_POLAND = 24;
-
     public static final int REGIONAL_BAND_PORTUGAL = 25;
-
     public static final int REGIONAL_BAND_RUSSIA = 26;
-
     public static final int REGIONAL_BAND_SINGAPORE = 27;
-
     public static final int REGIONAL_BAND_SLOVAKIA = 28;
-
     public static final int REGIONAL_BAND_SPAIN = 29;
-
     public static final int REGIONAL_BAND_SWITZERLAND = 30;
-
     public static final int REGIONAL_BAND_SWEDEN = 31;
-
     public static final int REGIONAL_BAND_TAIWAN = 32;
-
     public static final int REGIONAL_BAND_TURKEY = 33;
-
     public static final int REGIONAL_BAND_UNITEDKINGDOM = 34;
-
     public static final int REGIONAL_BAND_UNITED_STATES = 35;
-
     public static final int REGIONAL_BAND_DEFAULT = REGIONAL_BAND_CHINA;
 
     private static final String LOGTAG = FMRadio.LOGTAG;
@@ -111,12 +75,7 @@ public class FmSharedPreferences {
     private static final String FMCONFIG_COUNTRY = "fmconfig_country";
 
     private static final String FMSPEAKER = "fm_speaker";
-    // private static final String FMCONFIG_BAND = "fmconfig_band";
-    // private static final String FMCONFIG_MIN = "fmconfig_min";
-    // private static final String FMCONFIG_MAX = "fmconfig_max";
-    // private static final String FMCONFIG_STEP = "fmconfig_step";
-    // private static final String FMCONFIG_EMPH = "fmconfig_emphasis";
-    // private static final String FMCONFIG_RDSSTD = "fmconfig_rdsstd";
+
     /* Storage key String */
     private static final String LAST_LIST_INDEX = "last_list_index";
 
