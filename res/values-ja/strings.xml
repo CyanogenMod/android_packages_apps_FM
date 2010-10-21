@@ -59,8 +59,9 @@
     <string name="prompt_yes">はい</string>
     <string name="prompt_no">いいえ</string>
 
-    <string name="pref_bt_behaviour_on_exit_title">ラジオオフ時のBluetooth挙動</string>
-    <string name="pref_bt_behaviour_on_exit_summary">いつも無効にする, 元の状態に戻す, 尋ねる,など</string>
-    <string name="pref_bt_behaviour_on_exit_dialog_title">Bluetoothの挙動を選択</string>
-
+    <string name="pref_bt_behaviour_on_exit_title">ラジオオフ時のBluetooth動作</string>
+    <string name="pref_bt_behaviour_on_exit_summary">いつも無効にする, 元の状態に戻す, ユーザに尋ねるなど</string>
+    <string name="pref_bt_behaviour_on_exit_dialog_title">Bluetoothの動作を選択</string>
+    <string name="pref_headset_behaviour_title">ヘッドセットとBluetooth</string>
+    <string name="pref_headset_behaviour_summary">ヘッドセット接続を解除したときBluetoothの動作も連動させる</string>
 </resources>
