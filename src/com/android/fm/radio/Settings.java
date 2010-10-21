@@ -173,7 +173,7 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
         mRemoveHeadset = new CheckBoxPreference(this);
         mRemoveHeadset.setKey(HEADSET_DC_BEHAVIOUR);
         mRemoveHeadset.setTitle(R.string.pref_headset_behaviour_title);
-        mRemoveHeadset.setSummary(R.string.pref_headset_behaviour_title);
+        mRemoveHeadset.setSummary(R.string.pref_headset_behaviour_summary);
         mRemoveHeadset.setChecked(FmSharedPreferences.getHeadsetDcBehaviour());
         root.addPreference(mRemoveHeadset);
 
