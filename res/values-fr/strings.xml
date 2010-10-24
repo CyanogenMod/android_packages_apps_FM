@@ -62,4 +62,6 @@
     <string name="pref_bt_behaviour_on_exit_title">Comportement de BT à la fermeture</string>
     <string name="pref_bt_behaviour_on_exit_summary">Toujours désactiver, restaurer l\'état initial, demander, etc.</string>
     <string name="pref_bt_behaviour_on_exit_dialog_title">Choisir un comportement Bluetooth</string>
+    <string name="pref_headset_behaviour_title">Débranchement du casque</string>
+    <string name="pref_headset_behaviour_summary">Appliquer l\'action de fermeture Bluetooth lorsque le casque est débranché</string>
 </resources>
