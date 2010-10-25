@@ -573,7 +573,7 @@ public class FmSharedPreferences {
                 band = FmReceiver.FM_US_BAND;
                 mFMConfiguration.setLowerLimit(87500);
                 mFMConfiguration.setUpperLimit(107900);
-                mFrequencyBand_Stepsize = 100;
+                mFrequencyBand_Stepsize = 200;
             }
         }
         mFMConfiguration.setRadioBand(band);
