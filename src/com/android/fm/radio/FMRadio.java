@@ -387,14 +387,11 @@ public class FMRadio extends Activity {
             mTunedStation.Copy(station);
         }
 
-
         mHandler.post(mUpdateProgramService);
         mHandler.post(mUpdateRadioText);
         updateStationInfoToUI();
 
         enableRadioOnOffUI();
-
-        AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         setSpeakerUI(FmSharedPreferences.getSpeaker());
 
@@ -783,10 +780,10 @@ public class FMRadio extends Activity {
 
     private View.OnClickListener mTurnOnOffClickListener = new View.OnClickListener() {
         public void onClick(View v) {
-
             if (isFmOn()) {
                 disableRadio();
-            } else {
+            }
+            else {
                 asyncCheckAndEnableRadio();
             }
             setTurnOnOffButtonImage();
@@ -812,12 +809,17 @@ public class FMRadio extends Activity {
     }
 
     private void asyncCheckAndEnableRadio() {
+        Log.d(LOGTAG, "asyncCheckAndEnableRadio");
+
+        // Save the initial state of the BT adapter
         mBluetoothEnabled = BluetoothAdapter.getDefaultAdapter().isEnabled();
         mInitialBtState  = mBluetoothEnabled;
 
         if (mBluetoothEnabled) {
             enableRadio();
-        } else {
+        }
+        else {
+            // Enable the BT adapter
             BluetoothAdapter.getDefaultAdapter().enable();
 
             AsyncTask<Void, Void, Boolean> task = new AsyncTask<Void, Void, Boolean>() {
@@ -827,12 +829,7 @@ public class FMRadio extends Activity {
                         mBluetoothStartingDialog.dismiss();
                         mBluetoothStartingDialog = null;
                     }
-                    mBluetoothStartingDialog = ProgressDialog.show(
-                        FMRadio.this,
-                        null,
-                        getString(R.string.init_FM),
-                        true,
-                        false);
+                    mBluetoothStartingDialog = ProgressDialog.show(FMRadio.this,null,getString(R.string.init_FM),true,false);
                     super.onPreExecute();
                 }
 
@@ -858,7 +855,8 @@ public class FMRadio extends Activity {
                     }
                     if (mBluetoothEnabled){
                         enableRadio();
-                    } else {
+                    }
+                    else {
                         Toast toast = Toast.makeText(FMRadio.this,
                                 getString(R.string.need_bluetooth),
                                 Toast.LENGTH_LONG);
@@ -891,9 +889,24 @@ public class FMRadio extends Activity {
 
                 if (bStatus) {
                     if (isAntennaAvailable()) {
+                        // Set the previously tuned frequency
                         mFreqIndicator.setFrequency(FmSharedPreferences.getTunedFrequency());
+
+                        // The output device is not set on a FM radio power on so we do it here
+                        if(FmSharedPreferences.getSpeaker()) {
+                           switchToSpeaker();
+                        }
+                        else {
+                           switchToHeadset();
+                        }
+
+                        // Update the speaker icon
+                        setSpeakerUI(FmSharedPreferences.getSpeaker());
+
+                        // Turn on the FM radio
                         enableRadioOnOffUI();
-                    } else {
+                    }
+                    else {
                         Toast toast =Toast.makeText(this,
                                 getString(R.string.need_headset_for_antenna),
                                 Toast.LENGTH_LONG);
@@ -914,33 +927,55 @@ public class FMRadio extends Activity {
 
     private void disableRadio() {
         boolean bStatus = false;
+
+        // Cancel a frequency search if one was ongoing
         cancelSearch();
         endSleepTimer();
+
+        // Check if our service stub is valid
         if (mService != null) {
             try {
+                // Save the current tuned frequency so on on re-enable we revert back to it
                 FmSharedPreferences.setTunedFrequency(mFreqIndicator.getFrequency());
+
+                // Mute the audio
                 mService.mute();
+
+                // Turn off the FM radio
                 bStatus = mService.fmOff();
+
+                // Update the On/Off button in the UI to show off state
                 enableRadioOnOffUI();
+
                 if (bStatus == false) {
                     mCommandFailed = CMD_FMOFF;
                     Log.e(LOGTAG, " mService.fmOff failed");
                     // showDialog(DIALOG_CMD_FAILED);
-                } else {
+                }
+                else {
                     /* shut down force use */
                     AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
                 }
+
+                // Toggle BT on/off depending on value in preferences
                 toggleRadioOffBluetoothBehaviour();
-            } catch (RemoteException e) {
+            }
+            catch (RemoteException e) {
                 Log.e(LOGTAG, "RemoteException in disableRadio", e);
             }
         }
     }
 
     private void toggleRadioOffBluetoothBehaviour() {
+        Log.d(LOGTAG, "toggleRadioOffBluetoothBehavior");
+
+        // Check if the BT adapter is currently enabled
         if (BluetoothAdapter.getDefaultAdapter().isEnabled()) {
             switch (mPrefs.getBluetoothExitBehaviour()) {
-                // Do nothing for case 0
+                case 0:
+                    Log.d(LOGTAG, "toggleRadioOffBluetoothBehavior: Preference is to leave BT "+
+                                  "adapter on so not disabling");
+                    break;
                 case 1: // Restore initial BT state
                     if (!mInitialBtState) {
                         BluetoothAdapter.getDefaultAdapter().disable();
@@ -1043,10 +1078,12 @@ public class FMRadio extends Activity {
 
     private void enableRadioOnOffUI() {
         boolean bEnable = isFmOn();
+
         /* Disable if no antenna/headset is available */
         if (!isAntennaAvailable()) {
             bEnable = false;
         }
+
         enableRadioOnOffUI(bEnable);
     }
 
