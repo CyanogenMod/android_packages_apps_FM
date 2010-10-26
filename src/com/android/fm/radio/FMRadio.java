@@ -18,6 +18,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.hardware.fmradio.FmConfig;
+import android.media.AudioManager;
 import android.media.AudioSystem;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -350,7 +351,6 @@ public class FMRadio extends Activity {
         Log.d(LOGTAG, "FMRadio: onStart");
         try {
             if (mService != null) {
-                Log.d(LOGTAG, "FMRadio: onStart -> mService is not null");
                 mService.registerCallbacks(mServiceCallbacks);
             }
             else {
@@ -372,19 +372,34 @@ public class FMRadio extends Activity {
     @Override
     public void onResume() {
         super.onResume();
+
         Log.d(LOGTAG, "FMRadio: onResume");
+
+        // Re-load FM preferences
         mPrefs.Load();
+
+        // Grab the station from the tuned frequency
         PresetStation station = FmSharedPreferences.getStationFromFrequency(FmSharedPreferences
                 .getTunedFrequency());
+
+        // If we were able to retrieve the station then set that as our tuned station
         if (station != null) {
             mTunedStation.Copy(station);
         }
+
+
         mHandler.post(mUpdateProgramService);
         mHandler.post(mUpdateRadioText);
         updateStationInfoToUI();
 
         enableRadioOnOffUI();
+
+        AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+
         setSpeakerUI(FmSharedPreferences.getSpeaker());
+
+        AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_UNAVAILABLE, "");
+        AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_AVAILABLE, "");
     }
 
     private void setSpeakerUI(boolean on) {

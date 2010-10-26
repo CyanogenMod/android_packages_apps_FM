@@ -202,7 +202,7 @@ public class FMRadioService extends Service {
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         // Register our MediaButtonEventReceiver so it receives the lockscreen events
-        mAudioManager.registerMediaButtonEventReceiver(new ComponentName(getPackageName(), 
+        mAudioManager.registerMediaButtonEventReceiver(new ComponentName(getPackageName(),
                 FMMediaButtonIntentReceiver.class.getName()));
 
         // Instantiate a handle to our shared preferences
@@ -224,7 +224,7 @@ public class FMRadioService extends Service {
         // Resource to keep the device on a partial wake lock
         mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, this.getClass().getName());
         mWakeLock.setReferenceCounted(false);
-        
+
         // Register for Screen On/off broadcast notifications
         registerScreenOnOffListener();
 
@@ -269,6 +269,8 @@ public class FMRadioService extends Service {
             mHeadsetReceiver = null;
         }
 
+        Log.d(LOGTAG, "onDestroy: Giving up audio focus");
+
         // Give up Audio focus so other music apps can utilize it
         mAudioManager.abandonAudioFocus(mAudioFocusListener);
 
@@ -295,19 +297,25 @@ public class FMRadioService extends Service {
             switch (focusChange) {
                 case AudioManager.AUDIOFOCUS_LOSS:
                     Log.v(LOGTAG, "AudioFocus: received AUDIOFOCUS_LOSS");
+
                     if(isFmOn()) {
                         stopFM();
                     }
                     break;
                 case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
                     Log.v(LOGTAG, "AudioFocus: received AUDIOFOCUS_LOSS_TRANSIENT");
+
                     if(isFmOn()) {
+                        Log.d(LOGTAG, "AudioFocus: FM is on, turning off");
                         stopFM();
                     }
                     break;
                 case AudioManager.AUDIOFOCUS_GAIN:
                     Log.v(LOGTAG, "AudioFocus: received AUDIOFOCUS_GAIN");
+
                     if(!isFmOn()) {
+                        Log.d(LOGTAG, "AudioFocus: FM is off, turning back on");
+
                         startFM();
                     }
                     break;
@@ -513,10 +521,11 @@ public class FMRadioService extends Service {
         @Override
         public void onCallStateChanged(int state, String incomingNumber) {
             Log.d(LOGTAG, "onCallStateChanged: State - " + state);
-            Log.d(LOGTAG, "onCallStateChanged: incomingNumber - " + incomingNumber);
-            AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+
+            //AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+
             if (state == TelephonyManager.CALL_STATE_RINGING) {
-                int ringvolume = audioManager.getStreamVolume(AudioManager.STREAM_RING);
+                int ringvolume = mAudioManager.getStreamVolume(AudioManager.STREAM_RING);
                 if (ringvolume > 0) {
                     mute();
                     stopFM();
@@ -546,11 +555,21 @@ public class FMRadioService extends Service {
             else if (state == TelephonyManager.CALL_STATE_IDLE) {
                 // start playing again
                 if (mResumeAfterCall) {
+                    Log.d(LOGTAG, "onCallStateChanged: Re-enabling FM now that phone call has ended");
+
                     // resume playback only if FM Radio was playing
                     // when the call was answered
                     // unMute-FM
                     unMute();
                     startFM();
+
+                    // Re-enable audio focus as the phone call stole it away
+                    mAudioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
+
+                    // Register our MediaButtonEventReceiver so it receives the lockscreen events and volume control events
+                    mAudioManager.registerMediaButtonEventReceiver(new ComponentName(getPackageName(),
+                            FMMediaButtonIntentReceiver.class.getName()));
+
                     mResumeAfterCall = false;
                     try {
                         if (mCallbacks != null) {
