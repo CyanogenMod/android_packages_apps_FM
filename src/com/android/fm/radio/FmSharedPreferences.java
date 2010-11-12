@@ -774,7 +774,7 @@ public class FmSharedPreferences {
             }
             case REGIONAL_BAND_ITALY: {// - ITALY 87500 TO 108000 IN 50 KHZ
                                        // STEPS
-                mFMConfiguration.setChSpacing(FmReceiver.FM_CHSPACE_50_KHZ);
+                mFMConfiguration.setChSpacing(FmReceiver.FM_CHSPACE_100_KHZ);
                 break;
             }
             case REGIONAL_BAND_KOREA: {// - KOREA 87500 TO 108000 IN 200 KHZ
