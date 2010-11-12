@@ -50,7 +50,7 @@ public class FmSharedPreferences {
     public static final int REGIONAL_BAND_TURKEY = 33;
     public static final int REGIONAL_BAND_UNITEDKINGDOM = 34;
     public static final int REGIONAL_BAND_UNITED_STATES = 35;
-    public static final int REGIONAL_BAND_DEFAULT = REGIONAL_BAND_CHINA;
+    public static final int REGIONAL_BAND_DEFAULT = REGIONAL_BAND_NORTH_AMERICA;
 
     private static final String LOGTAG = FMRadio.LOGTAG;
 
@@ -406,7 +406,7 @@ public class FmSharedPreferences {
             }
         }
 
-        /* Load Configuration, default is China */
+        /* Load Configuration */
         setCountry(sp.getInt(FMCONFIG_COUNTRY, REGIONAL_BAND_DEFAULT));
         /* Load speaker state */
         setSpeaker(sp.getBoolean(FMSPEAKER, false));
@@ -470,6 +470,12 @@ public class FmSharedPreferences {
         mListIndex = 0;
         mListOfPlists.clear();
         setCountry(REGIONAL_BAND_DEFAULT);
+        setRadioBand(0);
+        setChSpacing(0);
+        setEmphasis(0);
+        setRdsStd(0);
+        mFMConfiguration.setLowerLimit(87500);
+        mFMConfiguration.setUpperLimit(107900);
     }
 
     public static void removeStationList(int listIndex) {

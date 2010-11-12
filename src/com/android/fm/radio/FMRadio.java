@@ -177,7 +177,7 @@ public class FMRadio extends Activity {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             int stepSize = FmSharedPreferences.getBandStepSize();
-            int frequency = ((lowerLimit + progress) / stepSize ) * stepSize;
+            int frequency = lowerLimit + ((progress / stepSize ) * stepSize);
             // change frequency
             tuneRadio(frequency);
         }
