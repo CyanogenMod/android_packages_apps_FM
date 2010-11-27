@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">FM радио</string>
+    <string name="tx_app_name">FM передатчик</string>
+    <string name="preset_delete">Удалить</string>
+    <string name="stat_notif_frequency">FM радио: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
+
+    <string name="sel_band_menu">Выбор региона</string>
+    <string name="settings_menu">Настройки</string>
+    <string name="regional_band">Регионы</string>
+
+    <string name="aud_output_mode">Режим аудиовыхода</string>
+    <string name="sel_audio_output">Выбор аудиовыхода</string>
+
+    <string name="record_dur">Продолжительность записи</string>
+    <string name="sel_rec_dur">Выбор продолжительность записи</string>
+
+    <string name="auto_select_af">Дополнительная частота</string>
+    <string name="auto_select_af_enabled">Автоматический выбор включен</string>
+    <string name="auto_select_af_disabled">Автоматический выбор выключен</string>
+
+    <string name="fac_defaults">Сброс настроек</string>
+    <string name="revert_to_fac">Сброс настроек</string>
+    <string name="settings_back">Назад</string>
+
+    <string name="settings_revert_confirm_title">Подтверждение сброса</string>
+    <string name="settings_revert_confirm_msg">Удаляться все настройки, включая установки!</string>
+
+    <string name="settings_back_summary">Возврат к предыдущему виду</string>
+    <string name="settings_revert_defaults_title">Сброс настроек</string>
+    <string name="settings_revert_defaults_summary">Сброс всех настроек до умолчания</string>
+
+    <string name="alert_dialog_ok">OK</string>
+    <string name="alert_dialog_cancel">Отмена</string>
+
+    <string name="preset_search">Поиск"<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
+
+    <string name="fm_command_failed_title">Сбой FM операции</string>
+    <string name="fm_cmd_failed_msg">Сбой операции. Возможные причины: не подключена проводная гарнитура как антена, не включен Bluetooth, телефон в режиме разговора или FM радио закрыто. Пожалуйста, проверьте и попробуйте еще раз.</string>
+
+    <skip/>
+    <!-- Do not translate. Duration format. -->
+    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
+
+    <string name="frequency_string"></string>
+    <string name="stat_no_fm">FM радио не включено</string>
+
+    <!-- Added by LIBRA -->
+    <string name="need_headset_for_antenna">Пожалуйста, подключить проводную гарнитуру, которая будет использоваться в качестве FM антенны.</string>
+    <string name="init_FM">Включение Bluetooth для поддержки FM радио...</string>
+    <string name="need_bluetooth">Пожалуйста, включите Bluetooth</string>
+
+    <string name="about_title">О программе</string>
+    <string name="about_summary">Приложение FM радио от MIUI - http://www.miui.com</string>
+
+    <string name="pref_disable_bt_prompt_title">Запрос на выключение BT, когда выключается радио</string>
+    <string name="pref_disable_bt_prompt_summary">Запрос у пользователя выключение Bluetooth, когда FM радио выключается</string>
+    <string name="prompt_disable_bt">Вы желаете выключить Bluetooth?</string>
+    <string name="prompt_yes">Да</string>
+    <string name="prompt_no">Нет</string>
+
+    <string name="pref_bt_behaviour_on_exit_title">Режим Bluetooth при выключении радио</string>
+    <string name="pref_bt_behaviour_on_exit_summary">Всегда выключать, восстанавливать начальное состояние, подсказки и т.д.</string>
+    <string name="pref_bt_behaviour_on_exit_dialog_title">Выбор режима Bluetooth</string>
+
+    <string name="pref_headset_behaviour_title">Гарнитура и Bluetooth режим</string>
+    <string name="pref_headset_behaviour_summary">Вызывать режим Bluetooth, когда гарнитура отключена</string>
+
+</resources>
