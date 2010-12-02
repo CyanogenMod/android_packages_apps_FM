@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Ràdio FM</string>
+  <string name="tx_app_name">Transmissor de FM</string>
+  <string name="preset_delete">Suprimeix</string>
+  <string name="stat_notif_frequency">Ràdio FM: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
+  <string name="sel_band_menu">Selecciona banda regional</string>
+  <string name="settings_menu">Paràmetres</string>
+  <string name="regional_band">Banda regional</string>
+  <string name="aud_output_mode">Mode de sortida d\'àudio</string>
+  <string name="sel_audio_output">Seleccioneu sortida d\'àudio</string>
+  <string name="record_dur">Durada de gravació</string>
+  <string name="sel_rec_dur">Selecciona el temps de gravació</string>
+  <string name="auto_select_af">Selecció automàtica AF</string>
+  <string name="auto_select_af_enabled">Selecció automàtica activada</string>
+  <string name="auto_select_af_disabled">Selecció automàtica desactivada</string>
+  <string name="fac_defaults">Restaura la configuració predeterminada</string>
+  <string name="revert_to_fac">Restaura la configuració predeterminada</string>
+  <string name="settings_back">Enrere</string>
+  <string name="settings_revert_confirm_title">Confirma restablir configuració</string>
+  <string name="settings_revert_confirm_msg">Això eliminarà tota configuració, la preestablerta inclosa</string>
+  <string name="settings_back_summary">Torna a la vista anterior</string>
+  <string name="settings_revert_defaults_title">Torna als valors de fàbrica</string>
+  <string name="settings_revert_defaults_summary">Restablir tots els paràmetres</string>
+  <string name="alert_dialog_ok">D\'acord</string>
+  <string name="alert_dialog_cancel">Cancel·la</string>
+  <string name="preset_search">Cerca"<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
+  <string name="fm_command_failed_title">Operació FM fallida</string>
+  <string name="fm_cmd_failed_msg">L\'operació ha fallat. Possibles causes: no has connectat els auriculars, no has activat el Bluetooth, el telèfon està realitzant una trucada, o s\'ha tancat la ràdio. Comprova-ho i intenta-ho de nou.</string>
+  <string name="frequency_string">frequency_string</string>
+  <string name="stat_no_fm">La ràdio FM no està engegada</string>
+  <string name="need_headset_for_antenna">Error! Connecta els auriculars com a antena.</string>
+  <string name="init_FM">Sisplau espera, activant el bluetooth...</string>
+  <string name="need_bluetooth">Error! Sisplau activa el bluetooth.</string>
+  <string name="about_title">Quant a</string>
+  <string name="about_summary">Aplicació de ràdio FM de MIUI - http://www.miui.com</string>
+  <string name="pref_disable_bt_prompt_title">Demana desactivar el BT en apagar la ràdio</string>
+  <string name="pref_disable_bt_prompt_summary">Demana a l\'usuari desactivar el Bluetooth en apagar la ràdio</string>
+  <string name="prompt_disable_bt">Voleu inhabilitar el Bluetooth?</string>
+  <string name="prompt_yes">Sí</string>
+  <string name="prompt_no">No</string>
+  <string name="pref_bt_behaviour_on_exit_title">Comportament del bluetooth en apagar la ràdio</string>
+  <string name="pref_bt_behaviour_on_exit_summary">Desactiva sempre, restaura l\'estat inicial, etc.</string>
+  <string name="pref_bt_behaviour_on_exit_dialog_title">Configura el comportament del bluetooth</string>
+  <string name="pref_headset_behaviour_title">Comportament dels auriculars i el bluetooth</string>
+  <string name="pref_headset_behaviour_summary">Invoca el comportament del bluetooth quan es desendollen els auriculars</string>
+</resources>
