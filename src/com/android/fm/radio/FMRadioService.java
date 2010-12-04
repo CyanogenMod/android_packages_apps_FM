@@ -302,6 +302,13 @@ public class FMRadioService extends Service {
                         stopFM();
                     }
                     break;
+                case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK:
+                    Log.v(LOGTAG, "AudioFocus: received AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK");
+
+                    if (isFmOn()) {
+                        Log.d(LOGTAG, "AudioFocus: FM is on, turning off");
+                    }
+                    break;
                 case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
                     Log.v(LOGTAG, "AudioFocus: received AUDIOFOCUS_LOSS_TRANSIENT");
 
@@ -320,7 +327,7 @@ public class FMRadioService extends Service {
                     }
                     break;
                 default:
-                    Log.e(LOGTAG, "Unknown audio focus change code");
+                    Log.e(LOGTAG, "Unknown audio focus change code " + focusChange);
             }
         }
     };
