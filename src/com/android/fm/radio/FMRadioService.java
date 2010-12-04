@@ -296,10 +296,10 @@ public class FMRadioService extends Service {
         public void onAudioFocusChange(int focusChange) {
             switch (focusChange) {
                 case AudioManager.AUDIOFOCUS_LOSS:
-                    Log.v(LOGTAG, "AudioFocus: received AUDIOFOCUS_LOSS");
+                    Log.v(LOGTAG, "AudioFocus: received AUDIOFOCUS_LOSS, turning FM off");
 
                     if(isFmOn()) {
-                        stopFM();
+                        fmOff();
                     }
                     break;
                 case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK:
@@ -307,6 +307,7 @@ public class FMRadioService extends Service {
 
                     if (isFmOn()) {
                         Log.d(LOGTAG, "AudioFocus: FM is on, turning off");
+                        mute();
                         stopFM();
                     }
                     break;
@@ -315,6 +316,7 @@ public class FMRadioService extends Service {
 
                     if(isFmOn()) {
                         Log.d(LOGTAG, "AudioFocus: FM is on, turning off");
+                        mute();
                         stopFM();
                     }
                     break;
