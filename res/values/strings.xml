@@ -3,7 +3,7 @@
     <string name="app_name">FM Radio</string>
     <string name="tx_app_name">FM Transmitter</string>
     <string name="preset_delete">Delete</string>
-    <string name="stat_notif_frequency">FM Radio: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
+    <string name="stat_notif_frequency">Frequency: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
 
     <string name="sel_band_menu">Select regional band</string>
     <string name="settings_menu">Settings</string>
