@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+  <string-array name="bt_exit_behaviour_entries">
+    <item>아무것도 하지 않음 (활성 상태로 둠)</item>
+    <item>이전 블루투스 상태로 복원</item>
+    <item>사용자 선택 창 보임</item>
+    <item>항상 비활성화</item>
+  </string-array>
+
+  <string-array name="ster_mon_entries">
+    <item>스테레오</item>
+    <item>모노</item>
+  </string-array>
+
+  <string-array name="record_durations_entries">
+    <item>5 분</item>
+    <item>15 분</item>
+    <item>30 분</item>
+    <item>제한없음</item>
+  </string-array>
+
+  <string-array name="search_category_rbds_entries">
+    <item>All Stations </item>
+    <item>Adult Hits</item>
+    <item>Classical</item>
+    <item>Classic Rock</item>
+    <item>College</item>
+    <item>Country</item>
+    <item>Emergency</item>
+    <item>Emergency Test</item>
+    <item>Foreign Language</item>
+    <item>Information</item>
+    <item>Jazz</item>
+    <item>News</item>
+    <item>Nostalgia</item>
+    <item>Oldies</item>
+    <item>Personality</item>
+    <item>Public</item>
+    <item>Religious Music</item>
+    <item>Religious Talk</item>
+    <item>Rhythm and Blues</item>
+    <item>Rock</item>
+    <item>Soft</item>
+    <item>Soft Rock</item>
+    <item>Soft Rhythm and Blues</item>
+    <item>Sports</item>
+    <item>Talk</item>
+    <item>Top 40</item>
+    <item>Weather</item>
+  </string-array>
+
+  <string-array name="search_category_rds_entries">
+    <item>All Stations</item>
+    <item>Culture</item>
+    <item>Current Affairs</item>
+    <item>Children programs</item>
+    <item>Country Music</item>
+    <item>Documentary</item>
+    <item>Drama</item>
+    <item>Easy Listening Music</item>
+    <item>Education</item>
+    <item>Emergency</item>
+    <item>Emergency Test</item>
+    <item>Finance</item>
+    <item>Folk Music</item>
+    <item>Information</item>
+    <item>Jazz Music</item>
+    <item>Light classical</item>
+    <item>Leisure</item>
+    <item>News</item>
+    <item>National Music</item>
+    <item>Other Music</item>
+    <item>Oldies Music</item>
+    <item>Phone In</item>
+    <item>Pop Music</item>
+    <item>Religion</item>
+    <item>Rock Music</item>
+    <item>Science</item>
+    <item>Serious classical</item>
+    <item>Social Affairs</item>
+    <item>Sport</item>
+    <item>Travel</item>
+    <item>Varied</item>
+    <item>Weather</item>
+  </string-array>
+
+  <string-array name="presetlist_edit_category">
+    <item>이름바꾸기</item>
+    <item>자동선택</item>
+    <item>지우기</item>
+  </string-array>
+
+  <string-array name="regional_band_entries">
+    <item>북미</item>
+    <item>유럽</item>
+    <item>일본</item>
+    <item>일본(확장)</item>
+    <item>호주</item>
+    <item>오스트리아</item>
+    <item>벨기에</item>
+    <item>브라질</item>
+    <item>중국</item>
+    <item>체코</item>
+    <item>덴마크</item>
+    <item>핀란드</item>
+    <item>프랑스</item>
+    <item>독일</item>
+    <item>그리스</item>
+    <item>홍콩</item>
+    <item>인도</item>
+    <item>아일랜드</item>
+    <item>이탈리아</item>
+    <item>대한민국</item>
+    <item>멕시코</item>
+    <item>네덜란드</item>
+    <item>뉴질랜드</item>
+    <item>노르웨이</item>
+    <item>폴란드</item>
+    <item>포르투갈</item>
+    <item>러시아</item>
+    <item>싱가포르</item>
+    <item>슬로바키아</item>
+    <item>스페인</item>
+    <item>스위스</item>
+    <item>스웨덴</item>
+    <item>타이완</item>
+    <item>터키</item>
+    <item>영국</item>
+    <item>미국</item>
+  </string-array>
+
+  <string-array name="regional_band_summary">
+    <item>북미 (87.5MHz ~ 108.0MHz. 200 Khz 간격)</item>
+    <item>유럽 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>일본 (76.0MHz ~  90.0MHz. 100 Khz 간격)</item>
+    <item>일본(확장) (90.0MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>호주 (87.7MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>오스트리아Austria (87.5MHz ~ 108.0MHz.  50 Khz 간격)</item>
+    <item>벨기에 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>브라질 (87.8MHz ~ 108.0MHz. 200 Khz Step)</item>
+    <item>중국 (87.0MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>체코 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>덴마크 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>핀란드 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>프랑스 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>독일 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>그리스 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>홍콩 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>인도 (91.0MHz ~ 106.4MHz. 100 Khz 간격)</item>
+    <item>아일랜드 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>이탈리아 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>대한민국 (87.5MHz ~ 108.0MHz. 200 Khz 간격)</item>
+    <item>멕시코 (88.1MHz ~ 107.9MHz. 200 Khz 간격)</item>
+    <item>네덜란드 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>뉴질랜드 (88.0MHz ~ 107.0MHz. 100 Khz 간격)</item>
+    <item>노르웨이 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>폴란드 (88.0MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>포르투갈 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>러시아 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>싱가포르 (88.0MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>슬로바키아 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>스페인 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>스위스 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>스웨덴 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>타이완 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>터키 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>영국 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>미국 (88.1MHz ~ 107.9MHz. 200 Khz 간격)</item>
+  </string-array>
+
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">FM 라디오</string>
+    <string name="tx_app_name">FM 트랜스미터</string>
+    <string name="preset_delete">삭제</string>
+    <string name="stat_notif_frequency">FM 라디오: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
+
+    <string name="sel_band_menu">국가별 주파수 대역 선택</string>
+    <string name="settings_menu">설정</string>
+    <string name="regional_band">국가별 주파수 대역</string>
+
+    <string name="aud_output_mode">오디오 출력 모드</string>
+    <string name="sel_audio_output">오디오 출력 선택</string>
+
+    <string name="record_dur">녹음 지속 시간</string>
+    <string name="sel_rec_dur">녹음 지속 시간 선택</string>
+
+    <string name="auto_select_af">대체 주파수</string>
+    <string name="auto_select_af_enabled">자동 선택 활성화</string>
+    <string name="auto_select_af_disabled">자동 선택 비활성화</string>
+
+    <string name="fac_defaults">설정 초기화</string>
+    <string name="revert_to_fac">설정 초기화</string>
+    <string name="settings_back">뒤로</string>
+
+    <string name="settings_revert_confirm_title">초기화 확인</string>
+    <string name="settings_revert_confirm_msg">이전 설정들을 포함하여 모든 설정들을 삭제합니다!</string>
+
+    <string name="settings_back_summary">이전으로 되돌리기</string>
+    <string name="settings_revert_defaults_title">설정 초기화</string>
+    <string name="settings_revert_defaults_summary">기본설정으로 초기화</string>
+
+    <string name="alert_dialog_ok">확인</string>
+    <string name="alert_dialog_cancel">취소</string>
+
+    <string name="preset_search">검색"<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
+
+    <string name="fm_command_failed_title">FM 작동 실패</string>
+    <string name="fm_cmd_failed_msg">작동실패. 예상 되는 이유: 안테나인 유선 해드셋을 미 연결, 블루투스의 비활성화, 통화 중, FM 연결 불가. 본 사항을 점검하고 다시 시도해 주세요.</string>
+
+    <skip/>
+    <!-- Do not translate. Duration format. -->
+    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
+
+    <string name="frequency_string"></string>
+    <string name="stat_no_fm">FM라디오가 켜지지 않았습니다</string>
+
+    <!-- Added by LIBRA -->
+    <string name="need_headset_for_antenna">FM 안테나로 사용 될, 유선 헤드셋을 연결해 주십시오.</string>
+    <string name="init_FM">FM 라디오 기능을 위해 블루투스를 활성화 중..</string>
+    <string name="need_bluetooth">블루투스를 활성화 해 주세요</string>
+
+    <string name="about_title">정보</string>
+    <string name="about_summary">MIUI의 FM라디오 - http://www.miui.com</string>
+
+    <string name="pref_disable_bt_prompt_title">라디오를 끌 때 블루투스를 비활성 선택</string>
+    <string name="pref_disable_bt_prompt_summary">라디오 스위치를 끌 때, 블루투스 비활성 선택 창을 표시</string>
+    <string name="prompt_disable_bt">블루투스를 비활성화 할까요?</string>
+    <string name="prompt_yes">예</string>
+    <string name="prompt_no">아니오</string>
+
+    <string name="pref_bt_behaviour_on_exit_title">라디오를 끌 때의 블루투스 동작</string>
+    <string name="pref_bt_behaviour_on_exit_summary">항상 꺼짐, 이전 상태로, 선택, 등.</string>
+    <string name="pref_bt_behaviour_on_exit_dialog_title">블루투스 동작 설정</string>
+
+    <string name="pref_headset_behaviour_title">헤드셋과 블루투스 동작</string>
+    <string name="pref_headset_behaviour_summary">헤드셋이 제거되면 블루투스를 동작시킴</string>
+
+</resources>
