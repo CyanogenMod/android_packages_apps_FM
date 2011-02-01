@@ -5,7 +5,7 @@
   <string-array name="bt_exit_behaviour_entries">
     <item>아무것도 하지 않음 (활성 상태로 둠)</item>
     <item>이전 블루투스 상태로 복원</item>
-    <item>사용자 선택 창 보임</item>
+    <item>사용자에게 묻기</item>
     <item>항상 비활성화</item>
   </string-array>
 
@@ -87,7 +87,7 @@
   </string-array>
 
   <string-array name="presetlist_edit_category">
-    <item>이름바꾸기</item>
+    <item>이름 바꾸기</item>
     <item>자동선택</item>
     <item>지우기</item>
   </string-array>
@@ -96,7 +96,7 @@
     <item>북미</item>
     <item>유럽</item>
     <item>일본</item>
-    <item>일본(확장)</item>
+    <item>일본 (확장)</item>
     <item>호주</item>
     <item>오스트리아</item>
     <item>벨기에</item>
@@ -135,9 +135,9 @@
     <item>북미 (87.5MHz ~ 108.0MHz. 200 Khz 간격)</item>
     <item>유럽 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
     <item>일본 (76.0MHz ~  90.0MHz. 100 Khz 간격)</item>
-    <item>일본(확장) (90.0MHz ~ 108.0MHz. 100 Khz 간격)</item>
+    <item>일본 (확장) (90.0MHz ~ 108.0MHz. 100 Khz 간격)</item>
     <item>호주 (87.7MHz ~ 108.0MHz. 100 Khz 간격)</item>
-    <item>오스트리아Austria (87.5MHz ~ 108.0MHz.  50 Khz 간격)</item>
+    <item>오스트리아 (87.5MHz ~ 108.0MHz.  50 Khz 간격)</item>
     <item>벨기에 (87.5MHz ~ 108.0MHz. 100 Khz 간격)</item>
     <item>브라질 (87.8MHz ~ 108.0MHz. 200 Khz Step)</item>
     <item>중국 (87.0MHz ~ 108.0MHz. 100 Khz 간격)</item>
