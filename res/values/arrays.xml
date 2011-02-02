@@ -9,7 +9,7 @@
     <item>Always disable</item>
   </string-array>
 
-  <string-array name="bt_exit_behaviour_values">
+  <string-array name="bt_exit_behaviour_values" translatable="false">
     <item>0</item>
     <item>1</item>
     <item>2</item>
@@ -21,7 +21,7 @@
     <item>Mono</item>
   </string-array>
 
-  <string-array name="ster_mon_values">
+  <string-array name="ster_mon_values" translatable="false">
     <item>0</item>
     <item>1</item>
   </string-array>
@@ -34,7 +34,7 @@
   </string-array>
 
 
-  <string-array name="record_duration_values">
+  <string-array name="record_duration_values" translatable="false">
     <item>5</item>
     <item>15</item>
     <item>30</item>
@@ -71,7 +71,7 @@
     <item>Weather</item>
   </string-array>
 
-  <string-array name="search_category_rbds_values">
+  <string-array name="search_category_rbds_values" translatable="false">
     <item>0</item>
     <item>7</item>
     <item>15</item>
@@ -137,7 +137,7 @@
     <item>Weather</item>
   </string-array>
 
-  <string-array name="search_category_rds_values">
+  <string-array name="search_category_rds_values" translatable="false">
     <item>0</item>
     <item>7</item>
     <item>2</item>
@@ -218,7 +218,7 @@
     <item>United States</item>
   </string-array>
 
-  <string-array name="regional_band_values">
+  <string-array name="regional_band_values" translatable="false">
     <item>0</item>
     <item>1</item>
     <item>2</item>
