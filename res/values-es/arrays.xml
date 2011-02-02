@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+  <string-array name="bt_exit_behaviour_entries">
+    <item>No hacer nada (permanece habilitado)</item>
+    <item>Restaurar estado inicial BT</item>
+    <item>Preguntar acción usuario</item>
+    <item>Always disable</item>
+  </string-array>
+
+  <string-array name="ster_mon_entries">
+    <item>Stereo</item>
+    <item>Mono</item>
+  </string-array>
+
+  <string-array name="record_durations_entries">
+    <item>5 minutos</item>
+    <item>15 minutos</item>
+    <item>30 minutos</item>
+    <item>Ilimitado</item>
+  </string-array>
+
+  <string-array name="search_category_rbds_entries">
+    <item>Todas las categorías</item>
+    <item>Adultos Hits</item>
+    <item>Clásica</item>
+    <item>Rock clásico</item>
+    <item>Escuela</item>
+    <item>País</item>
+    <item>Emergencia</item>
+    <item>Emergencia Test</item>
+    <item>Lengua Extranjera</item>
+    <item>Información</item>
+    <item>Jazz</item>
+    <item>Noticias</item>
+    <item>Nostalgia</item>
+    <item>Éxitos</item>
+    <item>Personalidad</item>
+    <item>Pública</item>
+    <item>Música Religiosa</item>
+    <item>Habla religiosa</item>
+    <item>Rhythm y Blues</item>
+    <item>Rock</item>
+    <item>Suave</item>
+    <item>Suave Rock</item>
+    <item>Suave Rhythm y Blues</item>
+    <item>Deportes</item>
+    <item>Habla</item>
+    <item>Top 40</item>
+    <item>El tiempo</item>
+  </string-array>
+
+  <string-array name="search_category_rds_entries">
+    <item>Todas las categorías</item>
+    <item>Cultura</item>
+    <item>Actualidad</item>
+    <item>Programas de niños</item>
+    <item>Música country</item>
+    <item>Documental</item>
+    <item>Drama</item>
+    <item>Música Audiencia Fácil</item>
+    <item>Educación</item>
+    <item>Emergencia</item>
+    <item>Emergencia Test</item>
+    <item>Finanzas</item>
+    <item>Música popular</item>
+    <item>Información</item>
+    <item>Música Jazz</item>
+    <item>Clásica Ligera</item>
+    <item>Ocio</item>
+    <item>Noticias</item>
+    <item>Música Nacional</item>
+    <item>Otra Música</item>
+    <item>Éxitos Música</item>
+    <item>Teléfono En</item>
+    <item>Música Pop</item>
+    <item>Religión</item>
+    <item>Música Rock</item>
+    <item>Ciencia</item>
+    <item>Clásica Grave</item>
+    <item>Asuntos Sociales</item>
+    <item>Deportes</item>
+    <item>Viajes</item>
+    <item>Variado</item>
+    <item>El tiempo</item>
+  </string-array>
+
+  <string-array name="presetlist_edit_category">
+    <item>Renombrar</item>
+    <item>Auto-Seleccionar</item>
+    <item>Eliminar</item>
+  </string-array>
+
+
+  <string-array name="regional_band_entries">
+    <item>Norte América</item>
+    <item>Europa</item>
+    <item>Japón</item>
+    <item>Japón (Amplia)</item>
+    <item>Australia</item>
+    <item>Austria</item>
+    <item>Bélgica</item>
+    <item>Brasil</item>
+    <item>China</item>
+    <item>Checa</item>
+    <item>Dinamarca</item>
+    <item>Finlandia</item>
+    <item>Francia</item>
+    <item>Alemania</item>
+    <item>Grecia</item>
+    <item>Hong Kong</item>
+    <item>India</item>
+    <item>Irlanda</item>
+    <item>Italia</item>
+    <item>Corea</item>
+    <item>Méjico</item>
+    <item>Países Bajos</item>
+    <item>Nueva Zelanda</item>
+    <item>Noruega</item>
+    <item>Polonia</item>
+    <item>Portugal</item>
+    <item>Rusia</item>
+    <item>Singapur</item>
+    <item>Eslovaquia</item>
+    <item>España</item>
+    <item>Suiza</item>
+    <item>Suecia</item>
+    <item>Taiwan</item>
+    <item>Turquía</item>
+    <item>Reino Unido </item>
+    <item>Estados Unidos</item>
+  </string-array>
+
+  <string-array name="regional_band_summary">
+    <item>Norte América (87.5MHz a 108.0MHz en pasos 200 Khz)</item>
+    <item>Europa (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Japón (76.0MHz a  90.0MHz en pasos 100 Khz)</item>
+    <item>Japón (Amplia) (90.0MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Australia (87.7MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Austria (87.5MHz a 108.0MHz en pasos  50 Khz)</item>
+    <item>Bélgica (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Brasil (87.8MHz a 108.0MHz en pasos 200 Khz)</item>
+    <item>China (87.0MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Checa (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Dinamarca (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Finlandia (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Francia (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Alemania (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Grecia (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Hong Kong (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>India (91.0MHz a 106.4MHz en pasos 100 Khz)</item>
+    <item>Irlanda (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Italia (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Corea (87.5MHz a 108.0MHz en pasos 200 Khz)</item>
+    <item>Méjico (88.1MHz a 107.9MHz en pasos 200 Khz)</item>
+    <item>Países Bajos (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Nueva Zelanda (88.0MHz a 107.0MHz en pasos 100 Khz)</item>
+    <item>Noruega (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Polonia (88.0MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Portugal (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Russia (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Singapur (88.0MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Eslovaquia (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>España (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Suiza (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Suecia (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Taiwan (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Turquía (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Reino Unido (87.5MHz a 108.0MHz en pasos 100 Khz)</item>
+    <item>Estados Unidos (88.1MHz a 107.9MHz en pasos 200 Khz)</item>
+  </string-array>
+
+</resources>

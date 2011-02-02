@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Radio FM</string>
+    <string name="tx_app_name">Emisora FM</string>
+    <string name="preset_delete">Eliminar</string>
+    <string name="stat_notif_frequency">Frecuencia: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
+
+    <string name="sel_band_menu">Selecciona banda regional</string>
+    <string name="settings_menu">Configuración</string>
+    <string name="regional_band">Banda Regional</string>
+
+    <string name="aud_output_mode">Modo salida audio</string>
+    <string name="sel_audio_output">Selecciona salida audio</string>
+
+    <string name="record_dur">Duración grabación</string>
+    <string name="sel_rec_dur">Selecciona duración grabación</string>
+
+    <string name="auto_select_af">Frecuencia alterna</string>
+    <string name="auto_select_af_enabled">Selección auto habilitada</string>
+    <string name="auto_select_af_disabled">Selección auto deshabilitada</string>
+
+    <string name="fac_defaults">Reset configuración</string>
+    <string name="revert_to_fac">Reset configuración</string>
+    <string name="settings_back">Atrás</string>
+
+    <string name="settings_revert_confirm_title">Confirmar Reset</string>
+    <string name="settings_revert_confirm_msg">Esto eliminará todos los ajustes incluyendo presets!</string>
+
+    <string name="settings_back_summary">Volver a la vista anterior</string>
+    <string name="settings_revert_defaults_title">Reset configuración</string>
+    <string name="settings_revert_defaults_summary">Reset ajustes por defecto</string>
+
+    <string name="alert_dialog_ok">Aceptar</string>
+    <string name="alert_dialog_cancel">Cancelar</string>
+
+    <string name="preset_search">Buscar"<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
+
+    <string name="fm_command_failed_title">FM operación fallida</string>
+    <string name="fm_cmd_failed_msg">Error en la operación. Las causas posibles son: usted no conecto el auricular con cable de antena, no activo el Bluetooth, el teléfono está en una llamada o FM Radio ha sido cerrada. Por favor, revise y vuelva a intentarlo.</string>
+
+    <skip/>
+    <!-- Do not translate. Duration format. -->
+    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
+
+    <string name="frequency_string"></string>
+    <string name="stat_no_fm">FM radio no está encendido</string>
+
+    <!-- Added by LIBRA -->
+    <string name="need_headset_for_antenna">Por favor, conecte un auricular con cable que se utiliza como una antena de FM.</string>
+    <string name="init_FM">Activación de Bluetooth para el apoyo de radio FM..</string>
+    <string name="need_bluetooth">Por favor, activa Bluetooth</string>
+
+    <string name="about_title">Acerca de</string>
+    <string name="about_summary">Aplicación FM Radio, por MIUI - http://www.miui.com</string>
+
+    <string name="pref_disable_bt_prompt_title">Sistema para desactivar BT con radio apagada</string>
+    <string name="pref_disable_bt_prompt_summary">Pedir al usuario desactivar Bluetooth cuando la radio se apaga</string>
+    <string name="prompt_disable_bt">¿Desea desactivar Bluetooth?</string>
+    <string name="prompt_yes">Si</string>
+    <string name="prompt_no">No</string>
+
+    <string name="pref_bt_behaviour_on_exit_title">Bluetooth comportamiento de radio apagada</string>
+    <string name="pref_bt_behaviour_on_exit_summary">Desactive siempre, restaurar el estado inicial, sistema, etc</string>
+    <string name="pref_bt_behaviour_on_exit_dialog_title">Elegir comportamiento Bluetooth</string>
+
+    <string name="pref_headset_behaviour_title">Auriculares y comportamiento Bluetooth</string>
+    <string name="pref_headset_behaviour_summary">Comportamiento cuando el auricular Bluetooth se retira</string>
+
+</resources>
