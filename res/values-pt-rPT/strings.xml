@@ -39,8 +39,6 @@
     <string name="fm_cmd_failed_msg">A operação falhou. Causas possiveis são: não ligou os headphones como antena, não activou o Bluetooth, o telemóvel está numa chamada, ou o FM foi terminado. Por favor verifique e tente novamente.</string>
 
     <skip/>
-    <!-- Do not translate. Duration format. -->
-    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
 
     <string name="frequency_string"></string>
     <string name="stat_no_fm">Rádio FM não está activado</string>
