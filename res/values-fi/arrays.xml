@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+  <string-array name="bt_exit_behaviour_entries">
+    <item>Älä tee mitään (Pysyy päällä)</item>
+    <item>Palauta alkuperäinen tila</item>
+    <item>Kysy käyttäjältä</item>
+    <item>Aina pois päältä</item>
+  </string-array>
+
+  <string-array name="ster_mon_entries">
+    <item>Stereo</item>
+    <item>Mono</item>
+  </string-array>
+
+  <string-array name="record_durations_entries">
+    <item>5 minuuttia</item>
+    <item>15 minuuttia</item>
+    <item>30 minuuttia</item>
+    <item>Loputon</item>
+  </string-array>
+
+  <string-array name="search_category_rbds_entries">
+    <item>Kaikki asemat</item>
+    <item>Aikuisten</item>
+    <item>Klassinen</item>
+    <item>Klassinen rock</item>
+    <item>Lukio</item>
+    <item>Kantri</item>
+    <item>Hälytys</item>
+    <item>Hälytystesti</item>
+    <item>Ulkomaalainen</item>
+    <item>Informaatio</item>
+    <item>Jazz</item>
+    <item>Uutiset</item>
+    <item>Nostalgia</item>
+    <item>Vanhempaa</item>
+    <item>Persoonallinen</item>
+    <item>Julkinen</item>
+    <item>Uskonnollinen musiikki</item>
+    <item>Uskonnollinen puhe</item>
+    <item>Rhythm and Blues</item>
+    <item>Rock</item>
+    <item>Soft</item>
+    <item>Soft Rock</item>
+    <item>Soft Rhythm and Blues</item>
+    <item>Urheilu</item>
+    <item>Puhe</item>
+    <item>Top 40</item>
+    <item>Sää</item>
+  </string-array>
+
+ <string-array name="search_category_rds_entries">
+    <item>Kaikki asemat</item>
+    <item>Kulttuuri</item>
+    <item>Current Affairs</item>
+    <item>Lastenohjelmat</item>
+    <item>Kantri</item>
+    <item>Dokumentaari</item>
+    <item>Draama</item>
+    <item>Easy Listening Music</item>
+    <item>Education</item>
+    <item>Hälytys</item>
+    <item>Hälytystesti</item>
+    <item>Talous</item>
+    <item>Folkmusiikki</item>
+    <item>Informaation</item>
+    <item>Jazz-musiikki</item>
+    <item>Kevyt klassinen</item>
+    <item>Vapaa-aika</item>
+    <item>Uutiset</item>
+    <item>Kansallinen musiikki</item>
+    <item>Muu musiikki</item>
+    <item>Vanhempi musiikki</item>
+    <item>Puhelin</item>
+    <item>Popmusiikki</item>
+    <item>Uskonnollinen</item>
+    <item>Rock-musiikki</item>
+    <item>Tiede</item>
+    <item>Vakava klassinen</item>
+    <item>Sosiaalinen</item>
+    <item>Urheilu</item>
+    <item>Matkailu</item>
+    <item>Vaihteleva</item>
+    <item>Sää</item>
+  </string-array>
+
+  <string-array name="presetlist_edit_category">
+    <item>Nimeä uudelleen</item>
+    <item>Automaattinen</item>
+    <item>Poista</item>
+  </string-array>
+
+  <string-array name="regional_band_entries">
+    <item>Pohjois-Amerikka</item>
+    <item>Eurooppa</item>
+    <item>Japani</item>
+    <item>Japani (Laaja)</item>
+    <item>Australia</item>
+    <item>Itävalta</item>
+    <item>Belgia</item>
+    <item>Brasilia</item>
+    <item>Kiina</item>
+    <item>Tsekki</item>
+    <item>Tanska</item>
+    <item>Suomi</item>
+    <item>Ranska</item>
+    <item>Saksa</item>
+    <item>Kreikka</item>
+    <item>Hong Kong</item>
+    <item>Intia</item>
+    <item>Irlanti</item>
+    <item>Italia</item>
+    <item>Korea</item>
+    <item>Meksiko</item>
+    <item>Alankomaat</item>
+    <item>Uusi-Seelanti</item>
+    <item>Norja</item>
+    <item>Puola</item>
+    <item>Portugali</item>
+    <item>Venäjä</item>
+    <item>Singapore</item>
+    <item>Slovakia</item>
+    <item>Espanja</item>
+    <item>Sveitsi</item>
+    <item>Ruotsi</item>
+    <item>Taiwan</item>
+    <item>Turkki</item>
+    <item>Iso-Britannia</item>
+    <item>Yhdysvallat</item>
+  </string-array>
+
+  <string-array name="regional_band_summary">
+    <item>Pohjois-Amerikka (87.5MHz-108.0MHz 200 Khz:n välein)</item>
+    <item>Eurooppa (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Japani (76.0MHz- 90.0MHz 100 Khz:n välein)</item>
+    <item>Japani (Wide) (90.0MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Australia (87.7MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Itävalta (87.5MHz-108.0MHz 50 Khz:n välein)</item>
+    <item>Belgia (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Brasilia (87.8MHz-108.0MHz 200 Khz:n Step)</item>
+    <item>Kiina (87.0MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Tsekki (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Tanska (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Suomi (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Ranska (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Saksa (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Kreikka (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Hong Kong (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Intia (91.0MHz-106.4MHz 100 Khz:n välein)</item>
+    <item>Irlanti (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Italia (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Korea (87.5MHz-108.0MHz 200 Khz:n välein)</item>
+    <item>Meksiko (88.1MHz-107.9MHz 200 Khz:n välein)</item>
+    <item>Alankomaat (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Uusi-Seelanti (88.0MHz-107.0MHz 100 Khz:n välein)</item>
+    <item>Norja (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Puola (88.0MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Portugali (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Venäjä (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Singapore (88.0MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Slovakia (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Espanja (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Sveitsi (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Ruotsi (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Taiwan (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Turkki (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Iso-Britannia (87.5MHz-108.0MHz 100 Khz:n välein)</item>
+    <item>Yhdysvallat (88.1MHz-107.9MHz 200 Khz:n välein)</item>
+  </string-array>
+
+</resources>
