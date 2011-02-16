@@ -3,7 +3,7 @@
   <string name="app_name">UKW Radio</string>
   <string name="tx_app_name">UKW Transmitter</string>
   <string name="preset_delete">Löschen</string>
-  <string name="stat_notif_frequency">UKW Radio: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
+  <string name="stat_notif_frequency">Frequenz: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
 
   <string name="sel_band_menu">Regionalband wählen</string>
   <string name="settings_menu">Einstellungen</string>
