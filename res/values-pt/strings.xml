@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Rádio FM</string>
+    <string name="tx_app_name">Transmissor FM</string>
+    <string name="preset_delete">Apagar</string>
+    <string name="stat_notif_frequency">Frequência: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
+
+    <string name="sel_band_menu">Selecionar banda regional</string>
+    <string name="settings_menu">Definições</string>
+    <string name="regional_band">Banda regional</string>
+
+    <string name="aud_output_mode">Modo saída de áudio</string>
+    <string name="sel_audio_output">Selecionar saída de áudio</string>
+
+    <string name="record_dur">Duração da gravação</string>
+    <string name="sel_rec_dur">Selecionar duração da gravação</string>
+
+    <string name="auto_select_af">Alternar frequência</string>
+    <string name="auto_select_af_enabled">Ativar selecão automática</string>
+    <string name="auto_select_af_disabled">Desativar selecão automática</string>
+
+    <string name="fac_defaults">Restaurar configurações</string>
+    <string name="revert_to_fac">Restaurar configurações</string>
+    <string name="settings_back">Voltar</string>
+
+    <string name="settings_revert_confirm_title">Confirmar Restauração</string>
+    <string name="settings_revert_confirm_msg">Isto irá apagar todas as configurações incluindo as frequências predefinidas!</string>
+
+    <string name="settings_back_summary">Voltar à tela anterior</string>
+    <string name="settings_revert_defaults_title">Restaurar configurações</string>
+    <string name="settings_revert_defaults_summary">Restaurar todas as configurações originais</string>
+
+    <string name="alert_dialog_ok">OK</string>
+    <string name="alert_dialog_cancel">Cancelar</string>
+
+    <string name="preset_search">Pesquisar "<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
+
+    <string name="fm_command_failed_title">Operação FM falhou</string>
+    <string name="fm_cmd_failed_msg">A operação falhou. Causas possiveis são: não ligou os fones de ouvido como antena, não ativou o Bluetooth, o celular está numa chamada, ou o FM foi terminado. Por favor verifique e tente novamente.</string>
+
+    <skip/>
+
+    <string name="frequency_string"></string>
+    <string name="stat_no_fm">Rádio FM não está ativado</string>
+
+    <!-- Added by LIBRA -->
+    <string name="need_headset_for_antenna">Por favor ligue um fone de ouvido com fios que será usado como antena.</string>
+    <string name="init_FM">A ativar o Bluetooth para suporte FM..</string>
+    <string name="need_bluetooth">Por favor ative o Bluetooth</string>
+
+    <string name="about_title">Sobre</string>
+    <string name="about_summary">Aplicação Rádio FM de MIUI - http://www.miui.com</string>
+
+    <string name="pref_disable_bt_prompt_title">Perguntar para desativar BT ao desligar rádio</string>
+    <string name="pref_disable_bt_prompt_summary">Perguntar ao usuário para desativar Bluetooth quando o rádio é desligado</string>
+    <string name="prompt_disable_bt">Quer desativar o Bluetooth?</string>
+    <string name="prompt_yes">Sim</string>
+    <string name="prompt_no">Não</string>
+
+    <string name="pref_bt_behaviour_on_exit_title">Comportamento do Bluetooth ao desligar o rádio</string>
+    <string name="pref_bt_behaviour_on_exit_summary">Desativar sempre, restaurar estado inicial, perguntar, etc.</string>
+    <string name="pref_bt_behaviour_on_exit_dialog_title">Escolha um comportamento do Bluetooth</string>
+
+    <string name="pref_headset_behaviour_title">Comportamento do fone de ouvido e do Bluetooth</string>
+    <string name="pref_headset_behaviour_summary">Invocar comportamento do Bluetooth quando o fone de ouvido é removido</string>
+
+</resources>
