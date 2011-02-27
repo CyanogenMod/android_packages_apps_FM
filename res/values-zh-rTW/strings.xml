@@ -1,54 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">FM收音机</string>
-    <string name="tx_app_name">FM发射</string>
-    <string name="preset_delete">删除</string>
-    <string name="stat_notif_frequency">FM调频"<xliff:g id="frequency">%1$s</xliff:g>"兆赫</string>
+    <string name="app_name">FM 收音機</string>
+    <string name="tx_app_name">FM 發送器</string>
+    <string name="preset_delete">刪除</string>
+    <string name="stat_notif_frequency">頻率："<xliff:g id="frequency">%1$s</xliff:g>" 兆赫</string>
 
-    <string name="sel_band_menu">Select Regional Band</string>
-    <string name="settings_menu">设置</string>
-    <string name="regional_band">Regional Band</string>
+    <string name="sel_band_menu">選擇地區頻譜</string>
+    <string name="settings_menu">設定</string>
+    <string name="regional_band">地區頻譜</string>
 
-    <string name="aud_output_mode">Audio Output Mode</string>
-    <string name="sel_audio_output">Select Audio Output</string>
+    <string name="aud_output_mode">音效輸出模式</string>
+    <string name="sel_audio_output">選擇音效輸出</string>
 
-    <string name="record_dur">Record Duration</string>
-    <string name="sel_rec_dur">Select Record Duration</string>
+    <string name="record_dur">錄音持續時間</string>
+    <string name="sel_rec_dur">選擇錄音持續時間</string>
 
-    <string name="auto_select_af">Alternate Frequency</string>
-    <string name="auto_select_af_enabled">Auto Select Enabled</string>
-    <string name="auto_select_af_disabled">Auto Select Disabled</string>
+    <string name="auto_select_af">替代頻率</string>
+    <string name="auto_select_af_enabled">已啟用自動選取</string>
+    <string name="auto_select_af_disabled">已停用自動選取</string>
 
-    <string name="fac_defaults">恢复默认设置</string>
-    <string name="revert_to_fac">恢复默认设置</string>
-    <string name="settings_back">Back</string>
+    <string name="fac_defaults">重設</string>
+    <string name="revert_to_fac">重設</string>
+    <string name="settings_back">返回</string>
 
-    <string name="settings_revert_confirm_title">Confirm Reset Settings</string>
-    <string name="settings_revert_confirm_msg">This will delete all settings including Presets</string>
+    <string name="settings_revert_confirm_title">重設確認</string>
+    <string name="settings_revert_confirm_msg">將會刪除包括電台在內的所有設定！</string>
 
-    <string name="settings_back_summary">Return to previous view</string>
-    <string name="settings_revert_defaults_title">Revert to Factory Defaults</string>
-    <string name="settings_revert_defaults_summary">Reset all settings</string>
+    <string name="settings_back_summary">回到上一個頁面</string>
+    <string name="settings_revert_defaults_title">重設</string>
+    <string name="settings_revert_defaults_summary">重設所有設定至預設值</string>
 
-    <string name="alert_dialog_ok">确认</string>
+    <string name="alert_dialog_ok">確定</string>
     <string name="alert_dialog_cancel">取消</string>
 
-    <string name="preset_search">搜索"<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
+    <string name="preset_search">搜尋"<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
 
-    <string name="fm_command_failed_title">FM操作失败</string>
-    <string name="fm_cmd_failed_msg">操作失败。可能原因有:没有插上有线耳机作为天线，或者没有打开蓝牙芯片，或者正处于通话中，或FM已关闭。请处理以上情况后再尝试弹起ON/OFF按钮，再按下ON/OFF按钮重启FM。
-    </string>
+    <string name="fm_command_failed_title">FM 無法運作</string>
+    <string name="fm_cmd_failed_msg">無法運作的可能原因包括：沒有插入有線耳機作為天線、沒有啟用藍牙、電話處於通話狀態、或 FM 已被關閉。請檢查一下然後再試一次。</string>
 
     <skip/>
     <!-- Do not translate. Duration format. -->
-    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
+    <!-- skipping untranslatable /resources:0/string:name=durationformat -->
 
     <string name="frequency_string"></string>
-    <string name="stat_no_fm">FM收音机未开启</string>
+    <string name="stat_no_fm">FM 收音機尚未開啟</string>
 
     <!-- Added by LIBRA -->
-    <string name="need_headset_for_antenna">错误！请插上有线耳机作为FM天线</string>
-    <string name="init_FM">请稍候，打开蓝牙启动FM芯片...</string>
-    <string name="need_bluetooth">错误！请打开蓝牙以启动FM芯片</string>
+    <string name="need_headset_for_antenna">請插入有線耳機作為 FM 天線。</string>
+    <string name="init_FM">正在啟用藍牙以支援 FM 收音機…</string>
+    <string name="need_bluetooth">請啟用藍牙</string>
+
+    <string name="about_title">關於</string>
+    <string name="about_summary">FM 收音機 - 由 MIUI 提供 - http://www.miui.com</string>
+
+    <string name="pref_disable_bt_prompt_title">結束時詢問停用藍牙</string>
+    <string name="pref_disable_bt_prompt_summary">關閉收音機時詢問是否要停用藍牙</string>
+    <string name="prompt_disable_bt">要停用藍牙嗎？</string>
+    <string name="prompt_yes">是</string>
+    <string name="prompt_no">否</string>
+
+    <string name="pref_bt_behaviour_on_exit_title">結束時如何設定藍牙</string>
+    <string name="pref_bt_behaviour_on_exit_summary">總是停用／啟用、恢復或詢問</string>
+    <string name="pref_bt_behaviour_on_exit_dialog_title">如何設定藍牙</string>
+
+    <string name="pref_headset_behaviour_title">拔除耳機後設定藍牙</string>
+    <string name="pref_headset_behaviour_summary">拔除耳機後套用藍牙設定</string>
 
 </resources>
