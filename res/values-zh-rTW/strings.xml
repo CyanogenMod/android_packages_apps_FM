@@ -36,7 +36,7 @@
     <string name="preset_search">搜尋"<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
 
     <string name="fm_command_failed_title">FM 無法運作</string>
-    <string name="fm_cmd_failed_msg">無法運作的可能原因包括：沒有插入有線耳機作為天線、沒有啟用藍牙、電話處於通話狀態、或 FM 已被關閉。請檢查一下然後再試一次。</string>
+    <string name="fm_cmd_failed_msg">無法運作的可能原因包括：沒有插入有線耳機作為天線、沒有開啟藍牙、電話處於通話狀態、或 FM 已被關閉。請檢查一下然後再試一次。</string>
 
     <skip/>
     <!-- Do not translate. Duration format. -->
@@ -47,11 +47,11 @@
 
     <!-- Added by LIBRA -->
     <string name="need_headset_for_antenna">請插入有線耳機作為 FM 天線。</string>
-    <string name="init_FM">正在啟用藍牙以支援 FM 收音機…</string>
-    <string name="need_bluetooth">請啟用藍牙</string>
+    <string name="init_FM">正在開啟藍牙以支援 FM 收音機…</string>
+    <string name="need_bluetooth">請開啟藍牙</string>
 
     <string name="about_title">關於</string>
-    <string name="about_summary">FM 收音機 - 由 MIUI 提供 - http://www.miui.com</string>
+    <string name="about_summary">FM 收音機 - 由 MIUI 提供\nhttp://www.miui.com</string>
 
     <string name="pref_disable_bt_prompt_title">結束時詢問停用藍牙</string>
     <string name="pref_disable_bt_prompt_summary">關閉收音機時詢問是否要停用藍牙</string>
@@ -59,11 +59,11 @@
     <string name="prompt_yes">是</string>
     <string name="prompt_no">否</string>
 
-    <string name="pref_bt_behaviour_on_exit_title">結束時如何設定藍牙</string>
-    <string name="pref_bt_behaviour_on_exit_summary">總是停用／啟用、恢復或詢問</string>
-    <string name="pref_bt_behaviour_on_exit_dialog_title">如何設定藍牙</string>
+    <string name="pref_bt_behaviour_on_exit_title">預設藍牙設定</string>
+    <string name="pref_bt_behaviour_on_exit_summary">結束時藍牙狀態的變更方式</string>
+    <string name="pref_bt_behaviour_on_exit_dialog_title">藍牙狀態變更方式</string>
 
     <string name="pref_headset_behaviour_title">拔除耳機後設定藍牙</string>
-    <string name="pref_headset_behaviour_summary">拔除耳機後套用藍牙設定</string>
+    <string name="pref_headset_behaviour_summary">拔除耳機後套用預設藍牙設定</string>
 
 </resources>
