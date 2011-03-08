@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string-array name="bt_exit_behaviour_entries">
+        <item>Τίποτα (Παραμένει ενεργό)</item>
+        <item>Επαναφορά αρχικής κατάστασης BT</item>
+        <item>Προτροπή για δράση από το χρήστη</item>
+        <item>Πάντα ανενεργό</item>
+    </string-array>
+    <string-array name="ster_mon_entries">
+        <item>Στερεοφωνικό</item>
+        <item>Μονοφωνικό</item>
+    </string-array>
+    <string-array name="record_durations_entries">
+        <item>5 λεπτά</item>
+        <item>15 λεπτά</item>
+        <item>30 λεπτά</item>
+        <item>Χωρίς όριο</item>
+    </string-array>
+    <string-array name="search_category_rbds_entries">
+        <item>Όλοι οι σταθμοί</item>
+        <item>Μόνο για ενήλικες</item>
+        <item>Κλασική μουσική</item>
+        <item>Κλασικό Ροκ</item>
+        <item>Κολεγιακή</item>
+        <item>Κάντρυ</item>
+        <item>Επείγον</item>
+        <item>Επείγουσα δοκιμή</item>
+        <item>Ξένη γλώσσα</item>
+        <item>Πληροφορία</item>
+        <item>Τζάζ</item>
+        <item>Ειδήσεις</item>
+        <item>Νοσταλγία</item>
+        <item>Παλιά</item>
+        <item>Προσωπικότητα</item>
+        <item>Δημόσια</item>
+        <item>Θρησκευτική μουσική</item>
+        <item>Θρησκευτικές ομιλίες</item>
+        <item>Rhythm and Blues</item>
+        <item>Ροκ</item>
+        <item>Ελαφρά</item>
+        <item>Ελαφρύ Ρόκ</item>
+        <item>Ελαφρύ Rhythm and Blues</item>
+        <item>Αθλητικά</item>
+        <item>Ομιλία</item>
+        <item>Top 40</item>
+        <item>Καιρός</item>
+    </string-array>
+    <string-array name="search_category_rds_entries">
+        <item>Όλοι οι σταθμοί</item>
+        <item>Κουλτούρα</item>
+        <item>Τρέχοντα γεγονότα</item>
+        <item>Παιδικές εκπομπές</item>
+        <item>Μουσική Κάντρυ</item>
+        <item>Ντοκιμαντέρ</item>
+        <item>Δράμα</item>
+        <item>Ευάκουστη Μουσική</item>
+        <item>Εκπαίδευση</item>
+        <item>Επείγον</item>
+        <item>Επείγουσα δοκιμή</item>
+        <item>Οικονομικά</item>
+        <item>Παραδοσιακή μουσική</item>
+        <item>Πληροφορία</item>
+        <item>Μουσική Τζαζ</item>
+        <item>Ελαφρά κλασική</item>
+        <item>Ελεύθερος χρόνος</item>
+        <item>Ειδήσεις</item>
+        <item>Εθνική μουσική</item>
+        <item>Άλλη μουσική</item>
+        <item>Παλιά μουσική</item>
+        <item>Phone in</item>
+        <item>Μουσική Pop</item>
+        <item>Θρησκεία</item>
+        <item>Μουσική Ρόκ</item>
+        <item>Επιστήμη</item>
+        <item>Σοβαρή Κλασική</item>
+        <item>Κοινωνικά γεγονότα</item>
+        <item>Αθλητικά</item>
+        <item>Ταξίδι</item>
+        <item>Διάφορα</item>
+        <item>Καιρός</item>
+    </string-array>
+    <string-array name="presetlist_edit_category">
+        <item>Μετονομασία</item>
+        <item>Αυτόμ-επιλογή</item>
+        <item>Διαγραφή</item>
+    </string-array>
+    <string-array name="regional_band_entries">
+        <item>Βόρεια Αμερική</item>
+        <item>Ευρώπη</item>
+        <item>Ιαπωνία</item>
+        <item>Ιαπωνία (Ευρύτερη)</item>
+        <item>Αυστραλία</item>
+        <item>Αυστρία</item>
+        <item>Βέλγιο</item>
+        <item>Βραζιλία</item>
+        <item>Κίνα</item>
+        <item>Τσεχία</item>
+        <item>Δανία</item>
+        <item>Φινλανδία</item>
+        <item>Γαλλία</item>
+        <item>Γερμανία</item>
+        <item>Ελλάδα</item>
+        <item>Hong Kong</item>
+        <item>Ινδία</item>
+        <item>Ιρλανδία</item>
+        <item>Ιταλία</item>
+        <item>Κορέα</item>
+        <item>Μεξικό</item>
+        <item>Ολλανδία</item>
+        <item>Νέα Ζηλανδία</item>
+        <item>Νορβηγία</item>
+        <item>Πολωνία</item>
+        <item>Πορτογαλλία</item>
+        <item>Ρωσία</item>
+        <item>Σιγκαπούρη</item>
+        <item>Σλοβακία</item>
+        <item>Ισπανία</item>
+        <item>Ελβετία</item>
+        <item>Σουηδία</item>
+        <item>Ταϊβάν</item>
+        <item>Τουρκία</item>
+        <item>Ηνωμένο Βασίλειο</item>
+        <item>Ηνωμένες Πολιτείες</item>
+    </string-array>
+    <string-array name="regional_band_summary">
+        <item>Βόρεια Αμερική (87.5MHz ως 108.0MHz ανά 200 Khz)</item>
+        <item>Ευρώπυ (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Ιαπωνία (76.0MHz ως 90.0MHz ανά βήματα 100 Khz)</item>
+        <item>Ιαπωνία (Ευρύτερη) (90.0MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Αυστραλία (87.7MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Αυστρία (87.5MHz ως 108.0MHz ανά βήματα 50 Khz)</item>
+        <item>Βέλγιο (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Βραζιλία (87.8MHz ως 108.0MHz ανά βήματα 200 Khz)</item>
+        <item>Κίνα (87.0MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Τσεχία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Δανία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Φινλανδία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Γαλλία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Γερμανία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Ελλάδα (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Hong Kong (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Ινδία (91.0MHz ως 106.4MHz ανά βήματα 100 Khz)</item>
+        <item>Ιρλανδία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Ιταλία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Κορέα (87.5MHz ως 108.0MHz ανά βήματα 200 Khz)</item>
+        <item>Μεξικό (88.1MHz ως 107.9MHz ανά βήματα 200 Khz)</item>
+        <item>Ολλανδία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Νέα ζηλανδία (88.0MHz ως 107.0MHz ανά βήματα 100 Khz)</item>
+        <item>Νορβηγία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Πολωνία (88.0MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Πορτογαλλία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Ρωσία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Σιγκαπούρη (88.0MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Σλοβακία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Ισπανία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Ελβετία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Σουηδία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Ταϊβάν (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Τουρκία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Ηνωμένο Βασίλειο (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Ηνωμένες Πολιτείες (88.1MHz ως 107.9MHz ανά βήματα 200 Khz)</item>
+    </string-array>
+</resources>
