@@ -5,30 +5,30 @@
     <string name="preset_delete">删除</string>
     <string name="stat_notif_frequency">FM调频"<xliff:g id="frequency">%1$s</xliff:g>"兆赫</string>
 
-    <string name="sel_band_menu">Select Regional Band</string>
-    <string name="settings_menu">设置</string>
-    <string name="regional_band">Regional Band</string>
+    <string name="sel_band_menu">选择地区频谱</string>
+    <string name="settings_menu">设定</string>
+    <string name="regional_band">地区频谱</string>
 
-    <string name="aud_output_mode">Audio Output Mode</string>
-    <string name="sel_audio_output">Select Audio Output</string>
+    <string name="aud_output_mode">音效输出模式</string>
+    <string name="sel_audio_output">选择音效输出</string>
 
-    <string name="record_dur">Record Duration</string>
-    <string name="sel_rec_dur">Select Record Duration</string>
+    <string name="record_dur">录音持续时间</string>
+    <string name="sel_rec_dur">选择录音持续时间</string>
 
-    <string name="auto_select_af">Alternate Frequency</string>
-    <string name="auto_select_af_enabled">Auto Select Enabled</string>
-    <string name="auto_select_af_disabled">Auto Select Disabled</string>
+    <string name="auto_select_af">替代频率</string>
+    <string name="auto_select_af_enabled">已启用自动选取</string>
+    <string name="auto_select_af_disabled">已停用自动选取</string>
 
     <string name="fac_defaults">恢复默认设置</string>
     <string name="revert_to_fac">恢复默认设置</string>
-    <string name="settings_back">Back</string>
+    <string name="settings_back">返回</string>
 
-    <string name="settings_revert_confirm_title">Confirm Reset Settings</string>
-    <string name="settings_revert_confirm_msg">This will delete all settings including Presets</string>
+    <string name="settings_revert_confirm_title">重设确认</string>
+    <string name="settings_revert_confirm_msg">将会删除包括电台在内的所有设定！</string>
 
-    <string name="settings_back_summary">Return to previous view</string>
-    <string name="settings_revert_defaults_title">Revert to Factory Defaults</string>
-    <string name="settings_revert_defaults_summary">Reset all settings</string>
+    <string name="settings_back_summary">回到上一个页面</string>
+    <string name="settings_revert_defaults_title">重设</string>
+    <string name="settings_revert_defaults_summary">重设所有设定至默认值</string>
 
     <string name="alert_dialog_ok">确认</string>
     <string name="alert_dialog_cancel">取消</string>
@@ -50,5 +50,20 @@
     <string name="need_headset_for_antenna">错误！请插上有线耳机作为FM天线</string>
     <string name="init_FM">请稍候，打开蓝牙启动FM芯片...</string>
     <string name="need_bluetooth">错误！请打开蓝牙以启动FM芯片</string>
+    <string name="about_title">关于</string>
+    <string name="about_summary">FM 收音机 - 由 MIUI 提供\nhttp://www.miui.com</string>
+
+    <string name="pref_disable_bt_prompt_title">结束时询问停用蓝牙</string>
+    <string name="pref_disable_bt_prompt_summary">关闭收音机时询问是否要停用蓝牙</string>
+    <string name="prompt_disable_bt">要停用蓝牙吗？</string>
+    <string name="prompt_yes">是</string>
+    <string name="prompt_no">否</string>
+
+    <string name="pref_bt_behaviour_on_exit_title">预设蓝牙设定</string>
+    <string name="pref_bt_behaviour_on_exit_summary">结束时蓝牙状态的变更方式</string>
+    <string name="pref_bt_behaviour_on_exit_dialog_title">蓝牙状态变更方式</string>
+
+    <string name="pref_headset_behaviour_title">拔除耳机后设定蓝牙</string>
+    <string name="pref_headset_behaviour_summary">拔除耳机后套用预设蓝牙设定</string>
 
 </resources>
