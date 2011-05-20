@@ -38,10 +38,6 @@
     <string name="fm_command_failed_title">FM operatie mislukt</string>
     <string name="fm_cmd_failed_msg">De operatie is mislukt. Mogelijke oorzaken: De bedraade hoofdtelefoon antenne is niet aangesloten, Bluetooth is niet geactiveerd, er is een telefoongesprek gaande, of FM is afgesloten. Controleer dit en probeer het vervolgens opnieuw.</string>
 
-    <skip/>
-    <!-- Do not translate. Duration format. -->
-    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
-
     <string name="frequency_string"></string>
     <string name="stat_no_fm">FM radio staat niet aan</string>
 
@@ -65,5 +61,4 @@
 
     <string name="pref_headset_behaviour_title">Hoofdtelefoon en Bluetooth gedrag</string>
     <string name="pref_headset_behaviour_summary">Roep Bluetooth gedrag aan wanneer hoofdtelefoon wordt losgekoppeld</string>
-
 </resources>
