@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">FM Radio</string>
+    <string name="tx_app_name">FM-transmitter</string>
+    <string name="preset_delete">Verwijder</string>
+    <string name="stat_notif_frequency">Frequentie: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
+
+    <string name="sel_band_menu">Selecteer regionale band</string>
+    <string name="settings_menu">Instellingen</string>
+    <string name="regional_band">Regionale band</string>
+
+    <string name="aud_output_mode">Audio uitvoer modus</string>
+    <string name="sel_audio_output">Selecteer audio uitvoer</string>
+
+    <string name="record_dur">Duur van opname</string>
+    <string name="sel_rec_dur">Selecteer opname duur</string>
+
+    <string name="auto_select_af">Alternatieve frequentie</string>
+    <string name="auto_select_af_enabled">Automatisch selecteren geactiveerd</string>
+    <string name="auto_select_af_disabled">Automatisch selecteren uitgezet</string>
+
+    <string name="fac_defaults">Reset instellingen</string>
+    <string name="revert_to_fac">Reset instellingen</string>
+    <string name="settings_back">Terug</string>
+
+    <string name="settings_revert_confirm_title">Bevestig reset</string>
+    <string name="settings_revert_confirm_msg">Dit verwijderd alle instellingen!</string>
+
+    <string name="settings_back_summary">Terug naar vorige weergave</string>
+    <string name="settings_revert_defaults_title">Reset instellingen</string>
+    <string name="settings_revert_defaults_summary">Reset instellingen naar de standaard waarden</string>
+
+    <string name="alert_dialog_ok">OK</string>
+    <string name="alert_dialog_cancel">Annuleren</string>
+
+    <string name="preset_search">Zoeken"<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
+
+    <string name="fm_command_failed_title">FM operatie mislukt</string>
+    <string name="fm_cmd_failed_msg">De operatie is mislukt. Mogelijke oorzaken: De bedraade hoofdtelefoon antenne is niet aangesloten, Bluetooth is niet geactiveerd, er is een telefoongesprek gaande, of FM is afgesloten. Controleer dit en probeer het vervolgens opnieuw.</string>
+
+    <string name="frequency_string"></string>
+    <string name="stat_no_fm">FM radio staat niet aan</string>
+
+    <!-- Added by LIBRA -->
+    <string name="need_headset_for_antenna">Sluit een bedraadde hoofdtelefoon aan, deze zal als FM antenne gebruikt worden.</string>
+    <string name="init_FM">Zet Bluetooth aan voor FM radio ondersteuning..</string>
+    <string name="need_bluetooth">Zet Bluetooth aan a.u.b.</string>
+
+    <string name="about_title">Over</string>
+    <string name="about_summary">FM Radio app ontwikkeld door MIUI - http://www.miui.com</string>
+
+    <string name="pref_disable_bt_prompt_title">Prompt om BT voor radio uit te zetten</string>
+    <string name="pref_disable_bt_prompt_summary">Prompt gebruiker om Bluetooth uit te zetten wanneer de radio uitgeschakeld wordt</string>
+    <string name="prompt_disable_bt">Wil je Bluetooth uitzetten?</string>
+    <string name="prompt_yes">Ja</string>
+    <string name="prompt_no">Nee</string>
+
+    <string name="pref_bt_behaviour_on_exit_title">Bluetooth gedrag in radio staat uit</string>
+    <string name="pref_bt_behaviour_on_exit_summary">Altijd uitschakelen, herstel initiële staat, promt, etc.</string>
+    <string name="pref_bt_behaviour_on_exit_dialog_title">Kies Bluetooth gedrag</string>
+
+    <string name="pref_headset_behaviour_title">Hoofdtelefoon en Bluetooth gedrag</string>
+    <string name="pref_headset_behaviour_summary">Roep Bluetooth gedrag aan wanneer hoofdtelefoon wordt losgekoppeld</string>
+</resources>
