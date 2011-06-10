@@ -5,6 +5,7 @@ import com.android.fm.R;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -66,9 +67,12 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
 
     private boolean mRxMode = false;
 
+    private Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+	context = getApplicationContext();
         Intent intent = getIntent();
         if (intent != null) {
             mRxMode = intent.getBooleanExtra(RX_MODE, false);
@@ -160,22 +164,23 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
                 root.addPreference(mRecordDurPreference);
             }
         }
+	if (context.getResources().getBoolean(R.bool.require_bt)) {
+	    mBluetoothBehaviour = new ListPreference(this);
+	    mBluetoothBehaviour.setEntries(R.array.bt_exit_behaviour_entries);
+	    mBluetoothBehaviour.setEntryValues(R.array.bt_exit_behaviour_values);
+	    mBluetoothBehaviour.setDialogTitle(R.string.pref_bt_behaviour_on_exit_dialog_title);
+	    mBluetoothBehaviour.setKey(BT_EXIT_BEHAVIOUR);
+	    mBluetoothBehaviour.setTitle(R.string.pref_bt_behaviour_on_exit_title);
+	    mBluetoothBehaviour.setSummary(R.string.pref_bt_behaviour_on_exit_summary);
+	    root.addPreference(mBluetoothBehaviour);
 
-        mBluetoothBehaviour = new ListPreference(this);
-        mBluetoothBehaviour.setEntries(R.array.bt_exit_behaviour_entries);
-        mBluetoothBehaviour.setEntryValues(R.array.bt_exit_behaviour_values);
-        mBluetoothBehaviour.setDialogTitle(R.string.pref_bt_behaviour_on_exit_dialog_title);
-        mBluetoothBehaviour.setKey(BT_EXIT_BEHAVIOUR);
-        mBluetoothBehaviour.setTitle(R.string.pref_bt_behaviour_on_exit_title);
-        mBluetoothBehaviour.setSummary(R.string.pref_bt_behaviour_on_exit_summary);
-        root.addPreference(mBluetoothBehaviour);
-
-        mRemoveHeadset = new CheckBoxPreference(this);
-        mRemoveHeadset.setKey(HEADSET_DC_BEHAVIOUR);
-        mRemoveHeadset.setTitle(R.string.pref_headset_behaviour_title);
-        mRemoveHeadset.setSummary(R.string.pref_headset_behaviour_summary);
-        mRemoveHeadset.setChecked(FmSharedPreferences.getHeadsetDcBehaviour());
-        root.addPreference(mRemoveHeadset);
+	    mRemoveHeadset = new CheckBoxPreference(this);
+	    mRemoveHeadset.setKey(HEADSET_DC_BEHAVIOUR);
+	    mRemoveHeadset.setTitle(R.string.pref_headset_behaviour_title);
+	    mRemoveHeadset.setSummary(R.string.pref_headset_behaviour_summary);
+	    mRemoveHeadset.setChecked(FmSharedPreferences.getHeadsetDcBehaviour());
+	    root.addPreference(mRemoveHeadset);
+	}
 
         mRestoreDefaultPreference = new Preference(this);
         mRestoreDefaultPreference.setTitle(R.string.settings_revert_defaults_title);

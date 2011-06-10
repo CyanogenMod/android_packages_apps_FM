@@ -160,7 +160,7 @@ public class FMRadio extends Activity {
     private Button[] mPresetButtons = {
             null, null, null, null, null
     };
-
+    private Context context;
     /* Middle row in the station info layout */
     private TextView mTuneStationFrequencyTV;
 
@@ -276,7 +276,7 @@ public class FMRadio extends Activity {
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-
+	context = getApplicationContext();
         mPrefs = new FmSharedPreferences(this);
         mPrefs.Load();
         mCommandActive = CMD_NONE;
@@ -784,7 +784,11 @@ public class FMRadio extends Activity {
                 disableRadio();
             }
             else {
-                asyncCheckAndEnableRadio();
+		if (context.getResources().getBoolean(R.bool.require_bt)) {
+		    asyncCheckAndEnableRadio();
+		} else {
+		    enableRadio();
+		}
             }
             setTurnOnOffButtonImage();
         }
@@ -958,7 +962,8 @@ public class FMRadio extends Activity {
                 }
 
                 // Toggle BT on/off depending on value in preferences
-                toggleRadioOffBluetoothBehaviour();
+		if (context.getResources().getBoolean(R.bool.require_bt))
+		    toggleRadioOffBluetoothBehaviour();
             }
             catch (RemoteException e) {
                 Log.e(LOGTAG, "RemoteException in disableRadio", e);
@@ -1829,7 +1834,12 @@ public class FMRadio extends Activity {
                 try {
                     mService.registerCallbacks(mServiceCallbacks);
 
-                    asyncCheckAndEnableRadio();
+		    if (context.getResources().getBoolean(R.bool.require_bt)) {
+			asyncCheckAndEnableRadio();
+		    } else {
+			enableRadio();
+		    }
+
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 }
