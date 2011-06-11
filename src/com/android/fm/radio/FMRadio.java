@@ -331,6 +331,7 @@ public class FMRadio extends Activity {
         } else {
             Log.d(LOGTAG, "onCreate: Start Service completed successfully");
         }
+        setVolumeControlStream(AudioSystem.STREAM_FM);
     }
 
     @Override
