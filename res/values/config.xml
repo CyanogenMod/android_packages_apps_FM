@@ -2,4 +2,7 @@
 <resources>
     <!-- Whether or not Bluetooth must be enabled for FM radio -->
     <bool name="require_bt">true</bool>
+
+    <!-- Whether or not output to speaker is supported -->
+    <bool name="speaker_supported">true</bool>
 </resources>
