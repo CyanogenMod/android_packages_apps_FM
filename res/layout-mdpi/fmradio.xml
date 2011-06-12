@@ -63,13 +63,21 @@
         android:layout_height="48dip"
         android:orientation="horizontal"
         android:layout_marginTop="10dip"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
+        android:paddingLeft="2dip"
+        android:paddingRight="2dip"
         >
+        <ImageButton android:id="@+id/btn_seekdown"
+            android:src="@drawable/btn_arrow_left"
+            android:background="@null"
+            android:layout_marginLeft="0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
         <ImageButton android:id="@+id/btn_speaker"
             android:src="@drawable/button_loudspeaker_off"
             android:background="@null"
-            android:layout_marginLeft="5dip"
+            android:layout_marginLeft="-4dip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
@@ -78,7 +86,7 @@
             android:background="@drawable/station_freq_bg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dip"
+            android:layout_marginLeft="2dip"
             >
             <TextView android:id="@+id/prog_frequency_tv"
                 android:layout_width="match_parent"
@@ -94,7 +102,15 @@
         <ImageButton android:id="@+id/btn_onoff"
             android:src="@drawable/button_power_off"
             android:background="@null"
-            android:layout_marginLeft="35dip"
+            android:layout_marginLeft="2dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <ImageButton android:id="@+id/btn_seekup"
+            android:src="@drawable/btn_arrow_right"
+            android:background="@null"
+            android:layout_marginLeft="-4dip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />

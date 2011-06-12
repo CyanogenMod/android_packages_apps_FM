@@ -5,4 +5,7 @@
 
     <!-- Whether or not output to speaker is supported -->
     <bool name="speaker_supported">true</bool>
+
+    <!-- Whether or not seek is supported -->
+    <bool name="seek_supported">false</bool>
 </resources>

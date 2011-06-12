@@ -21,6 +21,7 @@ interface IFMRadioService
     boolean searchStrongStationList(int numStations);
     int[]   getSearchList();
     boolean cancelSearch();
+    int getFreq();
     String getProgramService();
     String getRadioText();
     int getProgramType();
