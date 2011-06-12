@@ -1101,6 +1101,8 @@ public class FMRadio extends Activity {
         }
 
         mSpeakerButton.setEnabled(bEnable);
+	if (!context.getResources().getBoolean(R.bool.speaker_supported))
+	    mSpeakerButton.setVisibility(View.INVISIBLE);
         mFreqIndicator.setEnabled(bEnable);
         mTunerView.setEnabled(bEnable);
     }
