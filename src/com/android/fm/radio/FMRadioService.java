@@ -773,6 +773,10 @@ public class FMRadioService extends Service {
             return (mService.get().cancelSearch());
         }
 
+        public int getFreq() {
+            return (mService.get().getFreq());
+        }
+
         public String getProgramService() {
             return (mService.get().getProgramService());
         }
@@ -1026,6 +1030,14 @@ public class FMRadioService extends Service {
     }
 
     /**
+     * Get the current tuned frequency from the radio module
+     * @return freq value currently tuned
+     */
+    public int getFreq() {
+	return mReceiver.getTunedFrequency();
+    }
+
+   /**
      * Changes frequencies either higher or lower depending on {code boolean}
      * passed in.
      *

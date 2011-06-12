@@ -152,6 +152,8 @@ public class FMRadio extends Activity {
 
     /* Button Resources */
     private ImageButton mOnOffButton;
+    private ImageButton mSeekUpButton;
+    private ImageButton mSeekDownButton;
 
     /* Button switch speaker and headset */
     private ImageButton mSpeakerButton;
@@ -291,10 +293,20 @@ public class FMRadio extends Activity {
         mOnOffButton = (ImageButton) findViewById(R.id.btn_onoff);
         mOnOffButton.setOnClickListener(mTurnOnOffClickListener);
 
+        mSeekUpButton = (ImageButton) findViewById(R.id.btn_seekup);
+        mSeekUpButton.setOnClickListener(mSeekUpClickListener);
+        mSeekDownButton = (ImageButton) findViewById(R.id.btn_seekdown);
+        mSeekDownButton.setOnClickListener(mSeekDownClickListener);
+        mSeekUpButton.setImageResource(R.drawable.btn_arrow_right);
+        mSeekDownButton.setImageResource(R.drawable.btn_arrow_left);
+        if (!context.getResources().getBoolean(R.bool.seek_supported)){
+             mSeekUpButton.setVisibility(View.INVISIBLE);
+	     mSeekDownButton.setVisibility(View.INVISIBLE);
+        }
         mSpeakerButton = (ImageButton) findViewById(R.id.btn_speaker);
         mSpeakerButton.setOnClickListener(mSpeakerSwitchClickListener);
-	if (!context.getResources().getBoolean(R.bool.speaker_supported))
-	    mSpeakerButton.setVisibility(View.INVISIBLE);
+        if (!context.getResources().getBoolean(R.bool.speaker_supported))
+            mSpeakerButton.setVisibility(View.INVISIBLE);
 
         /* 5 Preset Buttons */
         mPresetButtons[0] = (Button) findViewById(R.id.presets_button_1);
@@ -796,6 +808,18 @@ public class FMRadio extends Activity {
         }
     };
 
+    private View.OnClickListener mSeekUpClickListener = new View.OnClickListener() {
+        public void onClick(View v) {
+	    SeekNextStation();
+        }
+    };
+
+    private View.OnClickListener mSeekDownClickListener = new View.OnClickListener() {
+        public void onClick(View v) {
+	    SeekPreviousStation();
+        }
+    };
+
     private View.OnClickListener mSpeakerSwitchClickListener = new View.OnClickListener() {
         public void onClick(View v) {
             boolean speakerState = !FmSharedPreferences.getSpeaker();
@@ -1105,9 +1129,27 @@ public class FMRadio extends Activity {
         mSpeakerButton.setEnabled(bEnable);
         mFreqIndicator.setEnabled(bEnable);
         mTunerView.setEnabled(bEnable);
+	mSeekUpButton.setEnabled(bEnable);
+	mSeekDownButton.setEnabled(bEnable);
     }
 
     private void updateSearchProgress() {
+	mIsSeeking=false;
+	if (mService != null) {
+	    try{
+		int freq=mService.getFreq()*10;
+		Log.d(LOGTAG,"Tuned frequency="+freq);
+		mTunedStation.setName("");
+		mTunedStation.setPI(0);
+		mTunedStation.setPty(0);
+		mTunedStation.setFrequency(freq);
+		mFreqIndicator.setFrequency(freq);
+		updateStationInfoToUI();
+	    }
+	    catch (RemoteException e)	{
+		e.printStackTrace();
+	    }
+	}
     }
 
 
