@@ -3,7 +3,7 @@
   <string name="app_name">FM-радіо</string>
   <string name="tx_app_name">FM-передавач</string>
   <string name="preset_delete">Видалити</string>
-  <string name="stat_notif_frequency">Частота: \"<xliff:g id=\"frequency\">%1$s</xliff:g>\" МГц</string>
+  <string name="stat_notif_frequency">Частота: "<xliff:g id="frequency">%1$s</xliff:g>" МГц</string>
   <string name="sel_band_menu">Виберіть регіон</string>
   <string name="settings_menu">Налаштування</string>
   <string name="regional_band">Діапазон у регіоні</string>
@@ -24,7 +24,7 @@
   <string name="settings_revert_defaults_summary">Скидання всіх налаштувань до типових значень</string>
   <string name="alert_dialog_ok">ОК</string>
   <string name="alert_dialog_cancel">Скасувати</string>
-  <string name="preset_search">Пошук\"<xliff:g id=\"preset_pi\">%1$s</xliff:g>\"</string>
+  <string name="preset_search">Пошук"<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
   <string name="fm_command_failed_title">Помилка в роботі FM-радіо</string>
   <string name="fm_cmd_failed_msg">Не вдалося виконати операцію. Можливі причини: ви не підключили провідну гарнітуру в якості антени, не ввімкнули Bluetooth, ваш телефон знаходиться в режимі дзвінка або FM-радіо було закрито. Перевірте та повторіть спробу.</string>
   <string name="stat_no_fm">FM-радіо не ввімкнено</string>
