@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="bt_exit_behaviour_entries">
+    <item>Нічого не робити (залишити увімкненим)</item>
+    <item>Відновити початковий стан BT</item>
+    <item>Запити у користувача</item>
+    <item>Завжди вимикати</item>
+  </string-array>
+  <string-array name="ster_mon_entries">
+    <item>Стерео</item>
+    <item>Моно</item>
+  </string-array>
+  <string-array name="record_durations_entries">
+    <item>5 хвилин</item>
+    <item>15 хвилин</item>
+    <item>30 хвилин</item>
+    <item>Необмежена</item>
+  </string-array>
+  <string-array name="search_category_rbds_entries">
+    <item>Усі станції</item>
+    <item>Старі хіти</item>
+    <item>Класика</item>
+    <item>Класичний рок</item>
+    <item>Коледж</item>
+    <item>Кантрі</item>
+    <item>Надзвичайні ситуації</item>
+    <item>Сповіщення про надзв. ситуації</item>
+    <item>Іншомовні</item>
+    <item>Інформація</item>
+    <item>Джаз</item>
+    <item>Новини</item>
+    <item>Ностальгія</item>
+    <item>Старі пісні</item>
+    <item>Персоналії</item>
+    <item>Громадські</item>
+    <item>Релігійна музика</item>
+    <item>Релігійні бесіди</item>
+    <item>Ритм-енд-блюз</item>
+    <item>Рок</item>
+    <item>Легка музика</item>
+    <item>Софт-рок</item>
+    <item>Легкий ритм-енд-блюз</item>
+    <item>Спорт</item>
+    <item>Бесіди</item>
+    <item>Топ-40</item>
+    <item>Погода</item>
+  </string-array>
+  <string-array name="search_category_rds_entries">
+    <item>Усі станції</item>
+    <item>Культура</item>
+    <item>Публіцистика</item>
+    <item>Дитячі програми</item>
+    <item>Кантрі</item>
+    <item>Документалістика</item>
+    <item>Драма</item>
+    <item>Легка музика</item>
+    <item>Освітні програми</item>
+    <item>Надзвичайні ситуації</item>
+    <item>Сповіщення про надзв. ситуації</item>
+    <item>Фінанси</item>
+    <item>Народна музика</item>
+    <item>Інформація</item>
+    <item>Джаз</item>
+    <item>Легка класика</item>
+    <item>Дозвілля</item>
+    <item>Новини</item>
+    <item>Національна музика</item>
+    <item>Інша музика</item>
+    <item>Старі хіти</item>
+    <item>Коментарі телефоном</item>
+    <item>Поп-музика</item>
+    <item>Релігія</item>
+    <item>Рок</item>
+    <item>Наука</item>
+    <item>Серйозна класика</item>
+    <item>Соціальна робота</item>
+    <item>Спорт</item>
+    <item>Подорожі</item>
+    <item>Про все</item>
+    <item>Погода</item>
+  </string-array>
+  <string-array name="presetlist_edit_category">
+    <item>Перейменувати</item>
+    <item>Автовибір</item>
+    <item>Видалити</item>
+  </string-array>
+  <string-array name="regional_band_entries">
+    <item>Північна Америка</item>
+    <item>Європа</item>
+    <item>Японія</item>
+    <item>Японія (широкий диап.)</item>
+    <item>Австралія</item>
+    <item>Австрія</item>
+    <item>Бельгія</item>
+    <item>Бразилія</item>
+    <item>Китай</item>
+    <item>Чехія</item>
+    <item>Данія</item>
+    <item>Фінляндія</item>
+    <item>Франція</item>
+    <item>Німеччина</item>
+    <item>Греція</item>
+    <item>Гонконг</item>
+    <item>Індія</item>
+    <item>Ірландія</item>
+    <item>Італія</item>
+    <item>Корея</item>
+    <item>Мексика</item>
+    <item>Нідерланди</item>
+    <item>Нова Зеландія</item>
+    <item>Норвегія</item>
+    <item>Польща</item>
+    <item>Португалія</item>
+    <item>Росія</item>
+    <item>Сінгапур</item>
+    <item>Словаччина</item>
+    <item>Іспанія</item>
+    <item>Швейцарія</item>
+    <item>Швеція</item>
+    <item>Тайвань</item>
+    <item>Туреччина</item>
+    <item>Великобританія</item>
+    <item>США</item>
+  </string-array>
+  <string-array name="regional_band_summary">
+    <item>Північна Америка (від 87,5 МГц до 108.0 МГц, крок 200 кГц)</item>
+    <item>Європа (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Японія (від 76.0 МГц до 90.0 МГц, крок 100 кГц)</item>
+    <item>Японія (широкий диап.) (від 90.0 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Австралія (від 77,7 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Австрія (від 87,5 МГц до 108.0 МГц, крок 50 кГц)</item>
+    <item>Бельгія (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Бразилія (від 87,8 МГц до 108.0 МГц, крок 200 кГц)</item>
+    <item>Китай (від 87.0 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Чехія (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Данія (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Фінляндія (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Франція (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Німеччина (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Греція (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Гонконг (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Індія (від 91.0 МГц до 106.4 МГц, крок 100 кГц)</item>
+    <item>Ірландія (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Італія (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Корея (від 87,5 МГц до 108.0 МГц, крок 200 кГц)</item>
+    <item>Мексика (від 88,1 МГц до 107,9 МГц, крок 200 кГц)</item>
+    <item>Нідерланди (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Нова Зеландія (від 88.0 МГц до 107.0 МГц, крок 100 кГц)</item>
+    <item>Норвегія (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Польща (від 88.0 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Португалія (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Росія (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Сінгапур (від 88.0 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Словаччина (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Іспанія (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Швейцарія (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Швеція (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Тайвань (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Туреччина (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>Великобританія (від 87,5 МГц до 108.0 МГц, крок 100 кГц)</item>
+    <item>США (від 88,1 МГц до 107,9 МГц, крок 200 кГц)</item>
+  </string-array>
+</resources>

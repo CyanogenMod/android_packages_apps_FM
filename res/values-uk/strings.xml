@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">FM-радіо</string>
+  <string name="tx_app_name">FM-передавач</string>
+  <string name="preset_delete">Видалити</string>
+  <string name="stat_notif_frequency">Частота: \"<xliff:g id=\"frequency\">%1$s</xliff:g>\" МГц</string>
+  <string name="sel_band_menu">Виберіть регіон</string>
+  <string name="settings_menu">Налаштування</string>
+  <string name="regional_band">Діапазон у регіоні</string>
+  <string name="aud_output_mode">Режим відтворення</string>
+  <string name="sel_audio_output">Виберіть режим відтворення</string>
+  <string name="record_dur">Тривалість запису</string>
+  <string name="sel_rec_dur">Виберіть тривалість запису</string>
+  <string name="auto_select_af">Альтернативні частоти</string>
+  <string name="auto_select_af_enabled">Автоматичний вибір увімкнено</string>
+  <string name="auto_select_af_disabled">Автоматичний вибір вимкнено</string>
+  <string name="fac_defaults">Скидання налаштувань</string>
+  <string name="revert_to_fac">Скидання налаштувань</string>
+  <string name="settings_back">Назад</string>
+  <string name="settings_revert_confirm_title">Підтвердження скидання</string>
+  <string name="settings_revert_confirm_msg">Будуть видалені всі налаштування, включаючи пресети!</string>
+  <string name="settings_back_summary">Повернутися до попереднього подання</string>
+  <string name="settings_revert_defaults_title">Скидання налаштувань</string>
+  <string name="settings_revert_defaults_summary">Скидання всіх налаштувань до типових значень</string>
+  <string name="alert_dialog_ok">ОК</string>
+  <string name="alert_dialog_cancel">Скасувати</string>
+  <string name="preset_search">Пошук\"<xliff:g id=\"preset_pi\">%1$s</xliff:g>\"</string>
+  <string name="fm_command_failed_title">Помилка в роботі FM-радіо</string>
+  <string name="fm_cmd_failed_msg">Не вдалося виконати операцію. Можливі причини: ви не підключили провідну гарнітуру в якості антени, не ввімкнули Bluetooth, ваш телефон знаходиться в режимі дзвінка або FM-радіо було закрито. Перевірте та повторіть спробу.</string>
+  <string name="stat_no_fm">FM-радіо не ввімкнено</string>
+  <string name="need_headset_for_antenna">Підключіть провідну гарнітуру, яка використовуватиметься в якості FM-антени.</string>
+  <string name="init_FM">Увімкнення Bluetooth для підтримки FM-радіо...</string>
+  <string name="need_bluetooth">Будь ласка, увімкніть Bluetooth</string>
+  <string name="about_title">Про програму</string>
+  <string name="about_summary">FM-радіо від MIUI - http://www.miui.com</string>
+  <string name="pref_disable_bt_prompt_title">Запит на вимк. BT коли вимикається радіо</string>
+  <string name="pref_disable_bt_prompt_summary">Запитувати користувача про необхідність вимкнення Bluetooth коли вимикається радіо</string>
+  <string name="prompt_disable_bt">Вимкнути Bluetooth?</string>
+  <string name="prompt_yes">Так</string>
+  <string name="prompt_no">Ні</string>
+  <string name="pref_bt_behaviour_on_exit_title">Поведінка Bluetooth за вимкнення радіо</string>
+  <string name="pref_bt_behaviour_on_exit_summary">Завжди вимикати, відновлення початкового стану, запит тощо.</string>
+  <string name="pref_bt_behaviour_on_exit_dialog_title">Виберіть поведінку Bluetooth</string>
+  <string name="pref_headset_behaviour_title">Взаємодія гарнітури з Bluetooth</string>
+  <string name="pref_headset_behaviour_summary">Визначення поведінки Bluetooth за видалення гарнітури</string>
+</resources>
