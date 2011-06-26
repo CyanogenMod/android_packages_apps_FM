@@ -17,6 +17,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.Shader;
 import android.hardware.fmradio.FmConfig;
 import android.media.AudioManager;
 import android.media.AudioSystem;
@@ -37,6 +41,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SeekBar;
@@ -278,7 +283,7 @@ public class FMRadio extends Activity {
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-	context = getApplicationContext();
+        context = getApplicationContext();
         mPrefs = new FmSharedPreferences(this);
         mPrefs.Load();
         mCommandActive = CMD_NONE;
@@ -289,6 +294,20 @@ public class FMRadio extends Activity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.fmradio);
+
+        // set tiled middle background for hdpi wvga
+        try {
+
+            FrameLayout layout = (FrameLayout) findViewById(R.id.middle_layout);
+            Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.fmradio_bg_mid);
+            BitmapDrawable bitmapDrawable = new BitmapDrawable(bmp);
+            bitmapDrawable.setTileModeXY(Shader.TileMode.REPEAT, Shader.TileMode.MIRROR);
+            layout.setBackgroundDrawable(null);
+            layout.setBackgroundDrawable(bitmapDrawable);
+
+        } catch (Exception e) {
+            Log.w(LOGTAG, "onCreate: unable to tile background to middle_layout");
+        }
 
         mOnOffButton = (ImageButton) findViewById(R.id.btn_onoff);
         mOnOffButton.setOnClickListener(mTurnOnOffClickListener);

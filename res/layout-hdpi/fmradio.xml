@@ -2,146 +2,172 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/fmradio"
-    android:background="@drawable/fmradio_background"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     >
 
-    <!-- This LinearLayout contains favorite Station Information display and the function buttons -->
-    <LinearLayout android:id="@+id/presets_layout"
-        android:background="@drawable/favorite_bg"
-        android:layout_width="match_parent"
-        android:layout_height="48dip"
-        android:orientation="horizontal"
-        android:layout_marginTop="245dip"
-        android:layout_marginLeft="14px"
-        android:layout_marginRight="13px"
+    <FrameLayout android:id="@+id/speaker_layout"
+    android:background="@drawable/fmradio_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    </FrameLayout>
+ 
+    <FrameLayout android:id="@+id/middle_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    >
+        <!-- This LinearLayout contains favorite Station Information display and the function buttons -->
+        <FrameLayout android:id="@+id/bgmid_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="90dip"
         >
-        <Button android:id="@+id/presets_button_1"
-            style="@style/favoriteButtonStyle"
-            />
-        <View
-            android:background="@drawable/favorite_line"
-            android:layout_width="2px"
-            android:layout_height="match_parent"
-            />
-        <Button android:id="@+id/presets_button_2"
-            style="@style/favoriteButtonStyle"
-            />
-        <View
-            android:background="@drawable/favorite_line"
-            android:layout_width="2px"
-            android:layout_height="match_parent"
-            />
-        <Button android:id="@+id/presets_button_3"
-            style="@style/favoriteButtonStyle"
-            />
-        <View
-            android:background="@drawable/favorite_line"
-            android:layout_width="2px"
-            android:layout_height="match_parent"
-            />
-        <Button android:id="@+id/presets_button_4"
-            style="@style/favoriteButtonStyle"
-            />
-        <View
-            android:background="@drawable/favorite_line"
-            android:layout_width="2px"
-            android:layout_height="match_parent"
-            />
-        <Button android:id="@+id/presets_button_5"
-            style="@style/favoriteButtonStyle"
-            />
-
-    </LinearLayout>
-
-    <!-- This LinearLayout contains Station Information display and the function buttons -->
-    <LinearLayout android:id="@+id/stationinfo_layout"
-        android:background="@null"
-        android:layout_width="match_parent"
-        android:layout_height="48dip"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dip"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        >
-        <ImageButton android:id="@+id/btn_seekdown"
-            android:src="@drawable/btn_arrow_left"
-            android:background="@null"
-            android:layout_marginLeft="4dip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-
-        <ImageButton android:id="@+id/btn_speaker"
-            android:src="@drawable/button_loudspeaker_off"
-            android:background="@null"
-            android:layout_marginLeft="3dip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-
-        <LinearLayout
-            android:background="@drawable/station_freq_bg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="3dip"
+            <LinearLayout android:id="@+id/presets_layout"
+            android:layout_width="match_parent"
+            android:gravity="top"
+            android:background="@drawable/favorite_bg"
+            android:layout_marginLeft="14px"
+            android:orientation="horizontal"
+            android:layout_marginRight="13px"
+            android:layout_gravity="top"
+            android:layout_height="30dip"
             >
-            <TextView android:id="@+id/prog_frequency_tv"
+                <Button android:id="@+id/presets_button_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/favoriteButtonStyle">
+                </Button>
+                <View android:id="@+id/view1"
+                android:layout_width="2px"
+                android:background="@drawable/favorite_line"
+                android:layout_height="match_parent"></View>
+                <Button android:id="@+id/presets_button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/favoriteButtonStyle">
+                </Button>
+                <View android:id="@+id/view2"
+                android:layout_width="2px"
+                android:background="@drawable/favorite_line"
+                android:layout_height="match_parent"></View>
+                <Button android:id="@+id/presets_button_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/favoriteButtonStyle">
+                </Button>
+                <View android:id="@+id/view3"
+                android:layout_width="2px"
+                android:background="@drawable/favorite_line"
+                android:layout_height="match_parent"></View>
+                <Button android:id="@+id/presets_button_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/favoriteButtonStyle">
+                </Button>
+                <View android:id="@+id/view4"
+                android:layout_width="2px"
+                android:background="@drawable/favorite_line"
+                android:layout_height="match_parent"></View>
+                <Button android:id="@+id/presets_button_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/favoriteButtonStyle">
+                </Button>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/stationinfo_layout"
+            android:layout_height="48dip"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dip"
+            android:background="@null"
+            android:paddingRight="10dip"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            >
+                <ImageButton android:id="@+id/btn_seekdown"
+                android:layout_marginLeft="4dip"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:src="@drawable/btn_arrow_left"
+                android:layout_height="wrap_content">
+                </ImageButton>
+                <ImageButton android:id="@+id/btn_speaker"
+                android:layout_marginLeft="3dip"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:src="@drawable/button_loudspeaker_off"
+                android:layout_height="wrap_content">
+                </ImageButton>
+                <LinearLayout android:id="@+id/linearLayout1"
+                android:layout_marginLeft="3dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/station_freq_bg"
+                >
+                    <TextView android:id="@+id/prog_frequency_tv"
+                    android:textColor="#FFC3E7AA"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="30sp"
+                    android:text="@string/frequency_string"
+                    android:paddingLeft="40dip">
+                    </TextView>
+                </LinearLayout>
+                <ImageButton android:id="@+id/btn_onoff"
+                android:layout_marginLeft="4dip"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:src="@drawable/button_power_off"
+                android:layout_height="wrap_content">
+                </ImageButton>
+                <ImageButton android:id="@+id/btn_seekup"
+                android:layout_marginLeft="4dip"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:src="@drawable/btn_arrow_right"
+                android:layout_height="wrap_content">
+                </ImageButton>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- This LinearLayout contains Station Information display and the function buttons -->
+        <FrameLayout android:id="@+id/bottom_layout"
+           android:layout_gravity="bottom"
+           android:background="@drawable/fmradio_bg_bottom"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+        >
+            <!-- This is frequency indicator: a red needle -->
+            <com.android.fm.radio.FreqIndicator android:id="@+id/freq_indicator_view"
+                android:progressDrawable="@drawable/freq_indicator_seek"
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="40dip"
-                android:gravity="center"
-                android:textColor="#FFC3E7AA"
-                android:textSize="30sp"
-                android:text="@string/frequency_string"
-                />
-        </LinearLayout>
+                android:layout_marginTop="6dip"
+                android:paddingLeft="24dip"
+                android:paddingRight="20dip"
+                android:thumb="@drawable/freq_indicator"
+                android:thumbOffset="0dip"
+                android:layout_gravity="top"
+            >
+            </com.android.fm.radio.FreqIndicator>
 
-        <ImageButton android:id="@+id/btn_onoff"
-            android:src="@drawable/button_power_off"
-            android:background="@null"
-            android:layout_marginLeft="4dip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            <!-- This is horizontal FM tuner -->
+            <com.android.fm.radio.TunerView android:id="@+id/fm_tuner_view"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingRight="10dip"
+                android:src="@drawable/tuner_view_0"
+                android:layout_gravity="top|center_horizontal"
+                android:paddingLeft="10dip"
+                android:paddingTop="2dip"
+                android:layout_marginTop="90dip"
+            >
+            </com.android.fm.radio.TunerView>
 
-        <ImageButton android:id="@+id/btn_seekup"
-            android:src="@drawable/btn_arrow_right"
-            android:background="@null"
-            android:layout_marginLeft="4dip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-
-    </LinearLayout>
-
-    <!-- This is frequency indicator: a red needle -->
-    <com.android.fm.radio.FreqIndicator
-        android:id="@+id/freq_indicator_view"
-        android:progressDrawable="@drawable/freq_indicator_seek"
-        android:thumb="@drawable/freq_indicator"
-        android:thumbOffset="0dip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="11dip"
-        android:layout_marginRight="6dip"
-        android:layout_marginTop="14dip"
-        />
-
-    <!-- This is horizontal FM tuner -->
-    <com.android.fm.radio.TunerView
-        android:id="@+id/fm_tuner_view"
-        android:src="@drawable/tuner_view_0"
-        android:layout_width="417px"
-        android:layout_height="75px"
-        android:paddingTop="18px"
-        android:paddingBottom="24px"
-        android:paddingLeft="20px"
-        android:paddingRight="20px"
-        android:layout_marginTop="13dip"
-        android:layout_gravity="center_horizontal"
-        />
+        </FrameLayout>
+    </FrameLayout>
 
 </LinearLayout>
