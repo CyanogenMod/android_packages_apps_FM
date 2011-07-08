@@ -408,9 +408,6 @@ public class FMRadio extends Activity {
         enableRadioOnOffUI();
 
         setSpeakerUI(FmSharedPreferences.getSpeaker());
-
-        AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_UNAVAILABLE, "");
-        AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_AVAILABLE, "");
     }
 
     private void setSpeakerUI(boolean on) {
@@ -920,6 +917,7 @@ public class FMRadio extends Activity {
                 if (bStatus) {
                     if (isAntennaAvailable()) {
                         // Set the previously tuned frequency
+                        tuneRadio(FmSharedPreferences.getTunedFrequency());
                         mFreqIndicator.setFrequency(FmSharedPreferences.getTunedFrequency());
 
                         // The output device is not set on a FM radio power on so we do it here
