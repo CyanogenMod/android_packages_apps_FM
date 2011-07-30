@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">FM Radio</string>
+    <string name="tx_app_name">FM Transmitter</string>
+    <string name="preset_delete">Slet</string>
+    <string name="stat_notif_frequency">Frekvens: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
+
+    <string name="sel_band_menu">Vælg regionalt bånd</string>
+    <string name="settings_menu">Indstillinger</string>
+    <string name="regional_band">Regionalt bånd</string>
+
+    <string name="aud_output_mode">Lyd output måde</string>
+    <string name="sel_audio_output">Vælg lyd output</string>
+
+    <string name="record_dur">Optagelses varighed</string>
+    <string name="sel_rec_dur">Vælg optagelses varighed</string>
+
+    <string name="auto_select_af">Alternativ frekvens</string>
+    <string name="auto_select_af_enabled">Auto vælg aktiveret</string>
+    <string name="auto_select_af_disabled">Auto vælg deaktiveret</string>
+
+    <string name="fac_defaults">Nulstil indstillinger</string>
+    <string name="revert_to_fac">Nulstil indstillinger</string>
+    <string name="settings_back">Tilbage</string>
+
+    <string name="settings_revert_confirm_title">Bekræft Nulstilling</string>
+    <string name="settings_revert_confirm_msg">Dette vil slette alle indstillinger, forudindstillinger inkluderet!</string>
+
+    <string name="settings_back_summary">Tilbage til forhåndværende visning</string>
+    <string name="settings_revert_defaults_title">Nulstil indstillinger</string>
+    <string name="settings_revert_defaults_summary">Nulstil alle indstillinger til standard</string>
+
+    <string name="alert_dialog_ok">OK</string>
+    <string name="alert_dialog_cancel">Annuller</string>
+
+    <string name="preset_search">Søg"<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
+
+    <string name="fm_command_failed_title">FM operation mislykkedes</string>
+    <string name="fm_cmd_failed_msg">Operationen mislykkedes. Mulige grunde er: du har ikke tilsluttet trådet headset som en antenne, du har ikke slået Bluetooth til, telefonen er midt i et opkald, eller FM er blevet lukket. Check dette og prøv igen.</string>
+
+    <skip/>
+    <!-- Do not translate. Duration format. -->
+    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
+
+    <string name="frequency_string"></string>
+    <string name="stat_no_fm">FM radioen er ikke tændt</string>
+
+    <!-- Added by LIBRA -->
+    <string name="need_headset_for_antenna">Tilslut venligst et trådet headset, som vil blive brugt som FM antenne.</string>
+    <string name="init_FM">Aktiverer for FM radio understøttelse...</string>
+    <string name="need_bluetooth">Aktiver venligst Bluetooth</string>
+
+    <string name="about_title">Om</string>
+    <string name="about_summary">FM Radio applikation af MIUI - http://www.miui.com</string>
+
+    <string name="pref_disable_bt_prompt_title">Spørg om at deaktivere BT når radioen slukkes</string>
+    <string name="pref_disable_bt_prompt_summary">Spørg brugeren om at deaktivere Bluetooth når radioen slukkes</string>
+    <string name="prompt_disable_bt">Vil du deaktivere Bluetooth?</string>
+    <string name="prompt_yes">Ja</string>
+    <string name="prompt_no">Nej</string>
+
+    <string name="pref_bt_behaviour_on_exit_title">Bluetooth opførsel når radioen slukkes</string>
+    <string name="pref_bt_behaviour_on_exit_summary">Deaktiver altid, genskab oprindelig tilstand, prompt, etc.</string>
+    <string name="pref_bt_behaviour_on_exit_dialog_title">Vælg Bluetooth opførsel</string>
+
+    <string name="pref_headset_behaviour_title">Headset og Bluetooth opførsel</string>
+    <string name="pref_headset_behaviour_summary">Påkald Bluetooth opførsel når headset er fjernet</string>
+
+</resources>

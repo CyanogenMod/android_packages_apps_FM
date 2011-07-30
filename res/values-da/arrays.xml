@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+  <string-array name="bt_exit_behaviour_entries">
+    <item>Gør ingenting (Forbliver aktiveret)</item>
+    <item>Genskab forhenværende BT tilstand</item>
+    <item>Prompt brugeren</item>
+    <item>Deaktiver altid</item>
+  </string-array>
+
+  <string-array name="bt_exit_behaviour_values" translatable="false">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+  </string-array>
+
+  <string-array name="ster_mon_entries">
+    <item>Stereo</item>
+    <item>Mono</item>
+  </string-array>
+
+  <string-array name="ster_mon_values" translatable="false">
+    <item>0</item>
+    <item>1</item>
+  </string-array>
+
+  <string-array name="record_durations_entries">
+    <item>5 minutter</item>
+    <item>15 minutter</item>
+    <item>30 minutter</item>
+    <item>Ubegrænset</item>
+  </string-array>
+
+
+  <string-array name="record_duration_values" translatable="false">
+    <item>5</item>
+    <item>15</item>
+    <item>30</item>
+    <item>-1</item>
+  </string-array>
+
+  <string-array name="search_category_rbds_entries">
+    <item>Alle Stationer</item>
+    <item>Voksne Hits</item>
+    <item>Classisk</item>
+    <item>Classisk Rock</item>
+    <item>College</item>
+    <item>Country</item>
+    <item>Nødstilfælde</item>
+    <item>Nødstilfælde Test</item>
+    <item>Fremmed Sprog</item>
+    <item>Information</item>
+    <item>Jazz</item>
+    <item>Nyheder</item>
+    <item>Nostalgi</item>
+    <item>Oldies</item>
+    <item>Personlighed</item>
+    <item>Offentligt</item>
+    <item>Religiøs Musik</item>
+    <item>Religiøs Snak</item>
+    <item>Rhythm and Blues</item>
+    <item>Rock</item>
+    <item>Soft</item>
+    <item>Soft Rock</item>
+    <item>Soft Rhythm and Blues</item>
+    <item>Sport</item>
+    <item>Snak</item>
+    <item>Top 40</item>
+    <item>Vejr</item>
+  </string-array>
+
+  <string-array name="search_category_rbds_values" translatable="false">
+    <item>0</item>
+    <item>7</item>
+    <item>15</item>
+    <item>6</item>
+    <item>23</item>
+    <item>10</item>
+    <item>31</item>
+    <item>30</item>
+    <item>18</item>
+    <item>2</item>
+    <item>14</item>
+    <item>1</item>
+    <item>13</item>
+    <item>11</item>
+    <item>21</item>
+    <item>22</item>
+    <item>19</item>
+    <item>20</item>
+    <item>16</item>
+    <item>5</item>
+    <item>12</item>
+    <item>8</item>
+    <item>17</item>
+    <item>3</item>
+    <item>4</item>
+    <item>9</item>
+    <item>29</item>
+  </string-array>
+
+
+  <string-array name="search_category_rds_entries">
+    <item>Alle Stationer</item>
+    <item>Kultur</item>
+    <item>Aktuelle Affærer</item>
+    <item>Børne programmer</item>
+    <item>Country Musik</item>
+    <item>Dokumentar</item>
+    <item>Drama</item>
+    <item>Nemt at lytte til Musik</item>
+    <item>Uddannelse</item>
+    <item>Nødstilfælde</item>
+    <item>Nødstilfælde Test</item>
+    <item>Finans</item>
+    <item>Folke Musik</item>
+    <item>Information</item>
+    <item>Jazz Musik</item>
+    <item>Let classisk</item>
+    <item>Fritid</item>
+    <item>Nyheder</item>
+    <item>National Musik</item>
+    <item>Andet Musik</item>
+    <item>Oldies Musik</item>
+    <item>Ring Ind</item>
+    <item>Pop Musik</item>
+    <item>Religion</item>
+    <item>Rock Musik</item>
+    <item>Videnskab</item>
+    <item>Seriøs classisk</item>
+    <item>Sociale Affærer</item>
+    <item>Sport</item>
+    <item>Rejse</item>
+    <item>Varieret</item>
+    <item>Vejr</item>
+  </string-array>
+
+  <string-array name="search_category_rds_values" translatable="false">
+    <item>0</item>
+    <item>7</item>
+    <item>2</item>
+    <item>18</item>
+    <item>25</item>
+    <item>29</item>
+    <item>6</item>
+    <item>12</item>
+    <item>5</item>
+    <item>31</item>
+    <item>30</item>
+    <item>17</item>
+    <item>28</item>
+    <item>3</item>
+    <item>24</item>
+    <item>13</item>
+    <item>23</item>
+    <item>1</item>
+    <item>26</item>
+    <item>15</item>
+    <item>27</item>
+    <item>21</item>
+    <item>10</item>
+    <item>20</item>
+    <item>11</item>
+    <item>8</item>
+    <item>14</item>
+    <item>19</item>
+    <item>4</item>
+    <item>22</item>
+    <item>9</item>
+    <item>16</item>
+  </string-array>
+
+  <string-array name="presetlist_edit_category">
+    <item>Rename</item>
+    <item>Auto-Select</item>
+    <item>Delete</item>
+  </string-array>
+
+
+  <string-array name="regional_band_entries">
+    <item>North America</item>
+    <item>Europe</item>
+    <item>Japan</item>
+    <item>Japan (Wide)</item>
+    <item>Australia</item>
+    <item>Austria</item>
+    <item>Belgium</item>
+    <item>Brazil</item>
+    <item>China</item>
+    <item>Czech</item>
+    <item>Denmark</item>
+    <item>Finland</item>
+    <item>France</item>
+    <item>Germany</item>
+    <item>Greece</item>
+    <item>Hong Kong</item>
+    <item>India</item>
+    <item>Ireland</item>
+    <item>Italy</item>
+    <item>Korea</item>
+    <item>Mexico</item>
+    <item>Netherlands</item>
+    <item>New Zealand</item>
+    <item>Norway</item>
+    <item>Poland</item>
+    <item>Portugal</item>
+    <item>Russia</item>
+    <item>Singapore</item>
+    <item>Slovakia</item>
+    <item>Spain</item>
+    <item>Switzerland</item>
+    <item>Sweden</item>
+    <item>Taiwan</item>
+    <item>Turkey</item>
+    <item>United Kingdom </item>
+    <item>United States</item>
+  </string-array>
+
+  <string-array name="regional_band_values" translatable="false">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+    <item>8</item>
+    <item>9</item>
+    <item>10</item>
+    <item>11</item>
+    <item>12</item>
+    <item>13</item>
+    <item>14</item>
+    <item>15</item>
+    <item>16</item>
+    <item>17</item>
+    <item>18</item>
+    <item>19</item>
+    <item>20</item>
+    <item>21</item>
+    <item>22</item>
+    <item>23</item>
+    <item>24</item>
+    <item>25</item>
+    <item>26</item>
+    <item>27</item>
+    <item>28</item>
+    <item>29</item>
+    <item>30</item>
+    <item>31</item>
+    <item>32</item>
+    <item>33</item>
+    <item>34</item>
+    <item>35</item>
+  </string-array>
+
+  <string-array name="regional_band_summary">
+    <item>North America (87.5MHz To 108.0MHz In 200 Khz Steps)</item>
+    <item>Europe (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Japan (76.0MHz To  90.0MHz In 100 Khz Steps)</item>
+    <item>Japan (Wide) (90.0MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Australia (87.7MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Austria (87.5MHz To 108.0MHz In  50 Khz Steps)</item>
+    <item>Belgium (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Brazil (87.8MHz To 108.0MHz In 200 Khz Step)</item>
+    <item>China (87.0MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Czech (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Denmark (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Finland (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>France (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Germany (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Greece (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Hong Kong (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>India (91.0MHz To 106.4MHz In 100 Khz Steps)</item>
+    <item>Ireland (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Italy (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Korea (87.5MHz To 108.0MHz In 200 Khz Steps)</item>
+    <item>Mexico (88.1MHz To 107.9MHz In 200 Khz Steps)</item>
+    <item>Netherlands (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>New Zealand (88.0MHz To 107.0MHz In 100 Khz Steps)</item>
+    <item>Norway (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Poland (88.0MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Portugal (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Russia (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Singapore (88.0MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Slovakia (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Spain (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Switzerland (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Sweden (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Taiwan (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>Turkey (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>United Kingdom (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
+    <item>United States (88.1MHz To 107.9MHz In 200 Khz Steps)</item>
+  </string-array>
+
+</resources>
