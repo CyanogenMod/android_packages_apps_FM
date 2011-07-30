@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+  <string-array name="bt_exit_behaviour_entries">
+    <item>Gör ingenting (Förblir aktiv)</item>
+    <item>Återställ ursprunligt BT-tillstånd</item>
+    <item>Uppmana till åtgärd från användaren</item>
+    <item>Inaktivera alltid</item>
+  </string-array>
+
+  <string-array name="ster_mon_entries">
+    <item>Stereo</item>
+    <item>Mono</item>
+  </string-array>
+
+  <string-array name="record_durations_entries">
+    <item>5 minuter</item>
+    <item>15 minuter</item>
+    <item>30 minuter</item>
+    <item>Obegränsat</item>
+  </string-array>
+
+  <string-array name="search_category_rbds_entries">
+    <item>Alla Stationer</item>
+    <item>Adult Hits</item>
+    <item>Klassiskt</item>
+    <item>Klassisk Rock</item>
+    <item>College</item>
+    <item>Country</item>
+    <item>Emergency</item>
+    <item>Emergency Test</item>
+    <item>Främmande språk</item>
+    <item>Information</item>
+    <item>Jazz</item>
+    <item>Nyheter</item>
+    <item>Nostalgi</item>
+    <item>Oldies</item>
+    <item>Personlighet</item>
+    <item>Offentligt</item>
+    <item>Religös Musik</item>
+    <item>Religöst Prat</item>
+    <item>Rhythm and Blues</item>
+    <item>Rock</item>
+    <item>Soft</item>
+    <item>Soft Rock</item>
+    <item>Soft Rhythm and Blues</item>
+    <item>Sport</item>
+    <item>Prat</item>
+    <item>Topp 40</item>
+    <item>Väder</item>
+  </string-array>
+
+  <string-array name="search_category_rds_entries">
+    <item>Alla Stationer</item>
+    <item>Kultur</item>
+    <item>Aktuella Frågor</item>
+    <item>Barnprogram</item>
+    <item>Country-musik</item>
+    <item>Dokumentär</item>
+    <item>Drama</item>
+    <item>Lättlyssnad Musik</item>
+    <item>Utbildning</item>
+    <item>Emergency</item>
+    <item>Emergency Test</item>
+    <item>Finans</item>
+    <item>Folkmusik</item>
+    <item>Information</item>
+    <item>Jazz-musik</item>
+    <item>Lätta klassiker</item>
+    <item>Fritid</item>
+    <item>Nyheter</item>
+    <item>Nationell Musik</item>
+    <item>Annan Musik</item>
+    <item>Oldies</item>
+    <item>Ring In</item>
+    <item>Pop-musik</item>
+    <item>Religion</item>
+    <item>Rock-musik</item>
+    <item>Vetenskap</item>
+    <item>Seriös Klassisk</item>
+    <item>Sociala frågor</item>
+    <item>Sport</item>
+    <item>Resor</item>
+    <item>Varierat</item>
+    <item>Väder</item>
+  </string-array>
+
+  <string-array name="presetlist_edit_category">
+    <item>Döp om</item>
+    <item>Välj automatiskt</item>
+    <item>Ta bort</item>
+  </string-array>
+
+
+  <string-array name="regional_band_entries">
+    <item>Nordamerika</item>
+    <item>Europa</item>
+    <item>Japan</item>
+    <item>Japan (Med omnejd)</item>
+    <item>Australien</item>
+    <item>Österrike</item>
+    <item>Belgien</item>
+    <item>Brasilien</item>
+    <item>Kina</item>
+    <item>Tjeckien</item>
+    <item>Danmark</item>
+    <item>Finland</item>
+    <item>Frankrike</item>
+    <item>Tyskland</item>
+    <item>Grekland</item>
+    <item>Hong Kong</item>
+    <item>Indien</item>
+    <item>Irland</item>
+    <item>Italien</item>
+    <item>Korea</item>
+    <item>Mexico</item>
+    <item>Nederländerna</item>
+    <item>Nya Zealand</item>
+    <item>Norge</item>
+    <item>Polen</item>
+    <item>Portugal</item>
+    <item>Ryssland</item>
+    <item>Singapore</item>
+    <item>Slovakien</item>
+    <item>Spanien</item>
+    <item>Schweiz</item>
+    <item>Sverige</item>
+    <item>Taiwan</item>
+    <item>Turkiet</item>
+    <item>Storbritannien</item>
+    <item>USA</item>
+  </string-array>
+
+  <string-array name="regional_band_summary">
+    <item>Nordamerika (87.5MHz Till 108.0MHz Med 200 Khz Steg)</item>
+    <item>Europa (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Japan (76.0MHz Till 90.0MHz Med 100 Khz Steg)</item>
+    <item>Japan (Med omnejd) (90.0MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Australien (87.7MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Österrike (87.5MHz Till 108.0MHz Med  50 Khz Steg)</item>
+    <item>Belgien (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Brasilien (87.8MHz Till 108.0MHz Med 200 Khz Steg)</item>
+    <item>Kina (87.0MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Tjeckien (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Danmark (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Finland (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Frankrike (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Tyskland (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Grekland (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Hong Kong (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Indien (91.0MHz Till 106.4MHz Med 100 Khz Steg)</item>
+    <item>Irland (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Italien (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Korea (87.5MHz Till 108.0MHz Med 200 Khz Steg)</item>
+    <item>Mexico (88.1MHz Till 107.9MHz Med 200 Khz Steg)</item>
+    <item>Nederländerna (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Nya Zealand (88.0MHz Till 107.0MHz Med 100 Khz Steg)</item>
+    <item>Norge (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Polen (88.0MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Portugal (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Ryssland (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Singapore (88.0MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Slovakien (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Spanien (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Schweiz (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Sverige (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Taiwan (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Turkiet (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>Storbritannien (87.5MHz Till 108.0MHz Med 100 Khz Steg)</item>
+    <item>USA (88.1MHz Till 107.9MHz Med 200 Khz Steg)</item>
+  </string-array>
+
+</resources>
