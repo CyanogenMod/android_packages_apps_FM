@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">FM-radio</string>
+    <string name="tx_app_name">FM-sändare</string>
+    <string name="preset_delete">Ta bort</string>
+    <string name="stat_notif_frequency">Frekvens: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
+
+    <string name="sel_band_menu">Välj regionalt band</string>
+    <string name="settings_menu">Inställningar</string>
+    <string name="regional_band">Regionalt band</string>
+
+    <string name="aud_output_mode">Ljudläge</string>
+    <string name="sel_audio_output">Välj ljudläge</string>
+
+    <string name="record_dur">Inspelningslängd</string>
+    <string name="sel_rec_dur">Välj inspelningslängd</string>
+
+    <string name="auto_select_af">Alternativ frekvens</string>
+    <string name="auto_select_af_enabled">Automatiskt val aktiverat</string>
+    <string name="auto_select_af_disabled">Automatiskt val inaktiverat</string>
+
+    <string name="fac_defaults">Återställ inställningar</string>
+    <string name="revert_to_fac">Återställ inställningar</string>
+    <string name="settings_back">Tillbaka</string>
+
+    <string name="settings_revert_confirm_title">Bekräfta återställning</string>
+    <string name="settings_revert_confirm_msg">Detta kommer ta bort alla inställningar, inklusive förinställningar!</string>
+
+    <string name="settings_back_summary">Återgå till föregående vy</string>
+    <string name="settings_revert_defaults_title">Återställ inställningar</string>
+    <string name="settings_revert_defaults_summary">Återställ samtliga inställningar till standard</string>
+
+    <string name="alert_dialog_ok">OK</string>
+    <string name="alert_dialog_cancel">Avbryt</string>
+
+    <string name="preset_search">Sök"<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
+
+    <string name="fm_command_failed_title">FM-åtgärd mysslyckades</string>
+    <string name="fm_cmd_failed_msg">Åtgärden misslyckades. Möjliga anledningar är: du kopplade inte in ett trådbundet headset som en antenn, aktiverade inte Bluetooth, telefonen är i ett samtal, eller FM har stängts ner. Kontrollera detta och försök igen.</string>
+
+    <string name="frequency_string"></string>
+    <string name="stat_no_fm">FM-radio är inte påslagen</string>
+
+    <string name="need_headset_for_antenna">Var god koppla in ett trådbundet headset. Detta kommer användas som FM-antenn.</string>
+    <string name="init_FM">Aktiverar stöd för Bluetooth FM-radio..</string>
+    <string name="need_bluetooth">Var god aktivera Bluetooth</string>
+
+    <string name="about_title">Om</string>
+    <string name="about_summary">FM-radio applikation av MIUI - http://www.miui.com</string>
+
+    <string name="pref_disable_bt_prompt_title">Fråga om BT-inaktivering vid radio av</string>
+    <string name="pref_disable_bt_prompt_summary">Fråga användaren om Bluetooth ska inaktiveras när radion stängs av</string>
+    <string name="prompt_disable_bt">Vill du inaktivera Bluetooth?</string>
+    <string name="prompt_yes">Ja</string>
+    <string name="prompt_no">Nej</string>
+
+    <string name="pref_bt_behaviour_on_exit_title">Bluetooth-beteende vid radio av</string>
+    <string name="pref_bt_behaviour_on_exit_summary">Inaktivera alltid, återställ ursprungligt tillstånd, fråga, osv.</string>
+    <string name="pref_bt_behaviour_on_exit_dialog_title">Välj ett Bluetooth-beteende</string>
+
+    <string name="pref_headset_behaviour_title">Headset- och Bluetooth-beteende</string>
+    <string name="pref_headset_behaviour_summary">Åberopa Bluetooth-beteende när headset kopplas bort</string>
+
+</resources>
