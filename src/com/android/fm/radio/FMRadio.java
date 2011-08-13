@@ -149,7 +149,7 @@ public class FMRadio extends Activity {
     private static IFMRadioService mService = null;
 
     private static FmSharedPreferences mPrefs;
-
+    
     /* Button Resources */
     private ImageButton mOnOffButton;
     private ImageButton mSeekUpButton;
@@ -270,6 +270,7 @@ public class FMRadio extends Activity {
                     }
                 }
             }
+
         }
     };
 
@@ -283,7 +284,7 @@ public class FMRadio extends Activity {
         mPrefs.Load();
         mCommandActive = CMD_NONE;
         mCommandFailed = CMD_NONE;
-
+	
         Log.d(LOGTAG, "onCreate - Height : " + getWindowManager().getDefaultDisplay().getHeight()
                 + " - Width  : " + getWindowManager().getDefaultDisplay().getWidth());
 
@@ -419,23 +420,48 @@ public class FMRadio extends Activity {
     }
 
     private void setSpeakerFunc(boolean on) {
-        if (on) {
-            switchToSpeaker();
-        } else {
-            switchToHeadset();
-        }
+
+         if (on) {
+             switchToSpeaker();
+         } else {
+             switchToHeadset();
+         }
+
     }
 
     private void switchToSpeaker() {
-        AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_SPEAKER);
+
+       /* AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_SPEAKER);
         AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_UNAVAILABLE, "");
-        AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_AVAILABLE, "");
+        AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_AVAILABLE, "");*/
+       if (mService != null) {
+	 try{
+	  mService.routeSpeaker(true);
+       } catch (RemoteException e) {
+	 Log.e(LOGTAG, "RemoteException in enableRadio", e);
+       }
+
+
+
+    }
     }
 
     private void switchToHeadset() {
-        AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
+
+        /*AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
         AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_UNAVAILABLE, "");
-        AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_AVAILABLE, "");
+        AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_AVAILABLE, "");*/
+	if (mService != null) {
+	  try{
+	  mService.routeSpeaker(false);
+	} catch (RemoteException e) {
+	  Log.e(LOGTAG, "RemoteException in enableRadio", e);
+	  
+	}
+
+
+
+    }
     }
 
     @Override
@@ -982,7 +1008,7 @@ public class FMRadio extends Activity {
                 }
                 else {
                     /* shut down force use */
-                    AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
+                    //AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE); Sami audio fix
                 }
 
                 // Toggle BT on/off depending on value in preferences
@@ -1487,22 +1513,25 @@ public class FMRadio extends Activity {
     /* Thread processing */
     private Runnable doSleepProcessing = new Runnable() {
         public void run() {
-            boolean sleepTimerExpired = hasSleepTimerExpired();
-            while (sleepTimerExpired == false) {
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                }
-                Message statusUpdate = new Message();
-                statusUpdate.what = SLEEPTIMER_UPDATE;
-                mUIUpdateHandlerHandler.sendMessage(statusUpdate);
-                sleepTimerExpired = hasSleepTimerExpired();
-            }
-            Message finished = new Message();
-            finished.what = SLEEPTIMER_EXPIRED;
-            mUIUpdateHandlerHandler.sendMessage(finished);
-        }
+	      boolean sleepTimerExpired = hasSleepTimerExpired();
+ 	      while (sleepTimerExpired == false) {
+		  try {
+		      Thread.sleep(500);
+		  } catch (InterruptedException e) {
+		      Thread.currentThread().interrupt();
+		  }
+		
+		  
+		  Message statusUpdate = new Message();
+		  statusUpdate.what = SLEEPTIMER_UPDATE;
+		  mUIUpdateHandlerHandler.sendMessage(statusUpdate);
+		  sleepTimerExpired = hasSleepTimerExpired();
+	      }
+	      Message finished = new Message();
+	      finished.what = SLEEPTIMER_EXPIRED;
+	      mUIUpdateHandlerHandler.sendMessage(finished);
+	  }
+
     };
 
     private static StringBuilder sFormatBuilder = new StringBuilder();
@@ -1531,7 +1560,7 @@ public class FMRadio extends Activity {
     }
 
     private void tuneRadio(int frequency) {
-        if ((mService != null)) {
+      if ((mService != null)) {
             boolean bStatus = false;
             try {
                 mTunedStation.setName("");
@@ -1575,7 +1604,7 @@ public class FMRadio extends Activity {
     final Runnable mRadioDisabled = new Runnable() {
         public void run() {
             /* shut down force use */
-            AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
+	    //AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE); Sami audio fix
             /* Update UI to FM Off State */
             enableRadioOnOffUI(false);
 

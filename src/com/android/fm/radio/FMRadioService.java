@@ -43,6 +43,8 @@ public class FMRadioService extends Service {
     public static final String CMDTOGGLEPAUSE = "togglepause";
     public static final String CMDNEXT = "next";
     public static final String CMDPREVIOUS = "previous";
+    //By Sami Masad
+    public static final String CMDVOLCHG = "volume_change";
 
     private Context context;
 
@@ -59,7 +61,8 @@ public class FMRadioService extends Service {
     /**
      * Points to the device node for the FM radio
      */
-    private static final String FMRADIO_DEVICE_FD_STRING = "/dev/radio0";
+    //private static final String FMRADIO_DEVICE_FD_STRING = "/dev/radio0";
+    private static final String FMRADIO_DEVICE_FD_STRING = "/dev/fmradio"; //fix by Sami Masad
 
     /**
      * ID identifying this service when launched in the foreground
@@ -497,6 +500,30 @@ public class FMRadioService extends Service {
                     }
                 }
             }
+
+/*           //By Sami Masad
+            else if(FMRadioService.CMDVOLCHG.equals(cmd)) {
+	      // copy the ringer volume
+	      if(isFmOn()) {
+		int vol ;
+		Log.d(LOGTAG, "Volume Change");
+		//read the volume from the ringer
+		vol = mAudioManager.getStreamVolume(AudioManager.STREAM_RING);
+		mAudioManager.setStreamVolume (AudioManager.STREAM_FM,vol,0);
+		
+		try {
+
+		  if ((mServiceInUse) && (mCallbacks != null)) {
+		    mCallbacks.onTuneStatusChanged();
+		  }
+		} catch (RemoteException e) {
+		  e.printStackTrace();
+		}
+	      }
+	    }
+	    
+//*/
+      
         }
 
         // make sure the service will shut down on its own if it was
@@ -506,6 +533,7 @@ public class FMRadioService extends Service {
         mDelayedStopHandler.sendMessageDelayed(msg, IDLE_DELAY);
         return START_STICKY;
     }
+  
 
     @Override
     public boolean onUnbind(Intent intent) {
@@ -526,14 +554,26 @@ public class FMRadioService extends Service {
     }
 
     private void startFM(){
-        Log.d(LOGTAG, "In startFM");
-        AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_AVAILABLE, "");
+	boolean result;        
+	Log.d(LOGTAG, "In startFM");
+	AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_AVAILABLE, ""); 
+	mAudioManager.setParameters("fm_radio_volume=8");
+	mAudioManager.setMode(AudioSystem.MODE_FMRADIO);
+	
+	mAudioManager.setParameters("dualmic_enabled=false");
+
+
+
+
         lockscreenBroadcast(true,getFreq());
     }
 
     private void stopFM(){
         Log.d(LOGTAG, "In stopFM");
         AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_UNAVAILABLE, "");
+ 	mAudioManager.setMode(AudioSystem.MODE_NORMAL);
+	mAudioManager.setParameters("fm_radio_volume=off");
+
         lockscreenBroadcast(false,0);
     }
 
@@ -599,7 +639,8 @@ public class FMRadioService extends Service {
                     startFM();
 
                     // Re-enable audio focus as the phone call stole it away
-                    mAudioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
+                    //mAudioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
+		    mAudioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_FM, AudioManager.AUDIOFOCUS_GAIN);
 
                     // Register our MediaButtonEventReceiver so it receives the lockscreen events and volume control events
                     mAudioManager.registerMediaButtonEventReceiver(new ComponentName(getPackageName(),
@@ -846,6 +887,11 @@ public class FMRadioService extends Service {
         public boolean isWiredHeadsetAvailable() {
             return (mService.get().isWiredHeadsetAvailable());
         }
+        
+        public void routeSpeaker(boolean enable) throws RemoteException {
+	    mService.get().routeSpeaker(enable);
+	}
+	
     }
 
     private final IBinder mBinder = new ServiceStub(this);
@@ -859,7 +905,8 @@ public class FMRadioService extends Service {
         boolean bStatus = false;
         Log.d(LOGTAG, "fmOn");
         mAudioManager.registerMediaButtonEventReceiver(new ComponentName(getPackageName(), FMMediaButtonIntentReceiver.class.getName()));
-        mAudioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
+        //mAudioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
+	mAudioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_FM, AudioManager.AUDIOFOCUS_GAIN);
 
         if (mReceiver == null) {
             mReceiver = new FmReceiver(FMRADIO_DEVICE_FD_STRING, null);
@@ -1391,6 +1438,21 @@ public class FMRadioService extends Service {
         }
         return bCommandSent;
     }
+    
+    /*
+     * Set the FM module to Speaker out Mode
+     * @return true if set Stereo mode api was invoked successfully, false if
+     * the api failed.
+     */
+    public void routeSpeaker(boolean bEnable) {
+
+      if (mAudioManager != null) {
+	Log.d(LOGTAG, "routeSpeaker: " + bEnable);
+	mAudioManager.setSpeakerphoneOn(bEnable);
+      }
+     
+    }
+    
 
     /**
      * Determines if an internal Antenna is available. Returns the cached value

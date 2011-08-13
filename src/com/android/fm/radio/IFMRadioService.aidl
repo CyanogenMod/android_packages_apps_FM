@@ -32,5 +32,6 @@ interface IFMRadioService
     boolean enableStereo(boolean bEnable);
     boolean isAntennaAvailable();
     boolean isWiredHeadsetAvailable();
+    void routeSpeaker(boolean bEnable);
 }
 
