@@ -7,6 +7,7 @@ interface IFMRadioService
     boolean fmOn();
     boolean fmOff();
     boolean isFmOn();
+    boolean isSpeakerEnabled();
     boolean fmReconfigure();
     void registerCallbacks(IFMRadioServiceCallbacks cb);
     void unregisterCallbacks();
@@ -16,6 +17,7 @@ interface IFMRadioService
     boolean isMuted();
     boolean tune(int frequency);
     boolean seek(boolean up);
+    void enableSpeaker(boolean speakerOn);
     boolean scan(int pty);
     boolean seekPI(int piCode);
     boolean searchStrongStationList(int numStations);

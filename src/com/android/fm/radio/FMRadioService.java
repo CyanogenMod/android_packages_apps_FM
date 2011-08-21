@@ -143,6 +143,8 @@ public class FMRadioService extends Service {
      */
     private boolean mFMOn = false;
 
+    private boolean mSpeakerPhoneOn = false;
+
     /**
      * Generic Handler instance
      */
@@ -747,6 +749,11 @@ public class FMRadioService extends Service {
             return (mService.get().isFmOn());
         }
 
+        public boolean isSpeakerEnabled()
+        {
+            return(mService.get().isSpeakerEnabled());
+        }
+
         public boolean fmReconfigure() {
             return (mService.get().fmReconfigure());
         }
@@ -781,6 +788,11 @@ public class FMRadioService extends Service {
 
         public boolean seek(boolean up) {
             return (mService.get().seek(up));
+        }
+
+        public void enableSpeaker(boolean speakerOn)
+        {
+            mService.get().enableSpeaker(speakerOn);
         }
 
         public boolean scan(int pty) {
@@ -920,8 +932,13 @@ public class FMRadioService extends Service {
      * failed.
      */
     private boolean fmOff() {
-        boolean bStatus = false;
         Log.d(LOGTAG, "fmOff");
+        boolean bStatus = false;
+
+        if (mSpeakerPhoneOn) {
+            mSpeakerPhoneOn = false;
+            AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
+        }
         mAudioManager.abandonAudioFocus(mAudioFocusListener);
         stopFM();
         // This will disable the FM radio device
@@ -941,6 +958,20 @@ public class FMRadioService extends Service {
      */
     public boolean isFmOn() {
         return mFMOn;
+    }
+
+    public boolean isSpeakerEnabled() {
+        return mSpeakerPhoneOn;
+    }
+
+    public void enableSpeaker(boolean speakerOn) {
+        mSpeakerPhoneOn = speakerOn;
+        if (speakerOn) {
+            AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_SPEAKER);
+        }
+        else {
+            AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
+        }
     }
 
     /*
