@@ -3,6 +3,8 @@
     <string name="app_name">Radio FM</string>
     <string name="tx_app_name">Trasmettitore FM</string>
     <string name="preset_delete">Elimina</string>
+    <string name="preset_rename">Rinomina</string>
+    <string name="dialog_presetlist_rename_title">Inserire un nome </string>
     <string name="stat_notif_frequency">Radio FM "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
 
     <string name="sel_band_menu">Seleziona banda</string>
