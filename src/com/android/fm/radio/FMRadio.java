@@ -279,7 +279,7 @@ public class FMRadio extends Activity {
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-	context = getApplicationContext();
+        context = getApplicationContext();
         mPrefs = new FmSharedPreferences(this);
         mPrefs.Load();
         mCommandActive = CMD_NONE;
@@ -302,7 +302,7 @@ public class FMRadio extends Activity {
         mSeekDownButton.setImageResource(R.drawable.btn_arrow_left);
         if (!context.getResources().getBoolean(R.bool.seek_supported)){
              mSeekUpButton.setVisibility(View.INVISIBLE);
-	     mSeekDownButton.setVisibility(View.INVISIBLE);
+             mSeekDownButton.setVisibility(View.INVISIBLE);
         }
         mSpeakerButton = (ImageButton) findViewById(R.id.btn_speaker);
         mSpeakerButton.setOnClickListener(mSpeakerSwitchClickListener);
@@ -838,11 +838,11 @@ public class FMRadio extends Activity {
                 disableRadio();
             }
             else {
-		if (context.getResources().getBoolean(R.bool.require_bt)) {
-		    asyncCheckAndEnableRadio();
-		} else {
-		    enableRadio();
-		}
+                if (context.getResources().getBoolean(R.bool.require_bt)) {
+                    asyncCheckAndEnableRadio();
+                } else {
+                    enableRadio();
+                }
             }
             setTurnOnOffButtonImage();
         }
@@ -850,13 +850,13 @@ public class FMRadio extends Activity {
 
     private View.OnClickListener mSeekUpClickListener = new View.OnClickListener() {
         public void onClick(View v) {
-	    SeekNextStation();
+            SeekNextStation();
         }
     };
 
     private View.OnClickListener mSeekDownClickListener = new View.OnClickListener() {
         public void onClick(View v) {
-	    SeekPreviousStation();
+            SeekPreviousStation();
         }
     };
 
@@ -1029,9 +1029,9 @@ public class FMRadio extends Activity {
                 }
 
                 // Toggle BT on/off depending on value in preferences
-		if (context.getResources().getBoolean(R.bool.require_bt))
-		    toggleRadioOffBluetoothBehaviour();
-            }
+                if (context.getResources().getBoolean(R.bool.require_bt))
+                    toggleRadioOffBluetoothBehaviour();
+                }
             catch (RemoteException e) {
                 Log.e(LOGTAG, "RemoteException in disableRadio", e);
             }
@@ -1171,46 +1171,46 @@ public class FMRadio extends Activity {
         mSpeakerButton.setEnabled(bEnable);
         mFreqIndicator.setEnabled(bEnable);
         mTunerView.setEnabled(bEnable);
-	mSeekUpButton.setEnabled(bEnable);
-	mSeekDownButton.setEnabled(bEnable);
+        mSeekUpButton.setEnabled(bEnable);
+        mSeekDownButton.setEnabled(bEnable);
     }
 
     private void updateSearchProgress() {
-	if (mService != null) {
-	    try{
-		int freq = mService.getFreq();
+        if (mService != null) {
+            try{
+                int freq = mService.getFreq();
 
-		// loop for up to 4 seconds waiting for search to find a station
-		for(int i=0; i < 8 && mIsSeeking; i++){
-		    int freqb;
-		    if(freq != (freqb = mService.getFreq())){
-			// if frequencies don't match wait 500ms then try again
-			freq = freqb;
-			Thread.sleep(500);
-		    }
-		    else {
-			// if frequencies do match seeking is finished
-			mIsSeeking = false;
-		    }
-		}
+                // loop for up to 4 seconds waiting for search to find a station
+                for(int i=0; i < 8 && mIsSeeking; i++){
+                    int freqb;
+                    if(freq != (freqb = mService.getFreq())){
+                        // if frequencies don't match wait 500ms then try again
+                        freq = freqb;
+                        Thread.sleep(500);
+                    }
+                    else {
+                        // if frequencies do match seeking is finished
+                        mIsSeeking = false;
+                    }
+                }
 
-		if(mIsSeeking)
-		    // if the loop completed without stopping on a station cancel the search
-		    cancelSearch();
-		else {
-		    // if a station was found update the display with the new frequency
-		    Log.d(LOGTAG,"Tuned frequency="+freq);
-		    mTunedStation.setFrequency(freq);
-		    mFreqIndicator.setFrequency(freq);
-		}
-	    }
-	    catch (RemoteException e)	{
-		e.printStackTrace();
-	    }
-	    catch (InterruptedException e)	{
-		e.printStackTrace();
-	    }
-	}
+                if(mIsSeeking)
+                    // if the loop completed without stopping on a station cancel the search
+                    cancelSearch();
+                else {
+                    // if a station was found update the display with the new frequency
+                    Log.d(LOGTAG,"Tuned frequency="+freq);
+                    mTunedStation.setFrequency(freq);
+                    mFreqIndicator.setFrequency(freq);
+                }
+            }
+            catch (RemoteException e) {
+                e.printStackTrace();
+            }
+            catch (InterruptedException e) {
+               e.printStackTrace();
+            }
+        }
     }
 
     private void setupPresetLayout() {
@@ -1939,11 +1939,11 @@ public class FMRadio extends Activity {
                 try {
                     mService.registerCallbacks(mServiceCallbacks);
 
-		    if (context.getResources().getBoolean(R.bool.require_bt)) {
-			asyncCheckAndEnableRadio();
-		    } else {
-			enableRadio();
-		    }
+                    if (context.getResources().getBoolean(R.bool.require_bt)) {
+                        asyncCheckAndEnableRadio();
+                    } else {
+                        enableRadio();
+                    }
 
                 } catch (RemoteException e) {
                     e.printStackTrace();

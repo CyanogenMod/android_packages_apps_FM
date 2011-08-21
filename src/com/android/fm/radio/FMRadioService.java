@@ -1062,7 +1062,7 @@ public class FMRadioService extends Service {
      * @return freq value currently tuned
      */
     public int getFreq() {
-	return mReceiver.getTunedFrequency();
+        return FmSharedPreferences.getTunedFrequency();
     }
 
    /**
