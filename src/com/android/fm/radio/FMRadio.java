@@ -417,35 +417,15 @@ public class FMRadio extends Activity {
 
         enableRadioOnOffUI();
 
-        setSpeakerUI(FmSharedPreferences.getSpeaker());
+        setSpeakerUI();
     }
 
-    private void setSpeakerUI(boolean on) {
-        if (on) {
+    private void setSpeakerUI() {
+        if (isSpeakerEnabled()) {
             mSpeakerButton.setImageResource(R.drawable.button_loudspeaker_on);
         } else {
             mSpeakerButton.setImageResource(R.drawable.button_loudspeaker_off);
         }
-    }
-
-    private void setSpeakerFunc(boolean on) {
-        if (on) {
-            switchToSpeaker();
-        } else {
-            switchToHeadset();
-        }
-    }
-
-    private void switchToSpeaker() {
-        AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_SPEAKER);
-        AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_UNAVAILABLE, "");
-        AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_AVAILABLE, "");
-    }
-
-    private void switchToHeadset() {
-        AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
-        AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_UNAVAILABLE, "");
-        AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_AVAILABLE, "");
     }
 
     @Override
@@ -539,6 +519,24 @@ public class FMRadio extends Activity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void enableSpeaker() {
+       //This method with toggle Speaker phone based on existing state .
+        boolean bSpeakerPhoneOn = isSpeakerEnabled();
+        if (mService != null) {
+            try {
+                if (bSpeakerPhoneOn) {  // as Speaker is already on turn it off.
+                    mService.enableSpeaker(false);
+                    Log.d(LOGTAG, "Speaker phone is  turned off");
+                } else { // as Speaker is off turn it on.
+                    mService.enableSpeaker(true);
+                    Log.d(LOGTAG, "Speaker phone is turned on");
+                }
+            } catch (RemoteException e) {
+                 e.printStackTrace();
+            }
+        }
     }
 
     @Override
@@ -871,10 +869,8 @@ public class FMRadio extends Activity {
 
     private View.OnClickListener mSpeakerSwitchClickListener = new View.OnClickListener() {
         public void onClick(View v) {
-            boolean speakerState = !FmSharedPreferences.getSpeaker();
-            setSpeakerUI(speakerState);
-            setSpeakerFunc(speakerState);
-            FmSharedPreferences.setSpeaker(speakerState);
+            enableSpeaker();
+            setSpeakerUI();
         }
     };
 
@@ -972,16 +968,8 @@ public class FMRadio extends Activity {
                         tuneRadio(FmSharedPreferences.getTunedFrequency());
                         mFreqIndicator.setFrequency(FmSharedPreferences.getTunedFrequency());
 
-                        // The output device is not set on a FM radio power on so we do it here
-                        if(FmSharedPreferences.getSpeaker()) {
-                           switchToSpeaker();
-                        }
-                        else {
-                           switchToHeadset();
-                        }
-
                         // Update the speaker icon
-                        setSpeakerUI(FmSharedPreferences.getSpeaker());
+                        setSpeakerUI();
 
                         // Turn on the FM radio
                         enableRadioOnOffUI();
@@ -1007,6 +995,7 @@ public class FMRadio extends Activity {
 
     private void disableRadio() {
         boolean bStatus = false;
+        boolean bSpeakerPhoneOn = isSpeakerEnabled();
 
         // Cancel a frequency search if one was ongoing
         cancelSearch();
@@ -1020,6 +1009,10 @@ public class FMRadio extends Activity {
 
                 // Mute the audio
                 mService.mute();
+
+                if (bSpeakerPhoneOn) {
+                    mService.enableSpeaker(false);
+                }
 
                 // Turn off the FM radio
                 bStatus = mService.fmOff();
@@ -1147,6 +1140,18 @@ public class FMRadio extends Activity {
         mRecording = false;
         DebugToasts("Stopped Recording", Toast.LENGTH_SHORT);
         return mRecording;
+    }
+
+    private boolean isSpeakerEnabled() {
+        boolean speakerEnabled = false;
+        if (mService != null) {
+            try {
+                speakerEnabled = mService.isSpeakerEnabled();
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+        return(speakerEnabled);
     }
 
     private void addToPresets() {
