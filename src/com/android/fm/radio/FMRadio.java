@@ -207,11 +207,20 @@ public class FMRadio extends Activity {
             if (tunerView.isEnabled() && step != 0) {
                 mSteps += step;
                 int stepSize = FmSharedPreferences.getBandStepSize();
+                int curProgress = mFreqIndicator.getProgress();
+                int upperLimit = FmSharedPreferences.getUpperLimit();
+                int lowerLimit = FmSharedPreferences.getLowerLimit();
                 if (mSteps > 5) {
-                    mFreqIndicator.setProgress(((mFreqIndicator.getProgress() / stepSize) + 1) * stepSize);
+                    if (curProgress == (upperLimit - lowerLimit))
+                        mFreqIndicator.setProgress(0);
+                    else
+                        mFreqIndicator.setProgress(((mFreqIndicator.getProgress() / stepSize) + 1) * stepSize);
                     mSteps = 0;
                 } else if (mSteps < -5) {
-                    mFreqIndicator.setProgress(((mFreqIndicator.getProgress() / stepSize) - 1) * stepSize);
+                    if (curProgress == 0)
+                        mFreqIndicator.setProgress(upperLimit - lowerLimit);
+                    else
+                        mFreqIndicator.setProgress(((mFreqIndicator.getProgress() / stepSize) - 1) * stepSize);
                     mSteps = 0;
                 }
             }
