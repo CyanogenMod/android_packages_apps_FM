@@ -1032,6 +1032,8 @@ public class FMRadioService extends Service {
              * since any changes to freq get saved to FmSharedPreferences and NOT mReceiver
              */
             int intCurrFreq = FmSharedPreferences.getTunedFrequency();
+            int upperLimit = FmSharedPreferences.getUpperLimit();
+            int lowerLimit = FmSharedPreferences.getLowerLimit();
             Log.d(LOGTAG, "Current Tuned frequency: "+intCurrFreq);
 
             if(up) {
@@ -1040,6 +1042,12 @@ public class FMRadioService extends Service {
             else {
                 intNewFreq = intCurrFreq - 100;
             }
+
+            if (intNewFreq > upperLimit)
+                intNewFreq = lowerLimit;
+            else if (intNewFreq < lowerLimit)
+                intNewFreq = upperLimit;
+
             Log.d(LOGTAG, "New Frequency: "+intNewFreq);
 
             // Update the new frequency in FmSharedPreferences
