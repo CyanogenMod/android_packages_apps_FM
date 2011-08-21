@@ -31,6 +31,7 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -142,9 +143,9 @@ public class FMRadio extends Activity {
 
     private static final int CMD_GET_INTERNALANTENNA_MODE = 14;
 
-    private static final int PRESETS_OPTIONS_DELETE = 0;
-
-    private static final int PRESETS_OPTIONS_SEARCHPI = 1;
+    private static final int PRESETS_OPTIONS_RENAME = 0;
+    private static final int PRESETS_OPTIONS_DELETE = 1;
+    private static final int PRESETS_OPTIONS_SEARCHPI = 2;
 
     private static IFMRadioService mService = null;
 
@@ -544,6 +545,9 @@ public class FMRadio extends Activity {
             case DIALOG_PRESET_OPTIONS: {
                 return createPresetOptionsDlg(id);
             }
+            case DIALOG_PRESET_RENAME: {
+                return createPresetRenameDlg(id);
+            }
             case DIALOG_CMD_FAILED: {
                 return createCmdFailedDlg(id);
             }
@@ -661,11 +665,13 @@ public class FMRadio extends Activity {
             AlertDialog.Builder dlgBuilder = new AlertDialog.Builder(this);
             dlgBuilder.setTitle(mPresetButtonStation.getName());
             ArrayList<String> arrayList = new ArrayList<String>();
-            // PRESETS_OPTIONS_DELETE=0
+            // PRESETS_OPTIONS_RENAME = 0
+            arrayList.add(getResources().getString(R.string.preset_rename));
+            // PRESETS_OPTIONS_DELETE = 1
             arrayList.add(getResources().getString(R.string.preset_delete));
             String piString = mPresetButtonStation.getPIString();
             if (!TextUtils.isEmpty(piString)) {
-                // PRESETS_OPTIONS_SEARCHPI=1
+                // PRESETS_OPTIONS_SEARCHPI = 2
                 arrayList.add(getResources().getString(R.string.preset_search, piString));
             }
 
@@ -682,6 +688,11 @@ public class FMRadio extends Activity {
                 public void onClick(DialogInterface dialog, int item) {
                     if (mPresetButtonStation != null) {
                         switch (item) {
+                            case PRESETS_OPTIONS_RENAME: {
+                                // Rename
+                                showDialog(DIALOG_PRESET_RENAME);
+                                break;
+                            }
                             case PRESETS_OPTIONS_DELETE: {
                                 // Delete
                                 int curListIndex = FmSharedPreferences.getCurrentListIndex();
@@ -718,6 +729,38 @@ public class FMRadio extends Activity {
     }
 
     private void updateSelectPresetListDlg(ListView lv) {
+    }
+
+    private Dialog createPresetRenameDlg(int id) {
+        if (mPresetButtonStation == null) {
+            return null;
+        }
+        LayoutInflater factory = LayoutInflater.from(this);
+        final View textEntryView = factory.inflate(R.layout.alert_dialog_text_entry, null);
+        AlertDialog.Builder dlgBuilder = new AlertDialog.Builder(this);
+        dlgBuilder.setTitle(R.string.dialog_presetlist_rename_title);
+        dlgBuilder.setView(textEntryView);
+        dlgBuilder.setPositiveButton(R.string.alert_dialog_ok,
+                                     new DialogInterface.OnClickListener() {
+                                         public void onClick(DialogInterface dialog, int whichButton) {
+                                             //int curList = FmSharedPreferences.getCurrentListIndex();
+                                             EditText mTV = (EditText) textEntryView.findViewById(R.id.list_edit);
+                                             CharSequence newName = mTV.getEditableText();
+                                             String nName = String.valueOf(newName);
+                                             mPresetButtonStation.setName(nName);
+                                             mPresetButtonStation=null;
+                                             setupPresetLayout();
+                                             mPrefs.Save();
+                                             removeDialog(DIALOG_PRESET_RENAME);
+                                         }
+                                     });
+        dlgBuilder.setNegativeButton(R.string.alert_dialog_cancel,
+                                     new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int whichButton) {
+                                             removeDialog(DIALOG_PRESET_RENAME);
+                                        }
+                                     });
+        return(dlgBuilder.create());
     }
 
     private Dialog createCmdFailedDlg(int id) {
