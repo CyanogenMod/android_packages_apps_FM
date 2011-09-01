@@ -329,6 +329,7 @@ public class FMRadioService extends Service {
 
                     if(isFmOn()) {
                         Log.d(LOGTAG, "AudioFocus: FM is off, turning back on");
+                        unMute();
                         startFM();
                     }
                     break;
@@ -559,9 +560,24 @@ public class FMRadioService extends Service {
 
             //AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
-            if (state == TelephonyManager.CALL_STATE_RINGING) {
-                int ringvolume = mAudioManager.getStreamVolume(AudioManager.STREAM_RING);
-                if (ringvolume > 0) {
+            if (mFMOn) {
+                if (state == TelephonyManager.CALL_STATE_RINGING) {
+                    int ringvolume = mAudioManager.getStreamVolume(AudioManager.STREAM_RING);
+                    if (ringvolume > 0) {
+                        mute();
+                        stopFM();
+                        mResumeAfterCall = true;
+                        try {
+                            if (mCallbacks != null) {
+                                mCallbacks.onMute(true);
+                            }
+                        } catch (RemoteException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                } // ringing
+                else if (state == TelephonyManager.CALL_STATE_OFFHOOK) {
+                    // pause the music while a conversation is in progress
                     mute();
                     stopFM();
                     mResumeAfterCall = true;
@@ -572,22 +588,10 @@ public class FMRadioService extends Service {
                     } catch (RemoteException e) {
                         e.printStackTrace();
                     }
-                }
-            } // ringing
-            else if (state == TelephonyManager.CALL_STATE_OFFHOOK) {
-                // pause the music while a conversation is in progress
-                mute();
-                stopFM();
-                mResumeAfterCall = true;
-                try {
-                    if (mCallbacks != null) {
-                        mCallbacks.onMute(true);
-                    }
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-            } // offhook
-            else if (state == TelephonyManager.CALL_STATE_IDLE) {
+                } // offhook
+            }
+
+            if (state == TelephonyManager.CALL_STATE_IDLE) {
                 // start playing again
                 if (mResumeAfterCall) {
                     Log.d(LOGTAG, "onCallStateChanged: Re-enabling FM now that phone call has ended");
