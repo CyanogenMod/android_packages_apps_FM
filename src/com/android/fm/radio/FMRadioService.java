@@ -25,8 +25,6 @@ import android.os.Message;
 import android.os.PowerManager;
 import android.os.RemoteException;
 import android.os.PowerManager.WakeLock;
-import android.telephony.PhoneStateListener;
-import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.RemoteViews;
 
@@ -216,12 +214,6 @@ public class FMRadioService extends Service {
         // Since this is the onCreate(), we set Callbacks to null
         mCallbacks = null;
 
-        // Handle to telephone resources
-        TelephonyManager tmgr = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-
-        // Listen for phone call state
-        tmgr.listen(mPhoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
-
         // Handle for device power states
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
 
@@ -281,9 +273,6 @@ public class FMRadioService extends Service {
         /* Since the service is closing, disable the receiver */
         fmOff();
 
-        TelephonyManager tmgr = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-        tmgr.listen(mPhoneStateListener, 0);
-
         Log.d(LOGTAG, "onDestroy: unbindFromService completed");
 
         // unregisterReceiver(mIntentReceiver);
@@ -329,6 +318,7 @@ public class FMRadioService extends Service {
 
                     if(isFmOn()) {
                         Log.d(LOGTAG, "AudioFocus: FM is off, turning back on");
+                        unMute();
                         startFM();
                     }
                     break;
@@ -550,73 +540,6 @@ public class FMRadioService extends Service {
         }
         sendStickyBroadcast(i);
     }
-
-    /* Handle Phone Call + FM Concurrency */
-    private PhoneStateListener mPhoneStateListener = new PhoneStateListener() {
-        @Override
-        public void onCallStateChanged(int state, String incomingNumber) {
-            Log.d(LOGTAG, "onCallStateChanged: State - " + state);
-
-            //AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-
-            if (state == TelephonyManager.CALL_STATE_RINGING) {
-                int ringvolume = mAudioManager.getStreamVolume(AudioManager.STREAM_RING);
-                if (ringvolume > 0) {
-                    mute();
-                    stopFM();
-                    mResumeAfterCall = true;
-                    try {
-                        if (mCallbacks != null) {
-                            mCallbacks.onMute(true);
-                        }
-                    } catch (RemoteException e) {
-                        e.printStackTrace();
-                    }
-                }
-            } // ringing
-            else if (state == TelephonyManager.CALL_STATE_OFFHOOK) {
-                // pause the music while a conversation is in progress
-                mute();
-                stopFM();
-                mResumeAfterCall = true;
-                try {
-                    if (mCallbacks != null) {
-                        mCallbacks.onMute(true);
-                    }
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-            } // offhook
-            else if (state == TelephonyManager.CALL_STATE_IDLE) {
-                // start playing again
-                if (mResumeAfterCall) {
-                    Log.d(LOGTAG, "onCallStateChanged: Re-enabling FM now that phone call has ended");
-
-                    // resume playback only if FM Radio was playing
-                    // when the call was answered
-                    // unMute-FM
-                    unMute();
-                    startFM();
-
-                    // Re-enable audio focus as the phone call stole it away
-                    mAudioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
-
-                    // Register our MediaButtonEventReceiver so it receives the lockscreen events and volume control events
-                    mAudioManager.registerMediaButtonEventReceiver(new ComponentName(getPackageName(),
-                            FMMediaButtonIntentReceiver.class.getName()));
-
-                    mResumeAfterCall = false;
-                    try {
-                        if (mCallbacks != null) {
-                            mCallbacks.onMute(false);
-                        }
-                    } catch (RemoteException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }// idle
-        }
-    };
 
     private Handler mDelayedStopHandler = new Handler() {
         @Override
