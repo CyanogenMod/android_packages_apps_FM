@@ -130,41 +130,41 @@
   </string-array>
 
   <string-array name="regional_band_summary">
-    <item>Nordamerika (87.5MHz bis 108.0MHz in 200 Khz Schritten)</item>
-    <item>Europa (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Japan (76.0MHz bis  90.0MHz in 100 Khz Schritten)</item>
-    <item>Japan (erweitert) (90.0MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Australien (87.7MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Österreich (87.5MHz bis 108.0MHz in  50 Khz Schritten)</item>
-    <item>Belgien (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Brasilien (87.8MHz bis 108.0MHz in 200 Khz Step)</item>
-    <item>China (87.0MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Tschechien (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Dänemark (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Finnland (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Frankreich (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Deutschland (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Griechenland (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Hongkong (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Indien (91.0MHz bis 106.4MHz in 100 Khz Schritten)</item>
-    <item>Irland (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Italien (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Korea (87.5MHz bis 108.0MHz in 200 Khz Schritten)</item>
-    <item>Mexiko (88.1MHz bis 107.9MHz in 200 Khz Schritten)</item>
-    <item>Niederlande (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Neuseeland (88.0MHz bis 107.0MHz in 100 Khz Schritten)</item>
-    <item>Norwegen (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Polen (88.0MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Portugal (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Russland (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Singapur (88.0MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Slowakei (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Spanien (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Schweiz (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Schweden (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Taiwan (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Türkei (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Großbritannien (87.5MHz bis 108.0MHz in 100 Khz Schritten)</item>
-    <item>Vereinigte Staaten (88.1MHz bis 107.9MHz in 200 Khz Schritten)</item>
+    <item>Nordamerika (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 200-kHz-Schritten)</item>
+    <item>Europa (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Japan (76,0&#x2009;MHz bis 90,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Japan (erweitert) (90,0&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Australien (87,7&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Österreich (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 50 kHz-Schritten)</item>
+    <item>Belgien (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Brasilien (87,8&#x2009;MHz bis 108,0&#x2009;MHz in 200 Khz Step)</item>
+    <item>China (87,0&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Tschechien (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Dänemark (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Finnland (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Frankreich (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Deutschland (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Griechenland (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Hongkong (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Indien (91,0&#x2009;MHz bis 106,4&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Irland (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Italien (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Korea (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 200-kHz-Schritten)</item>
+    <item>Mexiko (88,1&#x2009;MHz bis 107,9&#x2009;MHz in 200-kHz-Schritten)</item>
+    <item>Niederlande (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Neuseeland (88,0&#x2009;MHz bis 107,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Norwegen (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Polen (88,0&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Portugal (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Russland (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Singapur (88,0&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Slowakei (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Spanien (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Schweiz (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Schweden (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Taiwan (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Türkei (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Großbritannien (87,5&#x2009;MHz bis 108,0&#x2009;MHz in 100-kHz-Schritten)</item>
+    <item>Vereinigte Staaten (88,1&#x2009;MHz bis 107,9&#x2009;MHz in 200-kHz-Schritten)</item>
   </string-array>
 </resources>
