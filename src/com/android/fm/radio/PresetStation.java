@@ -1,6 +1,8 @@
 
 package com.android.fm.radio;
 
+import com.android.fm.utils.FrequencyPicker;
+
 import android.hardware.fmradio.FmReceiver;
 import android.text.TextUtils;
 
@@ -67,7 +69,7 @@ public class PresetStation {
         if (!TextUtils.isEmpty(name)) {
             mName = name;
         } else {
-            mName = "" + mFrequency / 1000.0;
+            mName = FrequencyPicker.formatFrequencyString(mFrequency);
         }
     }
 
@@ -75,7 +77,7 @@ public class PresetStation {
         mFrequency = freq;
         /* If no name set it to the frequency */
         if (TextUtils.isEmpty(mName)) {
-            mName = "" + mFrequency / 1000.0;
+            mName = FrequencyPicker.formatFrequencyString(mFrequency);
         }
         return;
     }
@@ -100,18 +102,6 @@ public class PresetStation {
 
     public int getFrequency() {
         return mFrequency;
-    }
-
-    /**
-     * Routine to get the Frequency in String from an integer
-     *
-     * @param frequency : Frequency to be converted (ex: 96500)
-     * @return String : Frequency in String form (ex: 96.5)
-     */
-    public static String getFrequencyString(int frequency) {
-        double frequencyDbl = frequency / 1000.0;
-        String frequencyString = "" + frequencyDbl;
-        return frequencyString;
     }
 
     public int getPty() {

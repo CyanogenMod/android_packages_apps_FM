@@ -13,6 +13,9 @@ import com.android.fm.R;
 import android.widget.NumberPicker;
 import android.widget.NumberPicker.OnChangedListener;
 
+import java.text.NumberFormat;
+import java.text.DecimalFormat;
+
 /**
  * A view for selecting the frequency For a dialog using this view, see
  * {FrequencyPickerDialog}.
@@ -42,6 +45,8 @@ public class FrequencyPicker extends FrameLayout {
 
     private int mKhz;
 
+    private static final NumberFormat sFrequencyFormat = NumberFormat.getInstance();
+
     /**
      * The callback used to indicate the user changes the Frequency.
      */
@@ -52,6 +57,14 @@ public class FrequencyPicker extends FrameLayout {
          * @param frequency The Frequency that was set.
          */
         void onFrequencyChanged(FrequencyPicker view, int frequency);
+    }
+
+    static {
+        if (sFrequencyFormat instanceof DecimalFormat) {
+            ((DecimalFormat)sFrequencyFormat).setDecimalSeparatorAlwaysShown(true);
+            ((DecimalFormat)sFrequencyFormat).setMinimumFractionDigits(1);
+            ((DecimalFormat)sFrequencyFormat).setMaximumFractionDigits(1);
+        }
     }
 
     public FrequencyPicker(Context context) {
@@ -369,10 +382,6 @@ public class FrequencyPicker extends FrameLayout {
     }
 
     public static String formatFrequencyString(int frequency) {
-        // 87500 => 875,  93750 => 937
-        int temp = frequency / 100;
-        //  875=>87.5  937=>93.7
-        double frequncyToShow = temp / 10.0;
-        return String.valueOf(frequncyToShow);
+        return sFrequencyFormat.format(frequency / 1000.0);
     }
 }
