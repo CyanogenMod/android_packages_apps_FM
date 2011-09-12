@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">FM Rádio</string>
+  <string name="tx_app_name">FM Vysílač</string>
+  <string name="preset_delete">Smazat</string>
+  <string name="stat_notif_frequency">Frekvence: <xliff:g id="frequency">%1$s</xliff:g>MHz</string>
+
+  <string name="sel_band_menu">Zvolte regionální pásmo</string>
+  <string name="settings_menu">Nastavení</string>
+  <string name="regional_band">Regionální pásmo</string>
+
+  <string name="aud_output_mode">Režim výstupu zvuku</string>
+  <string name="sel_audio_output">Zvolte výstup zvuku</string>
+
+  <string name="record_dur">Trvání záznamu</string>
+  <string name="sel_rec_dur">Zvolte dobu trvání záznamu</string>
+
+  <string name="auto_select_af">Alternativní kmitočty</string>
+  <string name="auto_select_af_enabled">Automatické přeladění povoleno</string>
+  <string name="auto_select_af_disabled">Automatické přeladění zakázáno</string>
+
+  <string name="fac_defaults">Obnovit nastavení</string>
+  <string name="revert_to_fac">Obnovit nastavení</string>
+  <string name="settings_back">Zpět</string>
+
+  <string name="settings_revert_confirm_title">Potvrdit obnovení</string>
+  <string name="settings_revert_confirm_msg">Tímto dojde k vymazání všech nastavení, včetně předvoleb!</string>
+
+  <string name="settings_back_summary">Zpět na předchozí</string>
+  <string name="settings_revert_defaults_title">Obnovit nastavení</string>
+  <string name="settings_revert_defaults_summary">Obnoví nastavení na výchozí hodnoty</string>
+
+  <string name="alert_dialog_cancel">Zrušit</string>
+
+  <string name="preset_search">Hledat <xliff:g id="preset_pi">%1$s</xliff:g></string>
+
+  <string name="fm_command_failed_title">FM operace se nezdařila</string>
+  <string name="fm_cmd_failed_msg">Požadovaná operace selhala. Možné příčiny: nejsou připojená sluchátka sloužící jako anténa, není povolen Bluetooth, telefon je v režimu volání nebo ovládání FM bylo ukončeno. Prosím proveďte kontrolu a opakujte.</string>
+
+  <skip />
+
+  <string name="stat_no_fm">FM rádio není zapnuto</string>
+
+  <string name="need_headset_for_antenna">Prosím připojte sluchátka, která jsou využívána jako anténa rádia.</string>
+  <string name="init_FM">Povoluji Bluetooth pro využití FM rádia\u2026</string>
+  <string name="need_bluetooth">Prosím zapněte Bluetooth</string>
+
+  <string name="about_title">O aplikaci</string>
+  <string name="about_summary">Aplikace FM rádio od týmu MIUI - http://www.miui.com</string>
+
+  <string name="pref_disable_bt_prompt_title">Zeptat se na zakázání BT při vypnutí rádia</string>
+  <string name="pref_disable_bt_prompt_summary">Zeptat se uživatele na zakázání Bluetooth při vypnutí rádia</string>
+  <string name="prompt_disable_bt">Chcete zakázat Bluetooth?</string>
+  <string name="prompt_yes">Ano</string>
+  <string name="prompt_no">Ne</string>
+
+  <string name="pref_bt_behaviour_on_exit_title">Chování Bluetooth při vypnutém rádiu</string>
+  <string name="pref_bt_behaviour_on_exit_summary">Vždy vypnutý, obnovit výchozí stav, zeptat se, atd.</string>
+  <string name="pref_bt_behaviour_on_exit_dialog_title">Zvolte chování Bluetooth</string>
+
+  <string name="pref_headset_behaviour_title">Chování sluchátek a Bluetooth</string>
+  <string name="pref_headset_behaviour_summary">Při odejmutí sluchátek vyvolat chování Bluetooth</string>
+
+</resources>
