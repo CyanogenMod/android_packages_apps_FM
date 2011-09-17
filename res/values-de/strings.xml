@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">UKW Radio</string>
-  <string name="tx_app_name">UKW Transmitter</string>
+  <string name="app_name">UKW-Radio</string>
+  <string name="tx_app_name">UKW-Transmitter</string>
   <string name="preset_delete">Löschen</string>
-  <string name="stat_notif_frequency">Frequenz: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
+  <string name="stat_notif_frequency">Frequenz: "<xliff:g id="frequency">%1$s</xliff:g>"&#x2009;MHz</string>
 
   <string name="sel_band_menu">Regionalband wählen</string>
   <string name="settings_menu">Einstellungen</string>
@@ -44,15 +44,15 @@
     Bitte überprüfen und die Radioanwendung erneut starten.</string>
 
   <string name="frequency_string"></string>
-  <string name="stat_no_fm">UKW Radio ist nicht eingeschaltet</string>
+  <string name="stat_no_fm">UKW-Radio ist nicht eingeschaltet</string>
 
   <!-- Added by LIBRA -->
   <string name="need_headset_for_antenna">Bitte ein kabelgebundenes Headset als Antenne anschließen.</string>
-  <string name="init_FM">Bluetooth zur Verwendung des Radios aktivieren...</string>
+  <string name="init_FM">Bluetooth zur Verwendung des Radios aktivieren&#x2026;</string>
   <string name="need_bluetooth">Bitte Bluetooth aktivieren</string>
 
   <string name="about_title">Über</string>
-  <string name="about_summary">UKW Radioanwendung von MIUI - http://www.miui.com</string>
+  <string name="about_summary">UKW-Radioanwendung von MIUI &#x2013; http://www.miui.com</string>
 
   <string name="pref_disable_bt_prompt_title">BT aus</string>
   <string name="pref_disable_bt_prompt_summary">Nachfragen, ob Bluetooth ausgeschaltet werden soll, wenn Radio ausgeschaltet wird</string>
