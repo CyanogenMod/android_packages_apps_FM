@@ -334,9 +334,11 @@ public class FMRadio extends Activity {
         mTunerView = (TunerView) findViewById(R.id.fm_tuner_view);
         mTunerView.setOnMoveListener(mTunerViewMoveListener);
 
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
-        registerReceiver(mIntentReceiver, filter);
+        if (getResources().getBoolean(R.bool.require_bt)) {
+            IntentFilter filter = new IntentFilter();
+            filter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
+            registerReceiver(mIntentReceiver, filter);
+        }
 
         enableRadioOnOffUI(false);
 
