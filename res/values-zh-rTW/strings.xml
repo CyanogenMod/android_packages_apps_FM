@@ -3,6 +3,8 @@
     <string name="app_name">FM 收音機</string>
     <string name="tx_app_name">FM 發送器</string>
     <string name="preset_delete">刪除</string>
+    <string name="preset_rename">重新命名</string>
+    <string name="dialog_presetlist_rename_title">輸入名稱 </string>
     <string name="stat_notif_frequency">頻率："<xliff:g id="frequency">%1$s</xliff:g>" 兆赫</string>
 
     <string name="sel_band_menu">選擇地區頻譜</string>
