@@ -1027,7 +1027,9 @@ public class FMRadio extends Activity {
                 }
                 else {
                     /* shut down force use */
-                    AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
+                    if (AudioSystem.hasFmPropMode() == 0) {
+                        AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
+                    }
                 }
 
                 // Toggle BT on/off depending on value in preferences
@@ -1620,7 +1622,10 @@ public class FMRadio extends Activity {
     final Runnable mRadioDisabled = new Runnable() {
         public void run() {
             /* shut down force use */
-            AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
+            if (AudioSystem.hasFmPropMode() == 0) {
+                AudioSystem.setForceUse(AudioSystem.FOR_MEDIA, AudioSystem.FORCE_NONE);
+            }
+            
             /* Update UI to FM Off State */
             enableRadioOnOffUI(false);
 

@@ -518,12 +518,27 @@ public class FMRadioService extends Service {
     private void startFM(){
         Log.d(LOGTAG, "In startFM");
         AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_AVAILABLE, "");
+        
+        if (AudioSystem.hasFmPropMode() == 1) {
+            Log.d(LOGTAG, "In startFM: device has proprietary FM mode");
+            mAudioManager.setParameters("fm_radio_volume=8");
+            mAudioManager.setMode(AudioSystem.MODE_FMRADIO);
+            mAudioManager.setParameters("dualmic_enabled=false");
+        }
+
         lockscreenBroadcast(true,getFreq());
     }
 
     private void stopFM(){
         Log.d(LOGTAG, "In stopFM");
         AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_UNAVAILABLE, "");
+        
+        if (AudioSystem.hasFmPropMode() == 1) {
+            Log.d(LOGTAG, "In stopFM: device has proprietary FM mode");
+            mAudioManager.setMode(AudioSystem.MODE_NORMAL);
+            mAudioManager.setParameters("fm_radio_volume=off");
+        }
+
         lockscreenBroadcast(false,0);
     }
 
@@ -782,7 +797,13 @@ public class FMRadioService extends Service {
         boolean bStatus = false;
         Log.d(LOGTAG, "fmOn");
         mAudioManager.registerMediaButtonEventReceiver(new ComponentName(getPackageName(), FMMediaButtonIntentReceiver.class.getName()));
-        mAudioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
+
+        if (AudioSystem.hasFmPropMode() == 1) {
+            Log.d(LOGTAG, "fmOn: device has proprietary FM mode");
+            mAudioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_FM, AudioManager.AUDIOFOCUS_GAIN);        
+        } else {
+            mAudioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
+        }
 
         if (mReceiver == null) {
             mReceiver = new FmReceiver(FMRADIO_DEVICE_FD_STRING, null);
