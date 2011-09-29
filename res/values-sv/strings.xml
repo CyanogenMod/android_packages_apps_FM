@@ -3,6 +3,8 @@
     <string name="app_name">FM-radio</string>
     <string name="tx_app_name">FM-sändare</string>
     <string name="preset_delete">Ta bort</string>
+    <string name="preset_rename">Döp om</string>
+    <string name="dialog_presetlist_rename_title">Ange ett namn</string>
     <string name="stat_notif_frequency">Frekvens: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
 
     <string name="sel_band_menu">Välj regionalt band</string>
@@ -37,6 +39,7 @@
 
     <string name="fm_command_failed_title">FM-åtgärd mysslyckades</string>
     <string name="fm_cmd_failed_msg">Åtgärden misslyckades. Möjliga anledningar är: du kopplade inte in ett trådbundet headset som en antenn, aktiverade inte Bluetooth, telefonen är i ett samtal, eller FM har stängts ner. Kontrollera detta och försök igen.</string>
+    <string name="durationformat">%2$d:%5$02d</string>
 
     <string name="frequency_string"></string>
     <string name="stat_no_fm">FM-radio är inte påslagen</string>
