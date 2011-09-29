@@ -3,6 +3,8 @@
     <string name="app_name">FM радио</string>
     <string name="tx_app_name">FM передатчик</string>
     <string name="preset_delete">Удалить</string>
+    <string name="preset_rename">Переименовать</string>
+    <string name="dialog_presetlist_rename_title">Введите имя</string>
     <string name="stat_notif_frequency">FM радио: "<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
 
     <string name="sel_band_menu">Выбор региона</string>
