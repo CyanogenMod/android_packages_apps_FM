@@ -203,10 +203,6 @@ public class FMRadioService extends Service {
         // Grab a handle to the AudioManager
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
-        // Register our MediaButtonEventReceiver so it receives the lockscreen events
-        mAudioManager.registerMediaButtonEventReceiver(new ComponentName(getPackageName(),
-                FMMediaButtonIntentReceiver.class.getName()));
-
         // Instantiate a handle to our shared preferences
         // TODO: These should be stored in a properties file and read from via a ResourceBundle
         mPrefs = new FmSharedPreferences(this);
@@ -845,6 +841,7 @@ public class FMRadioService extends Service {
     private boolean fmOff() {
         boolean bStatus = false;
         Log.d(LOGTAG, "fmOff");
+        mAudioManager.unregisterMediaButtonEventReceiver(new ComponentName(getPackageName(), FMMediaButtonIntentReceiver.class.getName()));
         mAudioManager.abandonAudioFocus(mAudioFocusListener);
         stopFM();
         // This will disable the FM radio device
