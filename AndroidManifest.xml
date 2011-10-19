@@ -45,7 +45,7 @@
 
         <service android:name=".radio.FMRadioService" android:exported="true" />
 
-        <receiver android:name=".radio.FMMediaButtonIntentReceiver">
+        <receiver android:name=".radio.FMMediaButtonIntentReceiver" android:enabled="false">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
             </intent-filter>
