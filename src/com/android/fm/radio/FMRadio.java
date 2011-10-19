@@ -279,7 +279,7 @@ public class FMRadio extends Activity {
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-	context = getApplicationContext();
+        context = getApplicationContext();
         mPrefs = new FmSharedPreferences(this);
         mPrefs.Load();
         mCommandActive = CMD_NONE;
@@ -950,6 +950,9 @@ public class FMRadio extends Activity {
 
         if (mService != null) {
             try {
+
+                boolean radioOn = mService.isFmOn();
+
                 // reset volume to avoid a bug that volume will be MAX
                 int vol = AudioSystem.getStreamVolumeIndex(AudioSystem.STREAM_FM);
                 AudioSystem.setStreamVolumeIndex(AudioSystem.STREAM_FM, vol);
@@ -961,18 +964,19 @@ public class FMRadio extends Activity {
 
                 if (bStatus) {
                     if (isAntennaAvailable()) {
-                        // Set the previously tuned frequency
-                        tuneRadio(FmSharedPreferences.getTunedFrequency());
-                        mFreqIndicator.setFrequency(FmSharedPreferences.getTunedFrequency());
+                        if (!radioOn) {
+                            // Set the previously tuned frequency
+                            tuneRadio(FmSharedPreferences.getTunedFrequency());
+                            mFreqIndicator.setFrequency(FmSharedPreferences.getTunedFrequency());
 
-                        // The output device is not set on a FM radio power on so we do it here
-                        if(FmSharedPreferences.getSpeaker()) {
-                           switchToSpeaker();
+                            // The output device is not set on a FM radio power on so we do it here
+                            if(FmSharedPreferences.getSpeaker()) {
+                                switchToSpeaker();
+                            }
+                            else {
+                                switchToHeadset();
+                            }
                         }
-                        else {
-                           switchToHeadset();
-                        }
-
                         // Update the speaker icon
                         setSpeakerUI(FmSharedPreferences.getSpeaker());
 
