@@ -16,6 +16,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.Configuration;
 import android.content.ServiceConnection;
 import android.hardware.fmradio.FmConfig;
 import android.media.AudioManager;
@@ -39,6 +40,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -279,75 +281,18 @@ public class FMRadio extends Activity {
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-	context = getApplicationContext();
-        mPrefs = new FmSharedPreferences(this);
-        mPrefs.Load();
-        mCommandActive = CMD_NONE;
-        mCommandFailed = CMD_NONE;
-
-        Log.d(LOGTAG, "onCreate - Height : " + getWindowManager().getDefaultDisplay().getHeight()
-                + " - Width  : " + getWindowManager().getDefaultDisplay().getWidth());
-
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.fmradio);
+    }
 
-        mOnOffButton = (ImageButton) findViewById(R.id.btn_onoff);
-        mOnOffButton.setOnClickListener(mTurnOnOffClickListener);
-
-        mSeekUpButton = (ImageButton) findViewById(R.id.btn_seekup);
-        mSeekUpButton.setOnClickListener(mSeekUpClickListener);
-        mSeekDownButton = (ImageButton) findViewById(R.id.btn_seekdown);
-        mSeekDownButton.setOnClickListener(mSeekDownClickListener);
-        mSeekUpButton.setImageResource(R.drawable.btn_arrow_right);
-        mSeekDownButton.setImageResource(R.drawable.btn_arrow_left);
-        if (!context.getResources().getBoolean(R.bool.seek_supported)){
-             mSeekUpButton.setVisibility(View.INVISIBLE);
-	     mSeekDownButton.setVisibility(View.INVISIBLE);
-        }
-        mSpeakerButton = (ImageButton) findViewById(R.id.btn_speaker);
-        mSpeakerButton.setOnClickListener(mSpeakerSwitchClickListener);
-        if (!context.getResources().getBoolean(R.bool.speaker_supported))
-            mSpeakerButton.setVisibility(View.INVISIBLE);
-
-        /* 5 Preset Buttons */
-        mPresetButtons[0] = (Button) findViewById(R.id.presets_button_1);
-        mPresetButtons[1] = (Button) findViewById(R.id.presets_button_2);
-        mPresetButtons[2] = (Button) findViewById(R.id.presets_button_3);
-        mPresetButtons[3] = (Button) findViewById(R.id.presets_button_4);
-        mPresetButtons[4] = (Button) findViewById(R.id.presets_button_5);
-        for (int nButton = 0; nButton < MAX_PRESETS_PER_PAGE; nButton++) {
-            mPresetButtons[nButton].setOnClickListener(mPresetButtonClickListener);
-            mPresetButtons[nButton].setOnLongClickListener(mPresetButtonOnLongClickListener);
-        }
-
-        mTuneStationFrequencyTV = (TextView) findViewById(R.id.prog_frequency_tv);
-        if (mTuneStationFrequencyTV != null) {
-            mTuneStationFrequencyTV.setOnClickListener(mFrequencyViewClickListener);
-        }
-
-        mFreqIndicator = (FreqIndicator) findViewById(R.id.freq_indicator_view);
-        mFreqIndicator.setMax(FmSharedPreferences.getUpperLimit() - FmSharedPreferences.getLowerLimit());
-        mFreqIndicator.setMinFrequency(FmSharedPreferences.getLowerLimit());
-        mFrequencyIndicatorChangeListener = new SeekBarChangeListener();
-        mFrequencyIndicatorChangeListener.setMin(mFreqIndicator.getMinFrequency());
-        mFreqIndicator.setOnSeekBarChangeListener(mFrequencyIndicatorChangeListener);
-
-        mTunerView = (TunerView) findViewById(R.id.fm_tuner_view);
-        mTunerView.setOnMoveListener(mTunerViewMoveListener);
-
-        if (getResources().getBoolean(R.bool.require_bt)) {
-            IntentFilter filter = new IntentFilter();
-            filter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
-            registerReceiver(mIntentReceiver, filter);
-        }
-
-        enableRadioOnOffUI(false);
-
-        if (false == bindToService(this, osc)) {
-            Log.d(LOGTAG, "onCreate: Failed to Start Service");
+    public void onConfigurationChanged (Configuration newConfig) {
+        ImageView topHalf = (ImageView) findViewById(R.id.tophalf);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            topHalf.setVisibility(View.GONE);
         } else {
-            Log.d(LOGTAG, "onCreate: Start Service completed successfully");
+            topHalf.setVisibility(View.VISIBLE);
         }
+        super.onConfigurationChanged(newConfig);
     }
 
     @Override
@@ -382,35 +327,11 @@ public class FMRadio extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-        FmSharedPreferences.setTunedFrequency(mTunedStation.getFrequency());
-        mPrefs.Save();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-
-        Log.d(LOGTAG, "FMRadio: onResume");
-
-        // Re-load FM preferences
-        mPrefs.Load();
-
-        // Grab the station from the tuned frequency
-        PresetStation station = FmSharedPreferences.getStationFromFrequency(FmSharedPreferences
-                .getTunedFrequency());
-
-        // If we were able to retrieve the station then set that as our tuned station
-        if (station != null) {
-            mTunedStation.Copy(station);
-        }
-
-        mHandler.post(mUpdateProgramService);
-        mHandler.post(mUpdateRadioText);
-        updateStationInfoToUI();
-
-        enableRadioOnOffUI();
-
-        setSpeakerUI(FmSharedPreferences.getSpeaker());
     }
 
     private void setSpeakerUI(boolean on) {
