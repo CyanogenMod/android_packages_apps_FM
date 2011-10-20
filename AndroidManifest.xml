@@ -25,8 +25,8 @@
                   android:clearTaskOnLaunch="true"
                   android:launchMode="singleInstance"
                   android:theme="@android:style/Theme.NoTitleBar"
-                  android:screenOrientation="portrait"
                   android:taskAffinity=""
+                  android:configChanges="orientation"
                   >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
