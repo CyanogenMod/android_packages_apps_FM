@@ -16,6 +16,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.Configuration;
 import android.content.ServiceConnection;
 import android.hardware.fmradio.FmConfig;
 import android.media.AudioManager;
@@ -292,7 +293,8 @@ public class FMRadio extends Activity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.fmradio);
-
+        updateFmSpkr(getResources().getConfiguration().orientation ==
+                Configuration.ORIENTATION_LANDSCAPE);
         mOnOffButton = (ImageButton) findViewById(R.id.btn_onoff);
         mOnOffButton.setOnClickListener(mTurnOnOffClickListener);
 
@@ -349,6 +351,20 @@ public class FMRadio extends Activity {
             Log.d(LOGTAG, "onCreate: Failed to Start Service");
         } else {
             Log.d(LOGTAG, "onCreate: Start Service completed successfully");
+        }
+    }
+
+    public void onConfigurationChanged (Configuration newConfig) {
+        updateFmSpkr(newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE);
+        super.onConfigurationChanged(newConfig);
+    }
+
+    private void updateFmSpkr(boolean isLand) {
+        View topHalf = (View) findViewById(R.id.tophalf);
+        if (isLand) {
+            topHalf.setVisibility(View.GONE);
+        } else {
+            topHalf.setVisibility(View.VISIBLE);
         }
     }
 
