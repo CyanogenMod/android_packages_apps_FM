@@ -16,6 +16,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.Configuration;
 import android.content.ServiceConnection;
 import android.hardware.fmradio.FmConfig;
 import android.media.AudioManager;
@@ -39,6 +40,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -348,6 +350,16 @@ public class FMRadio extends Activity {
         } else {
             Log.d(LOGTAG, "onCreate: Start Service completed successfully");
         }
+    }
+
+    public void onConfigurationChanged (Configuration newConfig) {
+        ImageView topHalf = (ImageView) findViewById(R.id.tophalf);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            topHalf.setVisibility(View.GONE);
+        } else {
+            topHalf.setVisibility(View.VISIBLE);
+        }
+        super.onConfigurationChanged(newConfig);
     }
 
     @Override
