@@ -3,6 +3,8 @@
   <string name="app_name">FM Rádio</string>
   <string name="tx_app_name">FM Vysílač</string>
   <string name="preset_delete">Smazat</string>
+  <string name="preset_rename">Přejmenovat</string>
+  <string name="dialog_presetlist_rename_title">Zadejte název </string>
   <string name="stat_notif_frequency">Frekvence: <xliff:g id="frequency">%1$s</xliff:g>MHz</string>
 
   <string name="sel_band_menu">Zvolte regionální pásmo</string>
