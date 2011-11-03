@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ster_mon_entries">
+        <item>Sztereó</item>
+        <item>Monó</item>
+    </string-array>
+    <string-array name="record_durations_entries">
+        <item>5 perc</item>
+        <item>15 perc</item>
+        <item>30 perc</item>
+        <item>Végtelen</item>
+    </string-array>
+    <string-array name="search_category_rbds_entries">
+        <item>Minden állomás</item>
+        <item>Felnőtt slágerek</item>
+        <item>Klasszikus</item>
+        <item>Klasszikus rock</item>
+        <item>College</item>
+        <item>Country</item>
+        <item>Emergency</item>
+        <item>Emergency Test</item>
+        <item>Külföldi nyelvű</item>
+        <item>Információ</item>
+        <item>Jazz</item>
+        <item>Hírek</item>
+        <item>Nosztalgia</item>
+        <item>Retro</item>
+        <item>Személyiség</item>
+        <item>Nyilvános</item>
+        <item>Vallási zene</item>
+        <item>Vallási beszélgetés</item>
+        <item>Rhythm and Blues</item>
+        <item>Rock</item>
+        <item>Könnyű</item>
+        <item>Könnyű rock</item>
+        <item>Könnyű Rhythm and Blues</item>
+        <item>Sport</item>
+        <item>Beszélgetés</item>
+        <item>Top 40</item>
+        <item>Időjárás</item>
+    </string-array>
+    <string-array name="search_category_rds_entries">
+        <item>Minden állomás</item>
+        <item>Kúltúra</item>
+        <item>Current Affairs</item>
+        <item>Gyerek program</item>
+        <item>Country zene</item>
+        <item>Dokumetum</item>
+        <item>Dráma</item>
+        <item>Könnyed zene</item>
+        <item>Oktatás</item>
+        <item>Emergency</item>
+        <item>Emergency Test</item>
+        <item>Pénzügy</item>
+        <item>Népzene</item>
+        <item>Információ</item>
+        <item>Jazz zene</item>
+        <item>Könnyű klasszikus</item>
+        <item>Szabadidő</item>
+        <item>Hírek</item>
+        <item>Nemzetek zenéje</item>
+        <item>Egyéb zene</item>
+        <item>Régi zene</item>
+        <item>Telefon be</item>
+        <item>Pop zene</item>
+        <item>Vallás</item>
+        <item>Rock zene</item>
+        <item>Tudomány</item>
+        <item>Komolyzene</item>
+        <item>Szociális ügyek</item>
+        <item>Sport</item>
+        <item>Utazás</item>
+        <item>Változatos</item>
+        <item>Időjárás</item>
+    </string-array>
+    <string-array name="presetlist_edit_category">
+        <item>Átnevez</item>
+        <item>Automata kiválasztás</item>
+        <item>Törlés</item>
+    </string-array>
+    <string-array name="regional_band_entries">
+        <item>Észak Amerika</item>
+        <item>Európa</item>
+        <item>Japán</item>
+        <item>Japán (széles)</item>
+        <item>Ausztrália</item>
+        <item>Ausztria</item>
+        <item>Belgium</item>
+        <item>Brazilia</item>
+        <item>Kína</item>
+        <item>Cseh</item>
+        <item>Dánia</item>
+        <item>Finn</item>
+        <item>Francia</item>
+        <item>Német</item>
+        <item>Görög</item>
+        <item>Hong Kong</item>
+        <item>India</item>
+        <item>Ír</item>
+        <item>Olasz</item>
+        <item>Kórea</item>
+        <item>Mexikó</item>
+        <item>Hollandia</item>
+        <item>Új Zéland</item>
+        <item>Norvégia</item>
+        <item>Lengyel</item>
+        <item>Portugál</item>
+        <item>Orosz</item>
+        <item>Szingapúr</item>
+        <item>Szlovákia</item>
+        <item>Spanyol</item>
+        <item>Svájc</item>
+        <item>Svéd</item>
+        <item>Tajvan</item>
+        <item>Török</item>
+        <item>Egyesült Királyság</item>
+        <item>Egyesült Államok</item>
+    </string-array>
+    <string-array name="regional_band_summary">
+        <item>Észak Amerika (87.5MHz-től 108.0MHz-ig 200Khz-es lépésekben)</item>
+        <item>Európa (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Japán (76.0MHz-től 90.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Japán (széles) (90.0MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Ausztrália (87.7MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Ausztria (87.5MHz-től 108.0MHz-ig 50Khz-es lépésekben)</item>
+        <item>Belgium (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Brazilia (87.8MHz-től 108.0MHz-ig 200 Khz Step)</item>
+        <item>Kína (87.0MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Cseh (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Dánia (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Finn (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Francia (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Német (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Görög (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Hong Kong (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>India (91.0MHz-től 106.4MHz-ig 100Khz-es lépésekben)</item>
+        <item>Ír (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Olasz (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Kórea (87.5MHz-től 108.0MHz-ig 200Khz-es lépésekben)</item>
+        <item>Mexikó (88.1MHz-től 107.9MHz-ig 200Khz-es lépésekben)</item>
+        <item>Hollandia (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Új Zéland (88.0MHz-től 107.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Norvég (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Lengyel (88.0MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Portugál (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Orosz (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Szingapúr (88.0MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Szlovákia (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Spanyol (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Svájc (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Svéd (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Tajvan (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Török (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Egyesült Királyság (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>
+        <item>Egyesült Államok (88.1MHz-től 107.9MHz-ig 200Khz-es lépésekben)</item>
+    </string-array>
+</resources>
