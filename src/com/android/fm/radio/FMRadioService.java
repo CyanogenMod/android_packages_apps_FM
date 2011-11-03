@@ -28,6 +28,7 @@ import android.os.RemoteException;
 import android.os.PowerManager.WakeLock;
 import android.util.Log;
 import android.widget.RemoteViews;
+import android.os.SystemProperties;
 
 import java.lang.ref.WeakReference;
 
@@ -515,12 +516,22 @@ public class FMRadioService extends Service {
 
     private void startFM(){
         Log.d(LOGTAG, "In startFM");
+        if (SystemProperties.OMAP_ENHANCEMENT) {
+            Intent fm_intent = new Intent("android.intent.action.FM_PLUG");
+            fm_intent.putExtra("state", 1);
+            context.sendBroadcast(fm_intent);
+        }
         AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_AVAILABLE, "");
         lockscreenBroadcast(true,getFreq());
     }
 
     private void stopFM(){
         Log.d(LOGTAG, "In stopFM");
+        if (SystemProperties.OMAP_ENHANCEMENT) {
+            Intent fm_intent = new Intent("android.intent.action.FM_PLUG");
+            fm_intent.putExtra("state", 0);
+            context.sendBroadcast(fm_intent);
+        }
         AudioSystem.setDeviceConnectionState(AudioSystem.DEVICE_OUT_FM, AudioSystem.DEVICE_STATE_UNAVAILABLE, "");
         lockscreenBroadcast(false,0);
     }
