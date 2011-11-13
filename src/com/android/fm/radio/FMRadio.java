@@ -63,25 +63,13 @@ public class FMRadio extends Activity {
     private static final int MENU_WIRED_HEADSET = Menu.FIRST + 9;
 
     /* Dialog Identifiers */
-    private static final int DIALOG_SEARCH = 1;
+    private static final int DIALOG_PICK_FREQUENCY = 1;
 
-    private static final int DIALOG_SELECT_PRESET_LIST = 3;
+    private static final int DIALOG_PRESET_OPTIONS = 2;
 
-    private static final int DIALOG_PRESETS_LIST = 4;
+    private static final int DIALOG_PRESET_RENAME = 3;
 
-    private static final int DIALOG_PRESET_LIST_RENAME = 5;
-
-    private static final int DIALOG_PRESET_LIST_DELETE = 6;
-
-    private static final int DIALOG_PRESET_LIST_AUTO_SET = 7;
-
-    private static final int DIALOG_PICK_FREQUENCY = 8;
-
-    private static final int DIALOG_PRESET_OPTIONS = 10;
-
-    private static final int DIALOG_PRESET_RENAME = 11;
-
-    private static final int DIALOG_CMD_FAILED = 13;
+    private static final int DIALOG_CMD_FAILED = 4;
 
     /* Activity Return ResultIdentifiers */
     private static final int ACTIVITY_RESULT_SETTINGS = 1;
@@ -564,7 +552,9 @@ public class FMRadio extends Activity {
                 return createPresetOptionsDlg(id);
             }
             case DIALOG_PRESET_RENAME: {
-                return createPresetRenameDlg(id);
+                FmConfig fmConfig = FmSharedPreferences.getFMConfiguration();
+                return new FrequencyPickerDialog(this, fmConfig, mPresetButtonStation.getFrequency(),
+                        mFrequencyRenameListener);
             }
             case DIALOG_CMD_FAILED: {
                 return createCmdFailedDlg(id);
@@ -581,26 +571,6 @@ public class FMRadio extends Activity {
         int curListIndex = FmSharedPreferences.getCurrentListIndex();
         PresetList curList = FmSharedPreferences.getStationList(curListIndex);
         switch (id) {
-            case DIALOG_PRESET_LIST_RENAME: {
-                EditText et = (EditText) dialog.findViewById(R.id.list_edit);
-                if (et != null) {
-                    et.setText(curList.getName());
-                }
-                break;
-            }
-            case DIALOG_SELECT_PRESET_LIST: {
-                AlertDialog alertDlg = ((AlertDialog) dialog);
-                ListView lv = (ListView) alertDlg.findViewById(R.id.list);
-                if (lv != null) {
-                    updateSelectPresetListDlg(lv);
-                }
-                break;
-            }
-            case DIALOG_PRESETS_LIST: {
-                AlertDialog alertDlg = ((AlertDialog) dialog);
-                alertDlg.setTitle(curList.getName());
-                break;
-            }
             case DIALOG_PICK_FREQUENCY: {
                 ((FrequencyPickerDialog) dialog).UpdateFrequency(mTunedStation.getFrequency());
                 break;
@@ -619,7 +589,6 @@ public class FMRadio extends Activity {
                 }
                 break;
             }
-
             default:
                 break;
         }
@@ -749,38 +718,6 @@ public class FMRadio extends Activity {
     private void updateSelectPresetListDlg(ListView lv) {
     }
 
-    private Dialog createPresetRenameDlg(int id) {
-        if (mPresetButtonStation == null) {
-            return null;
-        }
-        LayoutInflater factory = LayoutInflater.from(this);
-        final View textEntryView = factory.inflate(R.layout.alert_dialog_text_entry, null);
-        AlertDialog.Builder dlgBuilder = new AlertDialog.Builder(this);
-        dlgBuilder.setTitle(R.string.dialog_presetlist_rename_title);
-        dlgBuilder.setView(textEntryView);
-        dlgBuilder.setPositiveButton(R.string.alert_dialog_ok,
-                                     new DialogInterface.OnClickListener() {
-                                         public void onClick(DialogInterface dialog, int whichButton) {
-                                             //int curList = FmSharedPreferences.getCurrentListIndex();
-                                             EditText mTV = (EditText) textEntryView.findViewById(R.id.list_edit);
-                                             CharSequence newName = mTV.getEditableText();
-                                             String nName = String.valueOf(newName);
-                                             mPresetButtonStation.setName(nName);
-                                             mPresetButtonStation=null;
-                                             setupPresetLayout();
-                                             mPrefs.Save();
-                                             removeDialog(DIALOG_PRESET_RENAME);
-                                         }
-                                     });
-        dlgBuilder.setNegativeButton(R.string.alert_dialog_cancel,
-                                     new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog, int whichButton) {
-                                             removeDialog(DIALOG_PRESET_RENAME);
-                                        }
-                                     });
-        return(dlgBuilder.create());
-    }
-
     private Dialog createCmdFailedDlg(int id) {
         AlertDialog.Builder dlgBuilder = new AlertDialog.Builder(this);
         dlgBuilder.setIcon(R.drawable.alert_dialog_icon).setTitle(R.string.fm_command_failed_title);
@@ -808,19 +745,6 @@ public class FMRadio extends Activity {
         }
     };
 
-    private View.OnClickListener mPresetListClickListener = new View.OnClickListener() {
-        public void onClick(View v) {
-            showDialog(DIALOG_SELECT_PRESET_LIST);
-        }
-    };
-
-    private View.OnLongClickListener mPresetListButtonOnLongClickListener = new View.OnLongClickListener() {
-        public boolean onLongClick(View view) {
-            showDialog(DIALOG_PRESETS_LIST);
-            return true;
-        }
-    };
-
     private View.OnClickListener mPresetButtonClickListener = new View.OnClickListener() {
         public void onClick(View view) {
             PresetStation station = (PresetStation) view.getTag();
@@ -842,6 +766,19 @@ public class FMRadio extends Activity {
                 showDialog(DIALOG_PRESET_OPTIONS);
             }
             return true;
+        }
+    };
+
+    final FrequencyPickerDialog.OnFrequencySetListener mFrequencyRenameListener = new FrequencyPickerDialog.OnFrequencySetListener() {
+        public void onFrequencySet(FrequencyPicker view, int frequency) {
+            if (mPresetButtonStation == null) {
+                return;
+            }
+            mPresetButtonStation.setName(FrequencyPicker.formatFrequencyString(frequency));
+            mPresetButtonStation.setFrequency(frequency);
+            mPresetButtonStation=null;
+            setupPresetLayout();
+            mPrefs.Save();
         }
     };
 
