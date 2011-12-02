@@ -3,6 +3,8 @@
     <string name="app_name">FMラジオ</string>
     <string name="tx_app_name">FMトランスミッタ</string>
     <string name="preset_delete">削除</string>
+    <string name="preset_rename">名前変更</string>
+    <string name="dialog_presetlist_rename_title">名前を入力 </string>
     <string name="stat_notif_frequency">FMラジオ"<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
 
     <string name="sel_band_menu">バンド地域を選択</string>
