@@ -913,8 +913,8 @@ public class FMRadio extends Activity {
                 AudioSystem.setStreamVolumeIndex(AudioSystem.STREAM_FM, vol);
 
                 if (!isPhoneInCall()) {
-                    mService.unMute();
                     bStatus = mService.fmOn();
+                    mService.unMute();
                 }
 
                 if (bStatus) {

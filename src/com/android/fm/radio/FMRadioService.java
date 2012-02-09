@@ -313,8 +313,9 @@ public class FMRadioService extends Service {
 
                     if(isFmOn()) {
                         Log.d(LOGTAG, "AudioFocus: FM is off, turning back on");
-                        unMute();
+                        mute();
                         startFM();
+                        unMute();
                     }
                     break;
                 default:
@@ -412,8 +413,8 @@ public class FMRadioService extends Service {
                 // This handles the PLAY action
                 if(isFmOn() && isMuted()) {
                     Log.d(LOGTAG, "Unpausing FM radio playback");
-                    unMute();
                     startFM();
+                    unMute();
 
                     try {
                         if (mCallbacks != null) {
