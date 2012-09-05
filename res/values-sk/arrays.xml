@@ -3,15 +3,10 @@
 <resources>
 
   <string-array name="bt_exit_behaviour_entries">
-    <item>Neurobiť nič (Zostáva povolené)</item>
+    <item>Neurobiť nič (zostáva povolené)</item>
     <item>Obnoviť počiatočný stav BT</item>
     <item>Opýtať sa na užívateľskú akciu</item>
     <item>Vždy zakázať</item>
-  </string-array>
-
-  <string-array name="ster_mon_entries">
-    <item>Stereo</item>
-    <item>Mono</item>
   </string-array>
 
   <string-array name="record_durations_entries">
@@ -22,14 +17,14 @@
   </string-array>
 
 <string-array name="search_category_rbds_entries">
-    <item>Všetky Stanice</item>
-    <item>Hity pre Dospelých</item>
+    <item>Všetky stanice</item>
+    <item>Hity pre dospelých</item>
     <item>Klasické</item>
-    <item>Klasický Rock</item>
-    <item>Kolégium</item>
+    <item>Klasický rock</item>
+    <item>Školské</item>
     <item>Country</item>
-    <item>Pohotovosť</item>
-    <item>Test Pohotovosti</item>
+    <item>Núdzové</item>
+    <item>Testovanie núdzových</item>
     <item>Cudzí jazyk</item>
     <item>Informačné</item>
     <item>Jazz</item>
@@ -38,48 +33,48 @@
     <item>Starinky</item>
     <item>Osobné</item>
     <item>Verejné</item>
-    <item>Náboženská Hudba</item>
-    <item>Náboženské Hovory</item>
+    <item>Náboženská hudba</item>
+    <item>Náboženské rozhovory</item>
     <item>Rhythm and Blues</item>
     <item>Rock</item>
     <item>Soft</item>
     <item>Soft Rock</item>
     <item>Soft Rhythm and Blues</item>
     <item>Šport</item>
-    <item>Hovory</item>
+    <item>Hovorené slovo</item>
     <item>Top 40</item>
     <item>Počasie</item>
   </string-array>
 
   <string-array name="search_category_rds_entries">
-    <item>Všetky Stanice</item>
+    <item>Všetky stanice</item>
     <item>Kultúra</item>
-    <item>Súčasné Udalosti</item>
+    <item>Aktuálne udalosti</item>
     <item>Detské programy</item>
-    <item>Country Hudba</item>
+    <item>Country hudba</item>
     <item>Dokumentárne</item>
     <item>Dráma</item>
     <item>Hudba na ľahké počúvanie</item>
     <item>Vzdelávanie</item>
     <item>Pohotovosť</item>
-    <item>Test Pohotovosti</item>
+    <item>Test pohotovosti</item>
     <item>Finančné</item>
-    <item>Folková Hudba</item>
-    <item>informačné</item>
-    <item>Jazzová Hudba</item>
-    <item>Ľahká Klasika</item>
+    <item>Folková hudba</item>
+    <item>Informačné</item>
+    <item>Jazzová hudba</item>
+    <item>Ľahká klasika</item>
     <item>Oddych</item>
     <item>Správy</item>
-    <item>Národná Hudba</item>
-    <item>Iná Hudba</item>
-    <item>Stará Hudba</item>
+    <item>Národná hudba</item>
+    <item>Iná hudba</item>
+    <item>Staršia hudba</item>
     <item>Phone In</item>
-    <item>Pop Hudba</item>
-    <item>Náboženské</item>
-    <item>Rocková Hudba</item>
+    <item>Populárna hudba</item>
+    <item>Náboženská</item>
+    <item>Rocková hudba</item>
     <item>Veda</item>
     <item>Vážna klasika</item>
-    <item>Sociálne Udalosti</item>
+    <item>Sociálne veci</item>
     <item>Šport</item>
     <item>Cestovanie</item>
     <item>Rôzne</item>
@@ -88,8 +83,8 @@
 
   <string-array name="presetlist_edit_category">
     <item>Premenovať</item>
-    <item>Automatický Výber</item>
-    <item>Zmazať</item>
+    <item>Automatický výber</item>
+    <item>Vymazať</item>
   </string-array>
 
 
