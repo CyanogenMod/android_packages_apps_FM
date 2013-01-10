@@ -38,16 +38,12 @@
     <string name="fm_command_failed_title">FM 작동 실패</string>
     <string name="fm_cmd_failed_msg">작동 실패. 안테나 역할의 유선 헤드셋이 연결되어 있지 안거나 블루투스가 활성화되지 않거나 통화 중 등이 원인이 될 수 있습니다. 위 사항을 확인한 후 다시 시도해 주세요.</string>
 
-    <skip/>
-    <!-- Do not translate. Duration format. -->
-    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
-
     <string name="frequency_string"></string>
     <string name="stat_no_fm">FM 라디오가 켜지지 않았습니다</string>
 
     <!-- Added by LIBRA -->
     <string name="need_headset_for_antenna">FM 안테나로 사용 될 유선 헤드셋을 연결해 주십시오.</string>
-    <string name="init_FM">FM 라디오 기능을 위해 블루투스를 활성화 중..</string>
+    <string name="init_FM">FM 라디오 기능을 위해 블루투스를 활성화 중\u2026</string>
     <string name="need_bluetooth">블루투스를 활성화 해 주세요</string>
 
     <string name="about_title">정보</string>
@@ -65,5 +61,4 @@
 
     <string name="pref_headset_behaviour_title">헤드셋과 블루투스 동작</string>
     <string name="pref_headset_behaviour_summary">헤드셋이 제거되면 블루투스 동작을 수행함</string>
-
 </resources>

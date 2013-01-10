@@ -1,167 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="bt_exit_behaviour_entries">
+        <item>Nedělat nic (zůstane povolené)</item>
+        <item>Obnovit počáteční stav BT</item>
+        <item>Zeptat se uživatele</item>
+        <item>Vždy vypnuté</item>
+    </string-array>
 
-  <string-array name="bt_exit_behaviour_entries">
-    <item>Nedělat nic (zůstane povolené)</item>
-    <item>Obnovit počáteční stav BT</item>
-    <item>Zeptat se uživatele</item>
-    <item>Vždy vypnuté</item>
-  </string-array>
+    <string-array name="record_durations_entries">
+        <item>5 minut</item>
+        <item>15 minut</item>
+        <item>30 minut</item>
+        <item>Neomezené</item>
+    </string-array>
 
-  <string-array name="record_durations_entries">
-    <item>5 minut</item>
-    <item>15 minut</item>
-    <item>30 minut</item>
-    <item>Neomezené</item>
-  </string-array>
+    <string-array name="search_category_rbds_entries">
+        <item>Všechny stanice</item>
+        <item>Hity dospělých</item>
+        <item>Klasika</item>
+        <item>Klasický rock</item>
+        <item>College</item>
+        <item>Country</item>
+        <item>Emergency</item>
+        <item>Emergency Test</item>
+        <item>Cizý jazyk</item>
+        <item>Informace</item>
+        <item>Jazz</item>
+        <item>Zprávy</item>
+        <item>Nostalgie</item>
+        <item>Oldies</item>
+        <item>Hvězdy</item>
+        <item>Veřejné</item>
+        <item>Církevní hudba</item>
+        <item>Církevní hovory</item>
+        <item>Rhythm and Blues</item>
+        <item>Rock</item>
+        <item>Soft</item>
+        <item>Soft Rock</item>
+        <item>Soft Rhythm and Blues</item>
+        <item>Sportovní</item>
+        <item>Mluvené</item>
+        <item>Top 40</item>
+        <item>Počasí</item>
+    </string-array>
 
-  <string-array name="search_category_rbds_entries">
-    <item>Všechny stanice</item>
-    <item>Hity dospělých</item>
-    <item>Klasika</item>
-    <item>Klasický rock</item>
-    <item>College</item>
-    <item>Country</item>
-    <item>Emergency</item>
-    <item>Emergency Test</item>
-    <item>Cizý jazyk</item>
-    <item>Informace</item>
-    <item>Jazz</item>
-    <item>Zprávy</item>
-    <item>Nostalgie</item>
-    <item>Oldies</item>
-    <item>Hvězdy</item>
-    <item>Veřejné</item>
-    <item>Církevní hudba</item>
-    <item>Církevní hovory</item>
-    <item>Rhythm and Blues</item>
-    <item>Rock</item>
-    <item>Soft</item>
-    <item>Soft Rock</item>
-    <item>Soft Rhythm and Blues</item>
-    <item>Sportovní</item>
-    <item>Mluvené</item>
-    <item>Top 40</item>
-    <item>Počasí</item>
-  </string-array>
+    <string-array name="search_category_rds_entries">
+        <item>Všechny stanice</item>
+        <item>Kultura</item>
+        <item>Aktuální události</item>
+        <item>Pořady pro děti</item>
+        <item>Country Music</item>
+        <item>Dokumentární</item>
+        <item>Drama</item>
+        <item>Easy Listening Music</item>
+        <item>Vzdělání</item>
+        <item>Emergency</item>
+        <item>Emergency Test</item>
+        <item>Finance</item>
+        <item>Folková hudba</item>
+        <item>Informace</item>
+        <item>Jazzová hudba</item>
+        <item>Lehká klasika</item>
+        <item>Volný čas</item>
+        <item>Zprávy</item>
+        <item>Národní hudba</item>
+        <item>Ostatní hudba</item>
+        <item>Oldies Music</item>
+        <item>Telefon</item>
+        <item>Populární hudba</item>
+        <item>Církevní</item>
+        <item>Rocková hudba</item>
+        <item>Vědecké</item>
+        <item>Vážná klasická hudba</item>
+        <item>Sociální věci</item>
+        <item>Sport</item>
+        <item>Cestování</item>
+        <item>Různé</item>
+        <item>Počasí</item>
+    </string-array>
 
-  <string-array name="search_category_rds_entries">
-    <item>Všechny stanice</item>
-    <item>Kultura</item>
-    <item>Aktuální události</item>
-    <item>Pořady pro děti</item>
-    <item>Country Music</item>
-    <item>Dokumentární</item>
-    <item>Drama</item>
-    <item>Easy Listening Music</item>
-    <item>Vzdělání</item>
-    <item>Emergency</item>
-    <item>Emergency Test</item>
-    <item>Finance</item>
-    <item>Folková hudba</item>
-    <item>Informace</item>
-    <item>Jazzová hudba</item>
-    <item>Lehká klasika</item>
-    <item>Volný čas</item>
-    <item>Zprávy</item>
-    <item>Národní hudba</item>
-    <item>Ostatní hudba</item>
-    <item>Oldies Music</item>
-    <item>Telefon</item>
-    <item>Populární hudba</item>
-    <item>Církevní</item>
-    <item>Rocková hudba</item>
-    <item>Vědecké</item>
-    <item>Vážná klasická hudba</item>
-    <item>Sociální věci</item>
-    <item>Sport</item>
-    <item>Cestování</item>
-    <item>Různé</item>
-    <item>Počasí</item>
-  </string-array>
+    <string-array name="presetlist_edit_category">
+        <item>Přejmenovat</item>
+        <item>Vybrat automaticky</item>
+        <item>Smazat</item>
+    </string-array>
 
-  <string-array name="presetlist_edit_category">
-    <item>Přejmenovat</item>
-    <item>Vybrat automaticky</item>
-    <item>Smazat</item>
-  </string-array>
+    <string-array name="regional_band_entries">
+        <item>Severní Amerika</item>
+        <item>Evropa</item>
+        <item>Japonsko</item>
+        <item>Japonsko (širší)</item>
+        <item>Austrálie</item>
+        <item>Rakousko</item>
+        <item>Belgie</item>
+        <item>Brazílie</item>
+        <item>Čína</item>
+        <item>Česko</item>
+        <item>Dánsko</item>
+        <item>Finsko</item>
+        <item>Francie</item>
+        <item>Německo</item>
+        <item>Řecko</item>
+        <item>Hong Kong</item>
+        <item>Indie</item>
+        <item>Irsko</item>
+        <item>Itále</item>
+        <item>Kore</item>
+        <item>Mexiko</item>
+        <item>Nizozemsko</item>
+        <item>Nový Zéland</item>
+        <item>Norsko</item>
+        <item>Polsko</item>
+        <item>Portugalsko</item>
+        <item>Rusko</item>
+        <item>Singapur</item>
+        <item>Slovensko</item>
+        <item>Španělsko</item>
+        <item>Švýcarsko</item>
+        <item>Švédsko</item>
+        <item>Taiwan</item>
+        <item>Turecko</item>
+        <item>Spojené království</item>
+        <item>Spojené státy</item>
+    </string-array>
 
-  <string-array name="regional_band_entries">
-    <item>Severní Amerika</item>
-    <item>Evropa</item>
-    <item>Japonsko</item>
-    <item>Japonsko (širší)</item>
-    <item>Austrálie</item>
-    <item>Rakousko</item>
-    <item>Belgie</item>
-    <item>Brazílie</item>
-    <item>Čína</item>
-    <item>Česko</item>
-    <item>Dánsko</item>
-    <item>Finsko</item>
-    <item>Francie</item>
-    <item>Německo</item>
-    <item>Řecko</item>
-    <item>Hong Kong</item>
-    <item>Indie</item>
-    <item>Irsko</item>
-    <item>Itále</item>
-    <item>Kore</item>
-    <item>Mexiko</item>
-    <item>Nizozemsko</item>
-    <item>Nový Zéland</item>
-    <item>Norsko</item>
-    <item>Polsko</item>
-    <item>Portugalsko</item>
-    <item>Rusko</item>
-    <item>Singapur</item>
-    <item>Slovensko</item>
-    <item>Španělsko</item>
-    <item>Švýcarsko</item>
-    <item>Švédsko</item>
-    <item>Taiwan</item>
-    <item>Turecko</item>
-    <item>Spojené království</item>
-    <item>Spojené státy</item>
-  </string-array>
-
-  <string-array name="regional_band_summary">
-    <item>Severní Amerika (87.5MHz až 108.0MHz v 200KHz krocích)</item>
-    <item>Evropa (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Japonsko (76.0MHz až 90.0MHz v 100KHz krocích)</item>
-    <item>Japonsko (širší) (90.0MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Austrálie (87.7MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Rakousko (87.5MHz až 108.0MHz v 50KHz krocích)</item>
-    <item>Belgie (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Brazílie (87.8MHz až 108.0MHz v 200KHz Step)</item>
-    <item>Čína (87.0MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Česko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Dánsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Finsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Francie (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Německo (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Řecko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Hong Kong (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Indie (91.0MHz až 106.4MHz v 100KHz krocích)</item>
-    <item>Iresko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Itálie (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Korea (87.5MHz až 108.0MHz v 200KHz krocích)</item>
-    <item>Mexiko (88.1MHz až 107.9MHz v 200KHz krocích)</item>
-    <item>Nizozemsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Nový Zéland (88.0MHz až 107.0MHz v 100KHz krocích)</item>
-    <item>Norsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Polsko (88.0MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Portugalsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Rusko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Singapur (88.0MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Slovensko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Španělsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Švýcarsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Švédsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Taiwan (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Turecko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Spojené království (87.5MHz až 108.0MHz v 100KHz krocích)</item>
-    <item>Spojené státy (88.1MHz až 107.9MHz v 200KHz krocích)</item>
-  </string-array>
-
+    <string-array name="regional_band_summary">
+        <item>Severní Amerika (87.5MHz až 108.0MHz v 200KHz krocích)</item>
+        <item>Evropa (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Japonsko (76.0MHz až 90.0MHz v 100KHz krocích)</item>
+        <item>Japonsko (širší) (90.0MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Austrálie (87.7MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Rakousko (87.5MHz až 108.0MHz v 50KHz krocích)</item>
+        <item>Belgie (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Brazílie (87.8MHz až 108.0MHz v 200KHz Step)</item>
+        <item>Čína (87.0MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Česko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Dánsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Finsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Francie (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Německo (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Řecko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Hong Kong (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Indie (91.0MHz až 106.4MHz v 100KHz krocích)</item>
+        <item>Iresko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Itálie (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Korea (87.5MHz až 108.0MHz v 200KHz krocích)</item>
+        <item>Mexiko (88.1MHz až 107.9MHz v 200KHz krocích)</item>
+        <item>Nizozemsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Nový Zéland (88.0MHz až 107.0MHz v 100KHz krocích)</item>
+        <item>Norsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Polsko (88.0MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Portugalsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Rusko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Singapur (88.0MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Slovensko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Španělsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Švýcarsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Švédsko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Taiwan (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Turecko (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Spojené království (87.5MHz až 108.0MHz v 100KHz krocích)</item>
+        <item>Spojené státy (88.1MHz až 107.9MHz v 200KHz krocích)</item>
+    </string-array>
 </resources>

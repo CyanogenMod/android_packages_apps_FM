@@ -40,10 +40,6 @@
     <string name="fm_command_failed_title">FM operación fallida</string>
     <string name="fm_cmd_failed_msg">Error en la operación. Las causas posibles son: no están conectados los auriculares con cable de antena, Bluetooth no está activado, el teléfono está en una llamada o la radio FM ha sido cerrada. Por favor, revisa y vuelve a intentarlo.</string>
 
-    <skip/>
-    <!-- Do not translate. Duration format. -->
-    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
-
     <string name="frequency_string"></string>
     <string name="stat_no_fm">La radio FM no está encendida</string>
 
@@ -67,5 +63,4 @@
 
     <string name="pref_headset_behaviour_title">Auriculares y comportamiento Bluetooth</string>
     <string name="pref_headset_behaviour_summary">Comportamiento cuando los auriculares Bluetooth se desconectan</string>
-
 </resources>

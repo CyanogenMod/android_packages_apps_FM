@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Radio FM</string>
     <string name="tx_app_name">Trasmettitore FM</string>
@@ -40,11 +40,12 @@
     <string name="fm_command_failed_title">Operazione fallita</string>
     <string name="fm_cmd_failed_msg">Operazione non riuscita. Le possibili cause sono: le cuffie non sono collegate, il Bluetooth non è abilitato, si sta effettuando una chiamata, La radio FM è stata chiusa. Riprovare dopo aver premuto il pulsante ON/OFF, quindi riavviare la radio FM.</string>
 
-    <string name="frequency_string">Frequenza</string>
+    <string name="frequency_string"></string>
     <string name="stat_no_fm">Radio FM spenta</string>
 
+    <!-- Added by LIBRA -->
     <string name="need_headset_for_antenna">Errore! Collegare il cavo delle cuffie come antenna FM</string>
-    <string name="init_FM">Attendere prego, si sta abilitando il Bluetooth per attivare la radio FM...</string>
+    <string name="init_FM">Attendere prego, si sta abilitando il Bluetooth per attivare la radio FM\u2026</string>
     <string name="need_bluetooth">Errore! Si prega di attivare il Bluetooth per avviare la Radio FM</string>
 
     <string name="about_title">Info</string>
@@ -55,7 +56,7 @@
     <string name="prompt_disable_bt">Vuoi disattivare il Bluetooth?</string>
     <string name="prompt_yes">Si</string>
     <string name="prompt_no">No</string>
-    
+
     <string name="pref_bt_behaviour_on_exit_title">Gestione BT</string>
     <string name="pref_bt_behaviour_on_exit_summary">Disattiva sempre, ripristina stato iniziale, prompt, etc.</string>
     <string name="pref_bt_behaviour_on_exit_dialog_title">Scegli comportamento Bluetooth</string>

@@ -1,173 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
+    <string-array name="bt_exit_behaviour_entries">
+        <item>Não fazer nada (Continuar activo)</item>
+        <item>Restaurar estado inicial do Bluetooth</item>
+        <item>Perguntar por uma acção do utilizador</item>
+        <item>Desactivar sempre</item>
+    </string-array>
 
-  <string-array name="bt_exit_behaviour_entries">
-    <item>Não fazer nada (Continuar activo)</item>
-    <item>Restaurar estado inicial do Bluetooth</item>
-    <item>Perguntar por uma acção do utilizador</item>
-    <item>Desactivar sempre</item>
-  </string-array>
+    <string-array name="ster_mon_entries">
+        <item>Stereo</item>
+        <item>Mono</item>
+    </string-array>
 
-  <string-array name="ster_mon_entries">
-    <item>Stereo</item>
-    <item>Mono</item>
-  </string-array>
+    <string-array name="record_durations_entries">
+        <item>5 minutos</item>
+        <item>15 minutos</item>
+        <item>30 minutos</item>
+        <item>Ilimitado</item>
+    </string-array>
 
-  <string-array name="record_durations_entries">
-    <item>5 minutos</item>
-    <item>15 minutos</item>
-    <item>30 minutos</item>
-    <item>Ilimitado</item>
-  </string-array>
+    <string-array name="search_category_rbds_entries">
+        <item>All Stations</item>
+        <item>Adult Hits</item>
+        <item>Classical</item>
+        <item>Classic Rock</item>
+        <item>College</item>
+        <item>Country</item>
+        <item>Emergency</item>
+        <item>Emergency Test</item>
+        <item>Foreign Language</item>
+        <item>Information</item>
+        <item>Jazz</item>
+        <item>News</item>
+        <item>Nostalgia</item>
+        <item>Oldies</item>
+        <item>Personality</item>
+        <item>Public</item>
+        <item>Religious Music</item>
+        <item>Religious Talk</item>
+        <item>Rhythm and Blues</item>
+        <item>Rock</item>
+        <item>Soft</item>
+        <item>Soft Rock</item>
+        <item>Soft Rhythm and Blues</item>
+        <item>Sports</item>
+        <item>Talk</item>
+        <item>Top 40</item>
+        <item>Weather</item>
+    </string-array>
 
-  <string-array name="search_category_rbds_entries">
-    <item>All Stations</item>
-    <item>Adult Hits</item>
-    <item>Classical</item>
-    <item>Classic Rock</item>
-    <item>College</item>
-    <item>Country</item>
-    <item>Emergency</item>
-    <item>Emergency Test</item>
-    <item>Foreign Language</item>
-    <item>Information</item>
-    <item>Jazz</item>
-    <item>News</item>
-    <item>Nostalgia</item>
-    <item>Oldies</item>
-    <item>Personality</item>
-    <item>Public</item>
-    <item>Religious Music</item>
-    <item>Religious Talk</item>
-    <item>Rhythm and Blues</item>
-    <item>Rock</item>
-    <item>Soft</item>
-    <item>Soft Rock</item>
-    <item>Soft Rhythm and Blues</item>
-    <item>Sports</item>
-    <item>Talk</item>
-    <item>Top 40</item>
-    <item>Weather</item>
-  </string-array>
+    <string-array name="search_category_rds_entries">
+        <item>All Stations</item>
+        <item>Culture</item>
+        <item>Current Affairs</item>
+        <item>Children programs</item>
+        <item>Country Music</item>
+        <item>Documentary</item>
+        <item>Drama</item>
+        <item>Easy Listening Music</item>
+        <item>Education</item>
+        <item>Emergency</item>
+        <item>Emergency Test</item>
+        <item>Finance</item>
+        <item>Folk Music</item>
+        <item>Information</item>
+        <item>Jazz Music</item>
+        <item>Light classical</item>
+        <item>Leisure</item>
+        <item>News</item>
+        <item>National Music</item>
+        <item>Other Music</item>
+        <item>Oldies Music</item>
+        <item>Phone In</item>
+        <item>Pop Music</item>
+        <item>Religion</item>
+        <item>Rock Music</item>
+        <item>Science</item>
+        <item>Serious classical</item>
+        <item>Social Affairs</item>
+        <item>Sport</item>
+        <item>Travel</item>
+        <item>Varied</item>
+        <item>Weather</item>
+    </string-array>
 
-  <string-array name="search_category_rds_entries">
-    <item>All Stations</item>
-    <item>Culture</item>
-    <item>Current Affairs</item>
-    <item>Children programs</item>
-    <item>Country Music</item>
-    <item>Documentary</item>
-    <item>Drama</item>
-    <item>Easy Listening Music</item>
-    <item>Education</item>
-    <item>Emergency</item>
-    <item>Emergency Test</item>
-    <item>Finance</item>
-    <item>Folk Music</item>
-    <item>Information</item>
-    <item>Jazz Music</item>
-    <item>Light classical</item>
-    <item>Leisure</item>
-    <item>News</item>
-    <item>National Music</item>
-    <item>Other Music</item>
-    <item>Oldies Music</item>
-    <item>Phone In</item>
-    <item>Pop Music</item>
-    <item>Religion</item>
-    <item>Rock Music</item>
-    <item>Science</item>
-    <item>Serious classical</item>
-    <item>Social Affairs</item>
-    <item>Sport</item>
-    <item>Travel</item>
-    <item>Varied</item>
-    <item>Weather</item>
-  </string-array>
+    <string-array name="presetlist_edit_category">
+        <item>Renomear</item>
+        <item>Seleccionar automáticamente</item>
+        <item>Apagar</item>
+    </string-array>
 
-  <string-array name="presetlist_edit_category">
-    <item>Renomear</item>
-    <item>Seleccionar automáticamente</item>
-    <item>Apagar</item>
-  </string-array>
+    <string-array name="regional_band_entries">
+        <item>Alemanha</item>
+        <item>América</item>
+        <item>Austrália</item>
+        <item>Áustria</item>
+        <item>Bélgica</item>
+        <item>Brasil</item>
+        <item>China</item>
+        <item>Coreia</item>
+        <item>Dinamarca</item>
+        <item>Eslováquia</item>
+        <item>Espanha</item>
+        <item>Estados Unidos</item>
+        <item>Europa</item>
+        <item>Finlândia</item>
+        <item>França</item>
+        <item>Grécia</item>
+        <item>Holanda</item>
+        <item>Hong Kong</item>
+        <item>Índia</item>
+        <item>Irlanda</item>
+        <item>Itália</item>
+        <item>Japão</item>
+        <item>Japão (Wide)</item>
+        <item>México</item>
+        <item>Noruega</item>
+        <item>Nova Zelândia</item>
+        <item>Polónia</item>
+        <item>Portugal</item>
+        <item>Reino Unido</item>
+        <item>República Checa</item>
+        <item>Rússia</item>
+        <item>Singapura</item>
+        <item>Suécia</item>
+        <item>Suiça</item>
+        <item>Tailândia</item>
+        <item>Turquia</item>
+    </string-array>
 
-  <string-array name="regional_band_entries">
-    <item>Alemanha</item>
-    <item>América</item>
-    <item>Austrália</item>
-    <item>Áustria</item>
-    <item>Bélgica</item>
-    <item>Brasil</item>
-    <item>China</item>
-    <item>Coreia</item>
-    <item>Dinamarca</item>
-    <item>Eslováquia</item>
-    <item>Espanha</item>
-    <item>Estados Unidos</item>
-    <item>Europa</item>
-    <item>Finlândia</item>
-    <item>França</item>
-    <item>Grécia</item>
-    <item>Holanda</item>
-    <item>Hong Kong</item>
-    <item>Índia</item>
-    <item>Irlanda</item>
-    <item>Itália</item>
-    <item>Japão</item>
-    <item>Japão (Wide)</item>
-    <item>México</item>
-    <item>Noruega</item>
-    <item>Nova Zelândia</item>
-    <item>Polónia</item>
-    <item>Portugal</item>
-    <item>Reino Unido</item>
-    <item>República Checa</item>
-    <item>Rússia</item>
-    <item>Singapura</item>
-    <item>Suécia</item>
-    <item>Suiça</item>
-    <item>Tailândia</item>
-    <item>Turquia</item>
-  </string-array>
-
-  <string-array name="regional_band_summary">
-    <item>Alemanha (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>América do Norte (87.5MHz a 108.0MHz em 200 Khz Steps)</item>
-    <item>Austrália (87.7MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Áustria (87.5MHz a 108.0MHz em  50 Khz Steps)</item>
-    <item>Bélgica (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Brasil (87.8MHz a 108.0MHz em 200 Khz Step)</item>
-    <item>China (87.0MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Coreia (87.5MHz a 108.0MHz em 200 Khz Steps)</item>
-    <item>Dinamarca (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Eslováquia (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Espanha (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Estados Unidos (88.1MHz a 107.9MHz em 200 Khz Steps)</item>
-    <item>Europa (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Finlândia (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>França (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Grécia (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Holanda (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Hong Kong (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Índia (91.0MHz a 106.4MHz em 100 Khz Steps)</item>
-    <item>Irlanda (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Itália (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Japão (76.0MHz a  90.0MHz em 100 Khz Steps)</item>
-    <item>Japão (Wide) (90.0MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>México (88.1MHz a 107.9MHz em 200 Khz Steps)</item>
-    <item>Noruega (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Nova Zelândia (88.0MHz a 107.0MHz em 100 Khz Steps)</item>
-    <item>Polónia (88.0MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Portugal (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Reino Unido (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>República Checa (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Rússia (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Singapura (88.0MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Suécia (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Suiça (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Tailândia (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-    <item>Turquia (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
-  </string-array>
-
+    <string-array name="regional_band_summary">
+        <item>Alemanha (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>América do Norte (87.5MHz a 108.0MHz em 200 Khz Steps)</item>
+        <item>Austrália (87.7MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Áustria (87.5MHz a 108.0MHz em  50 Khz Steps)</item>
+        <item>Bélgica (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Brasil (87.8MHz a 108.0MHz em 200 Khz Step)</item>
+        <item>China (87.0MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Coreia (87.5MHz a 108.0MHz em 200 Khz Steps)</item>
+        <item>Dinamarca (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Eslováquia (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Espanha (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Estados Unidos (88.1MHz a 107.9MHz em 200 Khz Steps)</item>
+        <item>Europa (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Finlândia (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>França (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Grécia (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Holanda (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Hong Kong (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Índia (91.0MHz a 106.4MHz em 100 Khz Steps)</item>
+        <item>Irlanda (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Itália (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Japão (76.0MHz a  90.0MHz em 100 Khz Steps)</item>
+        <item>Japão (Wide) (90.0MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>México (88.1MHz a 107.9MHz em 200 Khz Steps)</item>
+        <item>Noruega (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Nova Zelândia (88.0MHz a 107.0MHz em 100 Khz Steps)</item>
+        <item>Polónia (88.0MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Portugal (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Reino Unido (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>República Checa (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Rússia (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Singapura (88.0MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Suécia (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Suiça (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Tailândia (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+        <item>Turquia (87.5MHz a 108.0MHz em 100 Khz Steps)</item>
+    </string-array>
 </resources>

@@ -40,16 +40,12 @@
     <string name="fm_command_failed_title">FM 無法運作</string>
     <string name="fm_cmd_failed_msg">無法運作的可能原因包括：沒有插入有線耳機作為天線、沒有開啟藍牙、電話處於通話狀態、或 FM 已被關閉。請檢查一下然後再試一次。</string>
 
-    <skip/>
-    <!-- Do not translate. Duration format. -->
-    <!-- skipping untranslatable /resources:0/string:name=durationformat -->
-
     <string name="frequency_string"></string>
     <string name="stat_no_fm">FM 收音機尚未開啟</string>
 
     <!-- Added by LIBRA -->
     <string name="need_headset_for_antenna">請插入有線耳機作為 FM 天線。</string>
-    <string name="init_FM">正在開啟藍牙以支援 FM 收音機…</string>
+    <string name="init_FM">正在開啟藍牙以支援 FM 收音機\u2026</string>
     <string name="need_bluetooth">請開啟藍牙</string>
 
     <string name="about_title">關於</string>
@@ -67,5 +63,4 @@
 
     <string name="pref_headset_behaviour_title">拔除耳機後設定藍牙</string>
     <string name="pref_headset_behaviour_summary">拔除耳機後套用預設藍牙設定</string>
-
 </resources>

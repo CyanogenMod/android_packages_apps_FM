@@ -39,13 +39,13 @@
 
     <string name="fm_command_failed_title">FM-åtgärd mysslyckades</string>
     <string name="fm_cmd_failed_msg">Åtgärden misslyckades. Möjliga anledningar är: du kopplade inte in ett trådbundet headset som en antenn, aktiverade inte Bluetooth, telefonen är i ett samtal, eller FM har stängts ner. Kontrollera detta och försök igen.</string>
-    <string name="durationformat">%2$d:%5$02d</string>
 
     <string name="frequency_string"></string>
     <string name="stat_no_fm">FM-radio är inte påslagen</string>
 
+    <!-- Added by LIBRA -->
     <string name="need_headset_for_antenna">Var god koppla in ett trådbundet headset. Detta kommer användas som FM-antenn.</string>
-    <string name="init_FM">Aktiverar stöd för Bluetooth FM-radio..</string>
+    <string name="init_FM">Aktiverar stöd för Bluetooth FM-radio\u2026</string>
     <string name="need_bluetooth">Var god aktivera Bluetooth</string>
 
     <string name="about_title">Om</string>
@@ -63,5 +63,4 @@
 
     <string name="pref_headset_behaviour_title">Headset- och Bluetooth-beteende</string>
     <string name="pref_headset_behaviour_summary">Åberopa Bluetooth-beteende när headset kopplas bort</string>
-
 </resources>

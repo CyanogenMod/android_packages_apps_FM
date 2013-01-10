@@ -1,110 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
+    <string-array name="bt_exit_behaviour_entries">
+        <item>何もしない(有効のままにする)</item>
+        <item>元の状態にもどす</item>
+        <item>ユーザに尋ねる</item>
+        <item>いつも無効にする</item>
+    </string-array>
 
-  <string-array name="bt_exit_behaviour_entries">
-    <item>何もしない(有効のままにする)</item>
-    <item>元の状態にもどす</item>
-    <item>ユーザに尋ねる</item>
-    <item>いつも無効にする</item>
-  </string-array>
+    <string-array name="ster_mon_entries">
+        <item>ステレオ</item>
+        <item>モノラル</item>
+    </string-array>
 
-  <string-array name="ster_mon_entries">
-    <item>ステレオ</item>
-    <item>モノラル</item>
-  </string-array>
+    <string-array name="record_durations_entries">
+        <item>5分</item>
+        <item>15分</item>
+        <item>30分</item>
+        <item>無制限</item>
+    </string-array>
 
-  <string-array name="record_durations_entries">
-    <item>5分</item>
-    <item>15分</item>
-    <item>30分</item>
-    <item>無制限</item>
-  </string-array>
+    <string-array name="presetlist_edit_category">
+        <item>リネーム</item>
+        <item>自動選択</item>
+        <item>削除</item>
+    </string-array>
 
-  <string-array name="presetlist_edit_category">
-    <item>リネーム</item>
-    <item>自動選択</item>
-    <item>削除</item>
-  </string-array>
+    <string-array name="regional_band_entries">
+        <item>北米</item>
+        <item>ヨーロッパ</item>
+        <item>日本</item>
+        <item>日本(ワイド)</item>
+        <item>オーストラリア</item>
+        <item>オーストリア</item>
+        <item>ベルギー</item>
+        <item>ブラジル</item>
+        <item>中国</item>
+        <item>チェコ</item>
+        <item>デンマーク</item>
+        <item>フィンランド</item>
+        <item>フランス</item>
+        <item>ドイツ</item>
+        <item>ギリシャ</item>
+        <item>香港</item>
+        <item>インド</item>
+        <item>アイルランド</item>
+        <item>イタリア</item>
+        <item>韓国</item>
+        <item>メキシコ</item>
+        <item>オランダ</item>
+        <item>ニュージーランド</item>
+        <item>ノルウェー</item>
+        <item>ポーランド</item>
+        <item>ポルトガル</item>
+        <item>ロシア</item>
+        <item>シンガポール</item>
+        <item>スロバキア</item>
+        <item>スペイン</item>
+        <item>スイス</item>
+        <item>スウェーデン</item>
+        <item>台湾</item>
+        <item>トルコ</item>
+        <item>イギリス</item>
+        <item>合衆国</item>
+    </string-array>
 
-  <string-array name="regional_band_entries">
-    <item>北米</item>
-    <item>ヨーロッパ</item>
-    <item>日本</item>
-    <item>日本(ワイド)</item>
-    <item>オーストラリア</item>
-    <item>オーストリア</item>
-    <item>ベルギー</item>
-    <item>ブラジル</item>
-    <item>中国</item>
-    <item>チェコ</item>
-    <item>デンマーク</item>
-    <item>フィンランド</item>
-    <item>フランス</item>
-    <item>ドイツ</item>
-    <item>ギリシャ</item>
-    <item>香港</item>
-    <item>インド</item>
-    <item>アイルランド</item>
-    <item>イタリア</item>
-    <item>韓国</item>
-    <item>メキシコ</item>
-    <item>オランダ</item>
-    <item>ニュージーランド</item>
-    <item>ノルウェー</item>
-    <item>ポーランド</item>
-    <item>ポルトガル</item>
-    <item>ロシア</item>
-    <item>シンガポール</item>
-    <item>スロバキア</item>
-    <item>スペイン</item>
-    <item>スイス</item>
-    <item>スウェーデン</item>
-    <item>台湾</item>
-    <item>トルコ</item>
-    <item>イギリス</item>
-    <item>合衆国</item>
-  </string-array>
-
-  <string-array name="regional_band_summary">
-    <item>北米 (87.5MHz〜108.0MHz, 200Khz間隔)</item>
-    <item>ヨーロッパ (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>日本 (76.0MHz〜90.0MHz, 100Khz間隔)</item>
-    <item>日本(ワイド) (90.0MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>オーストラリア (87.7MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>オーストリア (87.5MHz〜108.0MHz, 50Khz間隔)</item>
-    <item>ベルギー (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>ブラジル (87.8MHz〜108.0MHz, 200Khz Step)</item>
-    <item>中国 (87.0MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>チェコ (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>デンマーク (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>フィンランド (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>フランス (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>ドイツ (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>ギリシャ (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>香港 (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>インド (91.0MHz〜106.4MHz, 100Khz間隔)</item>
-    <item>アイルランド (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>イタリア (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>韓国 (87.5MHz〜108.0MHz, 200Khz間隔)</item>
-    <item>メキシコ (88.1MHz〜107.9MHz, 200Khz間隔)</item>
-    <item>オランダ (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>ニュージーランド (88.0MHz〜107.0MHz, 100Khz間隔)</item>
-    <item>ノルウェー (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>ポーランド (88.0MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>ポルトガル (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>ロシア (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>シンガポール (88.0MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>スロバキア (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>スペイン (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>スイス (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>スウェーデン (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>台湾 (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>トルコ (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>イギリス (87.5MHz〜108.0MHz, 100Khz間隔)</item>
-    <item>合衆国 (88.1MHz〜107.9MHz, 200Khz間隔)</item>
-  </string-array>
-
-
-
+    <string-array name="regional_band_summary">
+        <item>北米 (87.5MHz〜108.0MHz, 200Khz間隔)</item>
+        <item>ヨーロッパ (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>日本 (76.0MHz〜90.0MHz, 100Khz間隔)</item>
+        <item>日本(ワイド) (90.0MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>オーストラリア (87.7MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>オーストリア (87.5MHz〜108.0MHz, 50Khz間隔)</item>
+        <item>ベルギー (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>ブラジル (87.8MHz〜108.0MHz, 200Khz Step)</item>
+        <item>中国 (87.0MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>チェコ (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>デンマーク (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>フィンランド (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>フランス (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>ドイツ (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>ギリシャ (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>香港 (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>インド (91.0MHz〜106.4MHz, 100Khz間隔)</item>
+        <item>アイルランド (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>イタリア (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>韓国 (87.5MHz〜108.0MHz, 200Khz間隔)</item>
+        <item>メキシコ (88.1MHz〜107.9MHz, 200Khz間隔)</item>
+        <item>オランダ (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>ニュージーランド (88.0MHz〜107.0MHz, 100Khz間隔)</item>
+        <item>ノルウェー (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>ポーランド (88.0MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>ポルトガル (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>ロシア (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>シンガポール (88.0MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>スロバキア (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>スペイン (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>スイス (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>スウェーデン (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>台湾 (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>トルコ (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>イギリス (87.5MHz〜108.0MHz, 100Khz間隔)</item>
+        <item>合衆国 (88.1MHz〜107.9MHz, 200Khz間隔)</item>
+    </string-array>
 </resources>

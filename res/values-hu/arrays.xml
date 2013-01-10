@@ -4,12 +4,14 @@
         <item>Sztereó</item>
         <item>Monó</item>
     </string-array>
+
     <string-array name="record_durations_entries">
         <item>5 perc</item>
         <item>15 perc</item>
         <item>30 perc</item>
         <item>Végtelen</item>
     </string-array>
+
     <string-array name="search_category_rbds_entries">
         <item>Minden állomás</item>
         <item>Felnőtt slágerek</item>
@@ -39,6 +41,7 @@
         <item>Top 40</item>
         <item>Időjárás</item>
     </string-array>
+
     <string-array name="search_category_rds_entries">
         <item>Minden állomás</item>
         <item>Kúltúra</item>
@@ -73,11 +76,13 @@
         <item>Változatos</item>
         <item>Időjárás</item>
     </string-array>
+
     <string-array name="presetlist_edit_category">
         <item>Átnevez</item>
         <item>Automata kiválasztás</item>
         <item>Törlés</item>
     </string-array>
+
     <string-array name="regional_band_entries">
         <item>Észak Amerika</item>
         <item>Európa</item>
@@ -116,6 +121,7 @@
         <item>Egyesült Királyság</item>
         <item>Egyesült Államok</item>
     </string-array>
+
     <string-array name="regional_band_summary">
         <item>Észak Amerika (87.5MHz-től 108.0MHz-ig 200Khz-es lépésekben)</item>
         <item>Európa (87.5MHz-től 108.0MHz-ig 100Khz-es lépésekben)</item>

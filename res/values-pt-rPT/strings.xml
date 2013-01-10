@@ -38,14 +38,12 @@
     <string name="fm_command_failed_title">Operação FM falhou</string>
     <string name="fm_cmd_failed_msg">A operação falhou. Causas possiveis são: não ligou os headphones como antena, não activou o Bluetooth, o telemóvel está numa chamada, ou o FM foi terminado. Por favor verifique e tente novamente.</string>
 
-    <skip/>
-
     <string name="frequency_string"></string>
     <string name="stat_no_fm">Rádio FM não está activado</string>
 
     <!-- Added by LIBRA -->
     <string name="need_headset_for_antenna">Por favor ligue um auricular com fios que será usado como antena.</string>
-    <string name="init_FM">A activar o Bluetooth para suporte FM..</string>
+    <string name="init_FM">A activar o Bluetooth para suporte FM\u2026</string>
     <string name="need_bluetooth">Por favor active o Bluetooth</string>
 
     <string name="about_title">Sobre</string>
@@ -63,5 +61,4 @@
 
     <string name="pref_headset_behaviour_title">Comportamento do Auricular e do Bluetooth</string>
     <string name="pref_headset_behaviour_summary">Invocar comportamento do Bluetooth quando o auricular é removido</string>
-
 </resources>

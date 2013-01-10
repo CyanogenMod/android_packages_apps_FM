@@ -3,8 +3,8 @@
     <string name="app_name">FM收音机</string>
     <string name="tx_app_name">FM发射</string>
     <string name="preset_delete">删除</string>
-	<string name="preset_rename">重命名</string>
-	<string name="dialog_presetlist_rename_title">输入名称</string>
+    <string name="preset_rename">重命名</string>
+    <string name="dialog_presetlist_rename_title">输入名称</string>
     <string name="stat_notif_frequency">FM调频"<xliff:g id="frequency">%1$s</xliff:g>"兆赫</string>
 
     <string name="sel_band_menu">选择地区频谱</string>
@@ -29,7 +29,7 @@
     <string name="settings_revert_confirm_msg">将删除电台在内的所有设定</string>
 
     <string name="settings_back_summary">回到上一个页面</string>
-	<string name="settings_revert_defaults_title">重置为出厂设定</string>
+    <string name="settings_revert_defaults_title">重置为出厂设定</string>
     <string name="settings_revert_defaults_summary">重置所有设定</string>
 
     <string name="alert_dialog_ok">确认</string>
@@ -38,33 +38,29 @@
     <string name="preset_search">搜索"<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
 
     <string name="fm_command_failed_title">FM操作失败</string>
-    <string name="fm_cmd_failed_msg">操作失败。可能原因有:没有插上有线耳机作为天线，或者没有打开蓝牙芯片，或者正处于通话中，或FM已关闭。请处理以上情况后再尝试弹起ON/OFF按钮，再按下ON/OFF按钮重启FM。
-    </string>
-
-    <skip/>
-    <!-- Do not translate. Duration format. -->
-    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
+    <string name="fm_cmd_failed_msg">操作失败。可能原因有:没有插上有线耳机作为天线，或者没有打开蓝牙芯片，或者正处于通话中，或FM已关闭。请处理以上情况后再尝试弹起ON/OFF按钮，再按下ON/OFF按钮重启FM。</string>
 
     <string name="frequency_string"></string>
     <string name="stat_no_fm">FM收音机未开启</string>
 
     <!-- Added by LIBRA -->
     <string name="need_headset_for_antenna">错误！请插上有线耳机作为FM天线</string>
-    <string name="init_FM">请稍候，打开蓝牙启动FM芯片...</string>
-	<string name="need_bluetooth">错误！请打开蓝牙以启动FM芯片</string>
-	<string name="about_title">关于</string>
-	<string name="about_summary">FM 收音机 - 由 MIUI 提供\nhttp://www.miui.com</string>
+    <string name="init_FM">请稍候，打开蓝牙启动FM芯片\u2026</string>
+    <string name="need_bluetooth">错误！请打开蓝牙以启动FM芯片</string>
 
-	<string name="pref_disable_bt_prompt_title">结束时询问停用蓝牙</string>
-	<string name="pref_disable_bt_prompt_summary">关闭收音机时询问是否要停用蓝牙</string>
-	<string name="prompt_disable_bt">要停用蓝牙吗？</string>
-	<string name="prompt_yes">是</string>
-	<string name="prompt_no">否</string>
+    <string name="about_title">关于</string>
+    <string name="about_summary">FM 收音机 - 由 MIUI 提供\nhttp://www.miui.com</string>
 
-	<string name="pref_bt_behaviour_on_exit_title">预设蓝牙设定</string>
-	<string name="pref_bt_behaviour_on_exit_summary">结束时蓝牙状态的变更方式</string>
-	<string name="pref_bt_behaviour_on_exit_dialog_title">蓝牙状态变更方式</string>
+    <string name="pref_disable_bt_prompt_title">结束时询问停用蓝牙</string>
+    <string name="pref_disable_bt_prompt_summary">关闭收音机时询问是否要停用蓝牙</string>
+    <string name="prompt_disable_bt">要停用蓝牙吗？</string>
+    <string name="prompt_yes">是</string>
+    <string name="prompt_no">否</string>
 
-	<string name="pref_headset_behaviour_title">拔除耳机后设定蓝牙</string>
-	<string name="pref_headset_behaviour_summary">拔除耳机后套用预设蓝牙设定</string>
+    <string name="pref_bt_behaviour_on_exit_title">预设蓝牙设定</string>
+    <string name="pref_bt_behaviour_on_exit_summary">结束时蓝牙状态的变更方式</string>
+    <string name="pref_bt_behaviour_on_exit_dialog_title">蓝牙状态变更方式</string>
+
+    <string name="pref_headset_behaviour_title">拔除耳机后设定蓝牙</string>
+    <string name="pref_headset_behaviour_summary">拔除耳机后套用预设蓝牙设定</string>
 </resources>

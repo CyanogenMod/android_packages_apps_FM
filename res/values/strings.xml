@@ -49,7 +49,7 @@
 
     <!-- Added by LIBRA -->
     <string name="need_headset_for_antenna">Please plug in a wired headset which will be used as an FM antenna.</string>
-    <string name="init_FM">Enabling Bluetooth for FM radio support..</string>
+    <string name="init_FM">Enabling Bluetooth for FM radio support\u2026</string>
     <string name="need_bluetooth">Please enable Bluetooth</string>
 
     <string name="about_title">About</string>
@@ -67,5 +67,4 @@
 
     <string name="pref_headset_behaviour_title">Headset and Bluetooth behaviour</string>
     <string name="pref_headset_behaviour_summary">Invoke Bluetooth behaviour when headset is removed</string>
-
 </resources>

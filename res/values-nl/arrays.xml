@@ -1,163 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string-array name="bt_exit_behaviour_entries">
-    <item>Niets doen (blijft ingeschakeld)</item>
-    <item>Oorspronkelijke Bluetooth-stand herstellen</item>
-    <item>Melding voor gebruiker tonen</item>
-    <item>Altijd uitzetten</item>
-  </string-array>
-  <string-array name="ster_mon_entries">
-    <item>Stereo</item>
-    <item>Mono</item>
-  </string-array>
-  <string-array name="record_durations_entries">
-    <item>5 minuten</item>
-    <item>15 minuten</item>
-    <item>30 minuten</item>
-    <item>Ongelimiteerd</item>
-  </string-array>
-  <string-array name="search_category_rbds_entries">
-    <item>Alle stations</item>
-    <item>Erotiek</item>
-    <item>Klassiek</item>
-    <item>Klassieke rock</item>
-    <item>Onderwijs</item>
-    <item>Country</item>
-    <item>Nood</item>
-    <item>Noodtest</item>
-    <item>Anderstalig</item>
-    <item>Informatie</item>
-    <item>Jazz</item>
-    <item>Nieuws</item>
-    <item>Nostalgie</item>
-    <item>Gouwe ouwe</item>
-    <item>Personaliteit</item>
-    <item>Publiek</item>
-    <item>Religieuze muziek</item>
-    <item>Religieuze praat</item>
-    <item>Rhythm-and-Blues</item>
-    <item>Rock</item>
-    <item>Soft</item>
-    <item>Softrock</item>
-    <item>Softrhythm-and-blues</item>
-    <item>Sport</item>
-    <item>Praatprogramma\'s</item>
-    <item>Top 40</item>
-    <item>Weer</item>
-  </string-array>
-  <string-array name="search_category_rds_entries">
-    <item>Alle stations</item>
-    <item>Cultuur</item>
-    <item>Huidige zaken</item>
-    <item>Kinderprogramma\'s</item>
-    <item>Countrymuziek</item>
-    <item>Documentaire</item>
-    <item>Drama</item>
-    <item>Easy listening</item>
-    <item>Educatie</item>
-    <item>Nood</item>
-    <item>Noodtest</item>
-    <item>Financieel</item>
-    <item>Volksmuziek</item>
-    <item>Informatie</item>
-    <item>Jazzmuziek</item>
-    <item>Licht klassiek</item>
-    <item>Vrije tijd</item>
-    <item>Nieuws</item>
-    <item>Nederlandstalig</item>
-    <item>Andere muziek</item>
-    <item>Gouwe ouwe</item>
-    <item>Belprogramma</item>
-    <item>Popmuziek</item>
-    <item>Religieus</item>
-    <item>Rockmuziek</item>
-    <item>Wetenschappelijk</item>
-    <item>Serieus klassiek</item>
-    <item>Sociale zaken</item>
-    <item>Sport</item>
-    <item>Reizen</item>
-    <item>Gevarieërd</item>
-    <item>Weer</item>
-  </string-array>
-  <string-array name="presetlist_edit_category">
-    <item>Hernoemen</item>
-    <item>Automatisch selecteren</item>
-    <item>Verwijder</item>
-  </string-array>
-  <string-array name="regional_band_entries">
-    <item>Noord-Amerika</item>
-    <item>Europa</item>
-    <item>Japan</item>
-    <item>Japan (breed)</item>
-    <item>Australië</item>
-    <item>Oostenrijk</item>
-    <item>België</item>
-    <item>Brazilië</item>
-    <item>China</item>
-    <item>Tsjechië</item>
-    <item>Denemarken</item>
-    <item>Finland</item>
-    <item>Frankrijk</item>
-    <item>Duitsland</item>
-    <item>Griekenland</item>
-    <item>Hong Kong</item>
-    <item>India</item>
-    <item>Ierland</item>
-    <item>Italië</item>
-    <item>Korea</item>
-    <item>Mexico</item>
-    <item>Nederland</item>
-    <item>Nieuw-Zeeland</item>
-    <item>Noorwegen</item>
-    <item>Polen</item>
-    <item>Portugal</item>
-    <item>Rusland</item>
-    <item>Singapore</item>
-    <item>Slowakije</item>
-    <item>Spanje</item>
-    <item>Zwitserland</item>
-    <item>Zweden</item>
-    <item>Taiwan</item>
-    <item>Turkije</item>
-    <item>Verenigd Koninkrijk</item>
-    <item>Verenigde Staten</item>
-  </string-array>
-  <string-array name="regional_band_summary">
-    <item>Noord-Amerika (87.5MHz tot 108.0MHz in stappen van 200 kHz)</item>
-    <item>Europa (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Japan (76.0MHz tot  90.0MHz in stappen van 100 kHz)</item>
-    <item>Japan (Wide) (90.0MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Australië (87.7MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Oostenrijk (87.5MHz tot 108.0MHz in stappen van 50 kHz)</item>
-    <item>België (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Brazilië (87.8MHz tot 108.0MHz in stappen van 200 kHz)</item>
-    <item>China (87.0MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Tsjechië (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Denemarken (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Finland (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Frankrijk (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Duitsland (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Griekenland (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Hong Kong (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>India (91.0MHz tot 106.4MHz in stappen van 100 kHz)</item>
-    <item>Ierland (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Italië (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Korea (87.5MHz tot 108.0MHz in stappen van 200 kHz)</item>
-    <item>Mexico (88.1MHz tot 107.9MHz in stappen van 200 kHz)</item>
-    <item>Nederland (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Nieuw-Zeeland (88.0MHz tot 107.0MHz in stappen van 100 kHz)</item>
-    <item>Noorwegen (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Polen (88.0MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Portugal (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Rusland (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Singapore (88.0MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Slowakije (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Spanje (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Zwitserland (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Zweden (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Taiwan (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Turkije (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Verenigd Koninkrijk (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
-    <item>Verenigde Staten (88.1MHz tot 107.9MHz in stappen van 200 kHz)</item>
-  </string-array>
+    <string-array name="bt_exit_behaviour_entries">
+        <item>Niets doen (blijft ingeschakeld)</item>
+        <item>Oorspronkelijke Bluetooth-stand herstellen</item>
+        <item>Melding voor gebruiker tonen</item>
+        <item>Altijd uitzetten</item>
+    </string-array>
+
+    <string-array name="ster_mon_entries">
+        <item>Stereo</item>
+        <item>Mono</item>
+    </string-array>
+
+    <string-array name="record_durations_entries">
+        <item>5 minuten</item>
+        <item>15 minuten</item>
+        <item>30 minuten</item>
+        <item>Ongelimiteerd</item>
+    </string-array>
+
+    <string-array name="search_category_rbds_entries">
+        <item>Alle stations</item>
+        <item>Erotiek</item>
+        <item>Klassiek</item>
+        <item>Klassieke rock</item>
+        <item>Onderwijs</item>
+        <item>Country</item>
+        <item>Nood</item>
+        <item>Noodtest</item>
+        <item>Anderstalig</item>
+        <item>Informatie</item>
+        <item>Jazz</item>
+        <item>Nieuws</item>
+        <item>Nostalgie</item>
+        <item>Gouwe ouwe</item>
+        <item>Personaliteit</item>
+        <item>Publiek</item>
+        <item>Religieuze muziek</item>
+        <item>Religieuze praat</item>
+        <item>Rhythm-and-Blues</item>
+        <item>Rock</item>
+        <item>Soft</item>
+        <item>Softrock</item>
+        <item>Softrhythm-and-blues</item>
+        <item>Sport</item>
+        <item>Praatprogramma\'s</item>
+        <item>Top 40</item>
+        <item>Weer</item>
+    </string-array>
+
+    <string-array name="search_category_rds_entries">
+        <item>Alle stations</item>
+        <item>Cultuur</item>
+        <item>Huidige zaken</item>
+        <item>Kinderprogramma\'s</item>
+        <item>Countrymuziek</item>
+        <item>Documentaire</item>
+        <item>Drama</item>
+        <item>Easy listening</item>
+        <item>Educatie</item>
+        <item>Nood</item>
+        <item>Noodtest</item>
+        <item>Financieel</item>
+        <item>Volksmuziek</item>
+        <item>Informatie</item>
+        <item>Jazzmuziek</item>
+        <item>Licht klassiek</item>
+        <item>Vrije tijd</item>
+        <item>Nieuws</item>
+        <item>Nederlandstalig</item>
+        <item>Andere muziek</item>
+        <item>Gouwe ouwe</item>
+        <item>Belprogramma</item>
+        <item>Popmuziek</item>
+        <item>Religieus</item>
+        <item>Rockmuziek</item>
+        <item>Wetenschappelijk</item>
+        <item>Serieus klassiek</item>
+        <item>Sociale zaken</item>
+        <item>Sport</item>
+        <item>Reizen</item>
+        <item>Gevarieërd</item>
+        <item>Weer</item>
+    </string-array>
+
+    <string-array name="presetlist_edit_category">
+        <item>Hernoemen</item>
+        <item>Automatisch selecteren</item>
+        <item>Verwijder</item>
+    </string-array>
+
+    <string-array name="regional_band_entries">
+        <item>Noord-Amerika</item>
+        <item>Europa</item>
+        <item>Japan</item>
+        <item>Japan (breed)</item>
+        <item>Australië</item>
+        <item>Oostenrijk</item>
+        <item>België</item>
+        <item>Brazilië</item>
+        <item>China</item>
+        <item>Tsjechië</item>
+        <item>Denemarken</item>
+        <item>Finland</item>
+        <item>Frankrijk</item>
+        <item>Duitsland</item>
+        <item>Griekenland</item>
+        <item>Hong Kong</item>
+        <item>India</item>
+        <item>Ierland</item>
+        <item>Italië</item>
+        <item>Korea</item>
+        <item>Mexico</item>
+        <item>Nederland</item>
+        <item>Nieuw-Zeeland</item>
+        <item>Noorwegen</item>
+        <item>Polen</item>
+        <item>Portugal</item>
+        <item>Rusland</item>
+        <item>Singapore</item>
+        <item>Slowakije</item>
+        <item>Spanje</item>
+        <item>Zwitserland</item>
+        <item>Zweden</item>
+        <item>Taiwan</item>
+        <item>Turkije</item>
+        <item>Verenigd Koninkrijk</item>
+        <item>Verenigde Staten</item>
+    </string-array>
+
+    <string-array name="regional_band_summary">
+        <item>Noord-Amerika (87.5MHz tot 108.0MHz in stappen van 200 kHz)</item>
+        <item>Europa (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Japan (76.0MHz tot  90.0MHz in stappen van 100 kHz)</item>
+        <item>Japan (Wide) (90.0MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Australië (87.7MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Oostenrijk (87.5MHz tot 108.0MHz in stappen van 50 kHz)</item>
+        <item>België (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Brazilië (87.8MHz tot 108.0MHz in stappen van 200 kHz)</item>
+        <item>China (87.0MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Tsjechië (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Denemarken (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Finland (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Frankrijk (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Duitsland (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Griekenland (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Hong Kong (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>India (91.0MHz tot 106.4MHz in stappen van 100 kHz)</item>
+        <item>Ierland (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Italië (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Korea (87.5MHz tot 108.0MHz in stappen van 200 kHz)</item>
+        <item>Mexico (88.1MHz tot 107.9MHz in stappen van 200 kHz)</item>
+        <item>Nederland (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Nieuw-Zeeland (88.0MHz tot 107.0MHz in stappen van 100 kHz)</item>
+        <item>Noorwegen (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Polen (88.0MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Portugal (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Rusland (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Singapore (88.0MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Slowakije (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Spanje (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Zwitserland (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Zweden (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Taiwan (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Turkije (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Verenigd Koninkrijk (87.5MHz tot 108.0MHz in stappen van 100 kHz)</item>
+        <item>Verenigde Staten (88.1MHz tot 107.9MHz in stappen van 200 kHz)</item>
+    </string-array>
 </resources>

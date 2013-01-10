@@ -1,299 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
+    <string-array name="bt_exit_behaviour_entries">
+        <item>Hiçbir şey yapma (Etkin kalır)</item>
+        <item>Başlangıç durumuna getir</item>
+        <item>Kullanıcıdan onay iste</item>
+        <item>Her zaman kapat</item>
+    </string-array>
 
-  <string-array name="bt_exit_behaviour_entries">
-    <item>Hiçbir şey yapma (Etkin kalır)</item>
-    <item>Başlangıç durumuna getir</item>
-    <item>Kullanıcıdan onay iste</item>
-    <item>Her zaman kapat</item>
-  </string-array>
+    <string-array name="ster_mon_entries">
+        <item>Stereo (Çift kanal)</item>
+        <item>Mono (Tek kanal)</item>
+    </string-array>
 
-  <string-array name="bt_exit_behaviour_values" translatable="false">
-    <item>0</item>
-    <item>1</item>
-    <item>2</item>
-    <item>3</item>
-  </string-array>
+    <string-array name="record_durations_entries">
+        <item>5 dakika</item>
+        <item>15 dakika</item>
+        <item>30 dakika</item>
+        <item>Sınırsız</item>
+    </string-array>
 
-  <string-array name="ster_mon_entries">
-    <item>Stereo (Çift kanal)</item>
-    <item>Mono (Tek kanal)</item>
-  </string-array>
+    <string-array name="search_category_rbds_entries">
+        <item>Tüm İstasyonlar</item>
+        <item>Yetişkin Hitler</item>
+        <item>Klasik</item>
+        <item>Klasik Rak</item>
+        <item>Eğitim</item>
+        <item>Halk</item>
+        <item>Acil</item>
+        <item>Acil Denemesi</item>
+        <item>Yabancı Dil</item>
+        <item>Bilgi</item>
+        <item>Caz</item>
+        <item>Haberler</item>
+        <item>Nostalji</item>
+        <item>Eskiler</item>
+        <item>Kişisel</item>
+        <item>Herkes</item>
+        <item>Dini Müzik</item>
+        <item>Dini Konuşma</item>
+        <item>Ritim ve Hüzün</item>
+        <item>Rak</item>
+        <item>Hafif</item>
+        <item>Hafif Rak</item>
+        <item>Hafif Ritim ve Hüzün</item>
+        <item>Spor</item>
+        <item>Konuşma</item>
+        <item>Top 40</item>
+        <item>Hava</item>
+    </string-array>
 
-  <string-array name="ster_mon_values" translatable="false">
-    <item>0</item>
-    <item>1</item>
-  </string-array>
+    <string-array name="search_category_rds_entries">
+        <item>Tüm İstasyonlar</item>
+        <item>Kültür</item>
+        <item>Güncel Olaylar</item>
+        <item>Çocuk</item>
+        <item>Halk Müziği</item>
+        <item>Belgesel</item>
+        <item>Drama</item>
+        <item>Hafif Müzik</item>
+        <item>Eğitim</item>
+        <item>Acil</item>
+        <item>Acil Denemesi</item>
+        <item>Finans</item>
+        <item>Folk Müzik</item>
+        <item>Bilgi</item>
+        <item>Caz Müzik</item>
+        <item>Hafif klasik</item>
+        <item>Serbest</item>
+        <item>Haber</item>
+        <item>Ulusal Müzik</item>
+        <item>Diğer Müzik</item>
+        <item>Eskiler</item>
+        <item>Telefonda</item>
+        <item>Pop Müzik</item>
+        <item>Bölgesel</item>
+        <item>Rak Müzik</item>
+        <item>Bilim</item>
+        <item>Gerçek Klasik</item>
+        <item>Güncel Olaylar</item>
+        <item>Spor</item>
+        <item>Yolculuk</item>
+        <item>Değişken</item>
+        <item>Hava</item>
+    </string-array>
 
-  <string-array name="record_durations_entries">
-    <item>5 dakika</item>
-    <item>15 dakika</item>
-    <item>30 dakika</item>
-    <item>Sınırsız</item>
-  </string-array>
+    <string-array name="presetlist_edit_category">
+        <item>Yeniden adlandır</item>
+        <item>Otomatik-Seç</item>
+        <item>Sil</item>
+    </string-array>
 
+    <string-array name="regional_band_entries">
+        <item>Kuzey Amerika</item>
+        <item>Avrupa</item>
+        <item>Japonya</item>
+        <item>Japonya (Geniş)</item>
+        <item>Avustralya</item>
+        <item>Avusturya</item>
+        <item>Belçika</item>
+        <item>Brezilya</item>
+        <item>Çin</item>
+        <item>Çek</item>
+        <item>Danimarka</item>
+        <item>Finlandiya</item>
+        <item>Fransa</item>
+        <item>Almanya</item>
+        <item>Yunanistan</item>
+        <item>Hong Kong</item>
+        <item>Hindistan</item>
+        <item>İrlanda</item>
+        <item>İtalya</item>
+        <item>Kore</item>
+        <item>Meksika</item>
+        <item>Hollanda</item>
+        <item>Yeni Zelenda</item>
+        <item>Norveç</item>
+        <item>Polonya</item>
+        <item>Portekiz</item>
+        <item>Rusya</item>
+        <item>Singapur</item>
+        <item>Slovakya</item>
+        <item>İspanya</item>
+        <item>İsviçre</item>
+        <item>İsveç</item>
+        <item>Tayvan</item>
+        <item>Türkiye</item>
+        <item>İngiltere</item>
+        <item>A.B.D.</item>
+    </string-array>
 
-  <string-array name="record_duration_values" translatable="false">
-    <item>5</item>
-    <item>15</item>
-    <item>30</item>
-    <item>-1</item>
-  </string-array>
-
-  <string-array name="search_category_rbds_entries">
-    <item>Tüm İstasyonlar</item>
-    <item>Yetişkin Hitler</item>
-    <item>Klasik</item>
-    <item>Klasik Rak</item>
-    <item>Eğitim</item>
-    <item>Halk</item>
-    <item>Acil</item>
-    <item>Acil Denemesi</item>
-    <item>Yabancı Dil</item>
-    <item>Bilgi</item>
-    <item>Caz</item>
-    <item>Haberler</item>
-    <item>Nostalji</item>
-    <item>Eskiler</item>
-    <item>Kişisel</item>
-    <item>Herkes</item>
-    <item>Dini Müzik</item>
-    <item>Dini Konuşma</item>
-    <item>Ritim ve Hüzün</item>
-    <item>Rak</item>
-    <item>Hafif</item>
-    <item>Hafif Rak</item>
-    <item>Hafif Ritim ve Hüzün</item>
-    <item>Spor</item>
-    <item>Konuşma</item>
-    <item>Top 40</item>
-    <item>Hava</item>
-  </string-array>
-
-  <string-array name="search_category_rbds_values" translatable="false">
-    <item>0</item>
-    <item>7</item>
-    <item>15</item>
-    <item>6</item>
-    <item>23</item>
-    <item>10</item>
-    <item>31</item>
-    <item>30</item>
-    <item>18</item>
-    <item>2</item>
-    <item>14</item>
-    <item>1</item>
-    <item>13</item>
-    <item>11</item>
-    <item>21</item>
-    <item>22</item>
-    <item>19</item>
-    <item>20</item>
-    <item>16</item>
-    <item>5</item>
-    <item>12</item>
-    <item>8</item>
-    <item>17</item>
-    <item>3</item>
-    <item>4</item>
-    <item>9</item>
-    <item>29</item>
-  </string-array>
-
-
-  <string-array name="search_category_rds_entries">
-    <item>Tüm İstasyonlar</item>
-    <item>Kültür</item>
-    <item>Güncel Olaylar</item>
-    <item>Çocuk</item>
-    <item>Halk Müziği</item>
-    <item>Belgesel</item>
-    <item>Drama</item>
-    <item>Hafif Müzik</item>
-    <item>Eğitim</item>
-    <item>Acil</item>
-    <item>Acil Denemesi</item>
-    <item>Finans</item>
-    <item>Folk Müzik</item>
-    <item>Bilgi</item>
-    <item>Caz Müzik</item>
-    <item>Hafif klasik</item>
-    <item>Serbest</item>
-    <item>Haber</item>
-    <item>Ulusal Müzik</item>
-    <item>Diğer Müzik</item>
-    <item>Eskiler</item>
-    <item>Telefonda</item>
-    <item>Pop Müzik</item>
-    <item>Bölgesel</item>
-    <item>Rak Müzik</item>
-    <item>Bilim</item>
-    <item>Gerçek Klasik</item>
-    <item>Güncel Olaylar</item>
-    <item>Spor</item>
-    <item>Yolculuk</item>
-    <item>Değişken</item>
-    <item>Hava</item>
-  </string-array>
-
-  <string-array name="search_category_rds_values" translatable="false">
-    <item>0</item>
-    <item>7</item>
-    <item>2</item>
-    <item>18</item>
-    <item>25</item>
-    <item>29</item>
-    <item>6</item>
-    <item>12</item>
-    <item>5</item>
-    <item>31</item>
-    <item>30</item>
-    <item>17</item>
-    <item>28</item>
-    <item>3</item>
-    <item>24</item>
-    <item>13</item>
-    <item>23</item>
-    <item>1</item>
-    <item>26</item>
-    <item>15</item>
-    <item>27</item>
-    <item>21</item>
-    <item>10</item>
-    <item>20</item>
-    <item>11</item>
-    <item>8</item>
-    <item>14</item>
-    <item>19</item>
-    <item>4</item>
-    <item>22</item>
-    <item>9</item>
-    <item>16</item>
-  </string-array>
-
-  <string-array name="presetlist_edit_category">
-    <item>Yeniden adlandır</item>
-    <item>Otomatik-Seç</item>
-    <item>Sil</item>
-  </string-array>
-
-
-  <string-array name="regional_band_entries">
-    <item>Kuzey Amerika</item>
-    <item>Avrupa</item>
-    <item>Japonya</item>
-    <item>Japonya (Geniş)</item>
-    <item>Avustralya</item>
-    <item>Avusturya</item>
-    <item>Belçika</item>
-    <item>Brezilya</item>
-    <item>Çin</item>
-    <item>Çek</item>
-    <item>Danimarka</item>
-    <item>Finlandiya</item>
-    <item>Fransa</item>
-    <item>Almanya</item>
-    <item>Yunanistan</item>
-    <item>Hong Kong</item>
-    <item>Hindistan</item>
-    <item>İrlanda</item>
-    <item>İtalya</item>
-    <item>Kore</item>
-    <item>Meksika</item>
-    <item>Hollanda</item>
-    <item>Yeni Zelenda</item>
-    <item>Norveç</item>
-    <item>Polonya</item>
-    <item>Portekiz</item>
-    <item>Rusya</item>
-    <item>Singapur</item>
-    <item>Slovakya</item>
-    <item>İspanya</item>
-    <item>İsviçre</item>
-    <item>İsveç</item>
-    <item>Tayvan</item>
-    <item>Türkiye</item>
-    <item>İngiltere</item>
-    <item>A.B.D.</item>
-  </string-array>
-
-  <string-array name="regional_band_values" translatable="false">
-    <item>0</item>
-    <item>1</item>
-    <item>2</item>
-    <item>3</item>
-    <item>4</item>
-    <item>5</item>
-    <item>6</item>
-    <item>7</item>
-    <item>8</item>
-    <item>9</item>
-    <item>10</item>
-    <item>11</item>
-    <item>12</item>
-    <item>13</item>
-    <item>14</item>
-    <item>15</item>
-    <item>16</item>
-    <item>17</item>
-    <item>18</item>
-    <item>19</item>
-    <item>20</item>
-    <item>21</item>
-    <item>22</item>
-    <item>23</item>
-    <item>24</item>
-    <item>25</item>
-    <item>26</item>
-    <item>27</item>
-    <item>28</item>
-    <item>29</item>
-    <item>30</item>
-    <item>31</item>
-    <item>32</item>
-    <item>33</item>
-    <item>34</item>
-    <item>35</item>
-  </string-array>
-
-  <string-array name="regional_band_summary">
-    <item>Kuzey Amerika (87.5MHz - 108.0MHz, 200 Khz)</item>
-    <item>Avrupa (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Japonya (76.0MHz - 90.0MHz, 100 Khz)</item>
-    <item>Japonya (Geniş) (90.0MHz - 108.0MHz, 100 Khz)</item>
-    <item>Avustralya (87.7MHz - 108.0MHz, 100 Khz)</item>
-    <item>Avusturya (87.5MHz - 108.0MHz,  50 Khz)</item>
-    <item>Belçika (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Brezilya (87.8MHz - 108.0MHz, 200 Khz Step)</item>
-    <item>Çin (87.0MHz - 108.0MHz, 100 Khz)</item>
-    <item>Çek (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Danimarka (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Finlandiya (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Fransa (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Almanya (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Yunanistan (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Hong Kong (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Hindistan (91.0MHz - 106.4MHz, 100 Khz)</item>
-    <item>İrlanda (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Italya(87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Kore (87.5MHz - 108.0MHz, 200 Khz)</item>
-    <item>Meksika (88.1MHz - 107.9MHz, 200 Khz)</item>
-    <item>Hollanda (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Yeni Zelanda (88.0MHz - 107.0MHz, 100 Khz)</item>
-    <item>Norveç (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Polonya (88.0MHz - 108.0MHz, 100 Khz)</item>
-    <item>Portekiz (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Rusya (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Singapur (88.0MHz - 108.0MHz, 100 Khz)</item>
-    <item>Slovakya (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>İspanya (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>İsviçre (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>İsveç (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Tayvan (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>Türkiye (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>İngiltere (87.5MHz - 108.0MHz, 100 Khz)</item>
-    <item>A.B.D. (88.1MHz - 107.9MHz, 200 Khz)</item>
-  </string-array>
-
+    <string-array name="regional_band_summary">
+        <item>Kuzey Amerika (87.5MHz - 108.0MHz, 200 Khz)</item>
+        <item>Avrupa (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Japonya (76.0MHz - 90.0MHz, 100 Khz)</item>
+        <item>Japonya (Geniş) (90.0MHz - 108.0MHz, 100 Khz)</item>
+        <item>Avustralya (87.7MHz - 108.0MHz, 100 Khz)</item>
+        <item>Avusturya (87.5MHz - 108.0MHz,  50 Khz)</item>
+        <item>Belçika (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Brezilya (87.8MHz - 108.0MHz, 200 Khz Step)</item>
+        <item>Çin (87.0MHz - 108.0MHz, 100 Khz)</item>
+        <item>Çek (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Danimarka (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Finlandiya (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Fransa (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Almanya (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Yunanistan (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Hong Kong (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Hindistan (91.0MHz - 106.4MHz, 100 Khz)</item>
+        <item>İrlanda (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Italya(87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Kore (87.5MHz - 108.0MHz, 200 Khz)</item>
+        <item>Meksika (88.1MHz - 107.9MHz, 200 Khz)</item>
+        <item>Hollanda (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Yeni Zelanda (88.0MHz - 107.0MHz, 100 Khz)</item>
+        <item>Norveç (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Polonya (88.0MHz - 108.0MHz, 100 Khz)</item>
+        <item>Portekiz (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Rusya (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Singapur (88.0MHz - 108.0MHz, 100 Khz)</item>
+        <item>Slovakya (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>İspanya (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>İsviçre (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>İsveç (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Tayvan (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>Türkiye (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>İngiltere (87.5MHz - 108.0MHz, 100 Khz)</item>
+        <item>A.B.D. (88.1MHz - 107.9MHz, 200 Khz)</item>
+    </string-array>
 </resources>

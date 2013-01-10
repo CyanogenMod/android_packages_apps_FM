@@ -40,16 +40,12 @@
     <string name="fm_command_failed_title">FM operácia zlyhala</string>
     <string name="fm_cmd_failed_msg">Operácia zlyhala. Možné príčiny: nemáte pripojenú káblovú náhlavnú súpravu ako anténu, nepovolili ste Bluetooth, prebieha hovor, alebo FM bolo zavreté. Prosím skontrolujte a skúste znovu.</string>
 
-    <skip/>
-    <!-- Do not translate. Duration format. -->
-    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
-
     <string name="frequency_string"></string>
     <string name="stat_no_fm">FM rádio nie je zapnuté</string>
 
     <!-- Added by LIBRA -->
     <string name="need_headset_for_antenna">Prosím pripojte káblovú náhlavnú súpravu, ktorá bude použitá ako FM anténa.</string>
-    <string name="init_FM">Povoľovanie BT pre podporu FM rádia..</string>
+    <string name="init_FM">Povoľovanie BT pre podporu FM rádia\u2026</string>
     <string name="need_bluetooth">Prosím povoľte Bluetooth</string>
 
     <string name="about_title">O programe</string>
@@ -67,5 +63,4 @@
 
     <string name="pref_headset_behaviour_title">Správanie Bluetooth a náhlavnej súpravy</string>
     <string name="pref_headset_behaviour_summary">Vyvolať správanie Bluetooth pri odpojení náhlavnej súpravy</string>
-
 </resources>

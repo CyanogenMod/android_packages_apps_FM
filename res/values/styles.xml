@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
     <style name="FMStationSeekBar">
         <item name="android:indeterminateOnly">false</item>
@@ -21,5 +20,4 @@
         <item name="android:shadowDy">1.0</item>
         <item name="android:shadowRadius">1.0</item>
     </style>
-
 </resources>

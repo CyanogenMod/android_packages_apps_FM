@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
     <string-array name="bt_exit_behaviour_entries">
         <item>Ne rien faire (Reste actif)</item>
@@ -20,7 +19,6 @@
         <item>Illimité</item>
     </string-array>
 
-    <!-- Translated according to http://www.rds.org.uk/rds98/pdf/rds%20guidel_appendix5B_061006.pdf -->
     <string-array name="search_category_rds_entries">
         <item>Toutes les stations</item>
         <item>Culture</item>

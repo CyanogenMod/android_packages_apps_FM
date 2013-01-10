@@ -6,16 +6,19 @@
         <item>Προτροπή για δράση από το χρήστη</item>
         <item>Πάντα ανενεργό</item>
     </string-array>
+
     <string-array name="ster_mon_entries">
         <item>Στερεοφωνικό</item>
         <item>Μονοφωνικό</item>
     </string-array>
+
     <string-array name="record_durations_entries">
         <item>5 λεπτά</item>
         <item>15 λεπτά</item>
         <item>30 λεπτά</item>
         <item>Χωρίς όριο</item>
     </string-array>
+
     <string-array name="search_category_rbds_entries">
         <item>Όλοι οι σταθμοί</item>
         <item>Μόνο για ενήλικες</item>
@@ -45,6 +48,7 @@
         <item>Top 40</item>
         <item>Καιρός</item>
     </string-array>
+
     <string-array name="search_category_rds_entries">
         <item>Όλοι οι σταθμοί</item>
         <item>Κουλτούρα</item>
@@ -79,11 +83,13 @@
         <item>Διάφορα</item>
         <item>Καιρός</item>
     </string-array>
+
     <string-array name="presetlist_edit_category">
         <item>Μετονομασία</item>
-        <item>Αυτόμ-επιλογή</item>
+        <item>Αυτόμ. επιλογή</item>
         <item>Διαγραφή</item>
     </string-array>
+
     <string-array name="regional_band_entries">
         <item>Βόρεια Αμερική</item>
         <item>Ευρώπη</item>
@@ -100,7 +106,7 @@
         <item>Γαλλία</item>
         <item>Γερμανία</item>
         <item>Ελλάδα</item>
-        <item>Hong Kong</item>
+        <item>Χονγκ Κονγκ</item>
         <item>Ινδία</item>
         <item>Ιρλανδία</item>
         <item>Ιταλία</item>
@@ -122,6 +128,7 @@
         <item>Ηνωμένο Βασίλειο</item>
         <item>Ηνωμένες Πολιτείες</item>
     </string-array>
+
     <string-array name="regional_band_summary">
         <item>Βόρεια Αμερική (87.5MHz ως 108.0MHz ανά 200 Khz)</item>
         <item>Ευρώπυ (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
@@ -138,7 +145,7 @@
         <item>Γαλλία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
         <item>Γερμανία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
         <item>Ελλάδα (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
-        <item>Hong Kong (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
+        <item>Χονγκ Κονγκ (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
         <item>Ινδία (91.0MHz ως 106.4MHz ανά βήματα 100 Khz)</item>
         <item>Ιρλανδία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
         <item>Ιταλία (87.5MHz ως 108.0MHz ανά βήματα 100 Khz)</item>
