@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="bt_exit_behaviour_entries">
+        <item>No facis res (Queda actiu)</item>
+        <item>Restablir l\'estat inicial</item>
+        <item>Demanar a l\'usuari</item>
+        <item>Sempre desactivat</item>
+    </string-array>
+
+    <string-array name="ster_mon_entries">
+        <item>Estèreo</item>
+        <item>Mono</item>
+    </string-array>
+
+    <string-array name="record_durations_entries">
+        <item>5 minuts</item>
+        <item>15 minuts</item>
+        <item>30 minuts</item>
+        <item>Il·limitat</item>
+    </string-array>
+
+    <!-- Translated according to http://www.rds.org.uk/rds98/pdf/rds%20guidel_appendix5B_061006.pdf -->
+    <string-array name="search_category_rds_entries">
+        <item>Totes les emissores</item>
+        <item>Cultura</item>
+        <item>Magazín</item>
+        <item>Programes per a mainada</item>
+        <item>Música country</item>
+        <item>Documentals</item>
+        <item>Drama</item>
+        <item>Cançons</item>
+        <item>Educació</item>
+        <item>Avisos</item>
+        <item>Prova d\'avisos</item>
+        <item>Economia i finances</item>
+        <item>Música folklòrica</item>
+        <item>Informació</item>
+        <item>Jazz</item>
+        <item>Clàssica lleugera</item>
+        <item>Oci</item>
+        <item>Informatius</item>
+        <item>Cançons populars</item>
+        <item>Altres músiques</item>
+        <item>Música retro</item>
+        <item>Phone In</item>
+        <item>Pop</item>
+        <item>Religió</item>
+        <item>Rock</item>
+        <item>Ciència</item>
+        <item>Música clàssica</item>
+        <item>Societat</item>
+        <item>Esports</item>
+        <item>Viatges</item>
+        <item>Varietats</item>
+        <item>Metereologia</item>
+    </string-array>
+
+    <string-array name="presetlist_edit_category">
+        <item>Canvia el nom</item>
+        <item>Selecciona automàticament</item>
+        <item>Suprimeix</item>
+    </string-array>
+
+    <string-array name="regional_band_entries">
+        <item>Amèrica del Nord</item>
+        <item>Europa</item>
+        <item>Japó</item>
+        <item>Japó (Gran)</item>
+        <item>Austràlia</item>
+        <item>Àustria</item>
+        <item>Bèlgica</item>
+        <item>Brasil</item>
+        <item>Xina</item>
+        <item>Rep. Txeca</item>
+        <item>Dinamarca</item>
+        <item>Finlàndia</item>
+        <item>França</item>
+        <item>Alemanya</item>
+        <item>Grècia</item>
+        <item>Hong Kong</item>
+        <item>Índia</item>
+        <item>Irlanda</item>
+        <item>Itàlia</item>
+        <item>Corea</item>
+        <item>Mèxic</item>
+        <item>País Basc</item>
+        <item>Nova Zelanda</item>
+        <item>Noruega</item>
+        <item>Polònia</item>
+        <item>Portugal</item>
+        <item>Rússia</item>
+        <item>Singapur</item>
+        <item>Eslovàquia</item>
+        <item>Estat Espanyol</item>
+        <item>Suïssa</item>
+        <item>Suècia</item>
+        <item>Taiwan</item>
+        <item>Turquia</item>
+        <item>Regne Unit</item>
+        <item>Estats Units</item>
+    </string-array>
+
+    <string-array name="regional_band_summary">
+        <item>Amèrica del Nord (De 87.5MHz a 108.0MHz en salts de 200 Khz)</item>
+        <item>Europa (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Japó (De 76.0MHz a  90.0MHz en salts de 100 Khz)</item>
+        <item>Japó (Gran) (De 90.0MHz a 108.0MHz en salts de 50 Khz)</item>
+        <item>Austràlia (De 87.7MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Àustria (De 87.5MHz a 108.0MHz en salts de 50 Khz)</item>
+        <item>Bèlgica (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Brasil (De 87.8MHz a 108.0MHz en salts de 200 Khz Step)</item>
+        <item>Xina (De 87.0MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Rep. Txeca (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Dinamarca (De 87.5MHz a 108.0MHz en salts de 50 Khz)</item>
+        <item>Finlàndia (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>França (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Alemanya (De 87.5MHz a 108.0MHz en salts de 50 Khz)</item>
+        <item>Grècia (De 87.5MHz a 108.0MHz en salts de 50 Khz)</item>
+        <item>Hong Kong (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Índia (De 91.0MHz a 106.4MHz en salts de 100 Khz)</item>
+        <item>Irlanda (De 87.5MHz a 108.0MHz en salts de 50 Khz)</item>
+        <item>Itàlia (De 87.5MHz a 108.0MHz en salts de 50 Khz)</item>
+        <item>Corea (De 87.5MHz a 108.0MHz en salts de 200 Khz)</item>
+        <item>Mèxic (De 88.1MHz a 107.9MHz en salts de 200 Khz)</item>
+        <item>País Basc (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Nova Zelanda (De 88.0MHz a 107.0MHz en salts de 100 Khz)</item>
+        <item>Noruega (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Polònia (De 88.0MHz a 108.0MHz en salts de 50 Khz)</item>
+        <item>Portugal (De 87.5MHz a 108.0MHz en salts de 50 Khz)</item>
+        <item>Rússia (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Singapur (De 88.0MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Eslovàquia (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Estat Espanyol (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Suïssa (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Suècia (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Taiwan (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Turquia (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Regne Unit (De 87.5MHz a 108.0MHz en salts de 100 Khz)</item>
+        <item>Estats Units (De 88.1MHz a 107.9MHz en salts de 200 Khz)</item>
+    </string-array>
+</resources>
